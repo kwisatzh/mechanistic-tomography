@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Experiments designed/concieved by Vijay Erramilli. Code written by Vijay Erramilli and Codex. -->
+<!-- Experiments designed/conceived by Vijay Erramilli. Code written by Vijay Erramilli and Codex. -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <meta name="citation_pdf_url" content="https://kwisatzh.github.io/mechanistic-tomography/assets/mechanistic-tomography-v1.pdf">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Mechanistic Tomography">
-    <meta property="og:description" content="Designed measurement for control-oriented interpretability.">
+    <meta property="og:description" content="Designed Measurement for Control-Oriented Interpretability.">
     <meta property="og:url" content="https://kwisatzh.github.io/mechanistic-tomography/">
     <meta property="og:image" content="https://kwisatzh.github.io/mechanistic-tomography/assets/nt-sample-efficiency.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -22,127 +22,123 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="masthead">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="mark" href="#top" aria-label="Mechanistic Tomography home">MT</a>
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <a class="site-title" href="#top">Mechanistic Tomography</a>
         <div class="nav-links">
-          <a href="#idea">Idea</a>
-          <a href="#findings">Findings</a>
-          <a href="#cite">Cite</a>
+          <a href="#summary">Summary</a>
+          <a href="#results">Results</a>
+          <a href="#citation">Citation</a>
         </div>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Preprint · August 4, 2026</p>
-          <h1>Mechanistic<br>Tomography</h1>
+      <article>
+        <header class="paper-header">
+          <p class="paper-type">Preprint, version 1.0 · August 4, 2026</p>
+          <h1>Mechanistic Tomography</h1>
           <p class="subtitle">Designed Measurement for Control-Oriented Interpretability</p>
           <p class="author">Vijay Erramilli</p>
-          <p class="lede">
-            Mechanistic interpretability tries to recover quantities a model does not expose directly:
-            represented states, component effects, interactions, and responses to interventions.
-            Mechanistic tomography treats this as a measurement-design problem.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="assets/mechanistic-tomography-v1.pdf">Read the paper</a>
-            <a class="button secondary" href="https://doi.org/10.5281/zenodo.21797578">Zenodo / DOI</a>
+          <div class="paper-links" aria-label="Paper links">
+            <a class="primary-link" href="assets/mechanistic-tomography-v1.pdf">Read the PDF</a>
+            <a href="https://doi.org/10.5281/zenodo.21797578">DOI: 10.5281/zenodo.21797578</a>
           </div>
-        </div>
+        </header>
 
-        <div class="equation-card" aria-label="Mechanistic tomography equation">
-          <div class="equation"><span>ỹ</span> = <span>A</span><span>x</span> + <span>w</span></div>
-          <dl>
-            <div><dt>A</dt><dd>which interventions we make</dd></div>
-            <div><dt>x</dt><dd>the internal effect map we want</dd></div>
-            <div><dt>w</dt><dd>what the chosen measurement model misses</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <section id="idea" class="section split">
-        <div>
-          <p class="section-number">01 · The idea</p>
-          <h2>A common language—and a procedure for deciding what to measure next.</h2>
-        </div>
-        <div class="body-copy">
+        <section id="summary">
+          <h2>Abstract</h2>
           <p>
-            Coordinate patching, attribution patching, subset interventions, Hessian-vector products,
-            and lifted interaction recovery do not necessarily estimate the same quantity. They do,
-            however, share a measurement structure: each method declares a target, obtains measurements
-            through a particular form of model access, incurs structured error, and needs validation.
+            Mechanistic interpretability tries to recover quantities a model does not expose
+            directly: represented states, component effects, interactions, and responses to
+            interventions. This paper treats that task as a problem of measurement design.
+            Coordinate patching, attribution patching, subset interventions, Hessian-vector
+            products, and lifted interaction recovery are described through a shared structure:
+            a declared target, a measurement operator, structured error, and validation on
+            held-out interventions.
           </p>
           <p>
-            The operational rule is simple. Start with the least costly measurements available. Test the
-            resulting map on held-out interventions at the scale where it will be used. Calibrate a simple
-            mismatch when that is enough. When structured residuals remain, add interactions, measure
-            curvature, or change the basis.
+            The resulting procedure starts with the least costly measurements available, tests
+            the recovered map at the intervention scale where it will be used, and expands the
+            measurement family only when residual structure requires it. Control provides the
+            principal validation setting because errors in an estimated mechanism then have a
+            direct operational consequence.
           </p>
-        </div>
-      </section>
+        </section>
 
-      <section class="procedure" aria-labelledby="procedure-title">
-        <div class="procedure-heading">
-          <p class="section-number">02 · The procedure</p>
-          <h2 id="procedure-title">Measure, test, then escalate only when the residual requires it.</h2>
-        </div>
-        <ol class="steps">
-          <li><span>1</span><strong>Declare the target.</strong><p>State the effect map, basis, intervention family, and intended use.</p></li>
-          <li><span>2</span><strong>Use the cheapest access path.</strong><p>Forward probes, gradients, or curvature measurements impose different costs.</p></li>
-          <li><span>3</span><strong>Test held-out interventions.</strong><p>Fit quality alone cannot show whether the map predicts an action not yet taken.</p></li>
-          <li><span>4</span><strong>Escalate the measurement family.</strong><p>Persistent structure in the residual tells us what the current method cannot see.</p></li>
-        </ol>
-      </section>
-
-      <section id="findings" class="section findings">
-        <div class="findings-copy">
-          <p class="section-number">03 · What the paper shows</p>
-          <h2>The formulation changes both how measurements are compared and what existing methods can do.</h2>
-          <ul>
-            <li><strong>Observer error reaches control.</strong> In a two-HMM wind tunnel, closed-loop target error tracks observer error under a fixed controller and actuator.</li>
-            <li><strong>Aggregate measurements can replace exhaustive probes.</strong> When an effect map is compressible, sparse recovery needs fewer forward interventions than one-component-at-a-time measurement.</li>
-            <li><strong>Finite probes can extend local gradients.</strong> A small calibration set tests—and sometimes corrects—attribution patching at the intended intervention scale.</li>
-            <li><strong>Interactions require richer measurements.</strong> Lifted forward measurements and designed Hessian-vector products recover pair structure missed by first-order maps.</li>
-            <li><strong>The required model is basis-relative.</strong> Tracr and GPT-2-small IOI show why the intervention basis determines which interactions must be represented.</li>
+        <section>
+          <h2>Main contributions</h2>
+          <ul class="contributions">
+            <li>
+              A common measurement formulation for methods that estimate different internal
+              quantities through different forms of model access.
+            </li>
+            <li>
+              Held-out intervention tests that distinguish an explanatory fit from an effect
+              map that can support action.
+            </li>
+            <li>
+              Sparse aggregate measurements that can recover compressible effect maps with
+              fewer forward interventions than coordinate-by-coordinate probing.
+            </li>
+            <li>
+              Calibration and interaction measurements that reveal when local gradients or
+              first-order maps are insufficient at finite intervention scale.
+            </li>
+            <li>
+              Experiments spanning a two-HMM control setting, planted sparse effects, Tracr,
+              and GPT-2-small on IOI.
+            </li>
           </ul>
-        </div>
-        <figure>
-          <img src="assets/nt-sample-efficiency.png" alt="Held-out recovery score versus number of aggregate measurements, showing sparse recovery above 0.9 with fewer than 32 measurements.">
-          <figcaption>
-            In the planted sparse-effect experiment, aggregate measurements recover the declared map
-            without exhausting all 32 coordinates. The point is not that one estimator always wins;
-            the measurement design exposes when fewer interventions suffice.
-          </figcaption>
-        </figure>
-      </section>
+        </section>
 
-      <section class="observer-callout">
-        <p class="section-number">Why control?</p>
-        <blockquote>
-          Once an estimate guides an intervention, it acts as an observer. A useful observer must predict
-          what the intervention will actually do—not merely reconstruct a mechanism on the data used to fit it.
-        </blockquote>
-        <p>
-          Control is the paper’s principal validation setting because it makes measurement error consequential.
-          The framework itself applies more broadly to internal states and finite intervention effects.
-        </p>
-      </section>
+        <section>
+          <h2>Measurement procedure</h2>
+          <ol class="procedure">
+            <li><strong>Declare the target.</strong> Specify the effect map, basis, intervention family, and intended use.</li>
+            <li><strong>Choose an access path.</strong> Use forward probes, gradients, or curvature measurements according to the target and cost.</li>
+            <li><strong>Test held-out interventions.</strong> Evaluate the map at the scale where it will guide decisions.</li>
+            <li><strong>Inspect the residual.</strong> Calibrate simple mismatch or add interactions, curvature, or a different basis when needed.</li>
+          </ol>
+        </section>
 
-      <section id="cite" class="section citation">
-        <div>
-          <p class="section-number">04 · Read and cite</p>
-          <h2>A public, frozen first version.</h2>
+        <section id="results">
+          <h2>Selected result</h2>
+          <figure>
+            <img src="assets/nt-sample-efficiency.png" alt="Held-out recovery score versus number of aggregate measurements, showing sparse recovery above 0.9 with fewer than 32 measurements.">
+            <figcaption>
+              In the planted sparse-effect experiment, aggregate measurements recover the
+              declared map without exhausting all 32 coordinates. The measurement design makes
+              explicit when fewer interventions are sufficient.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h2>Why control?</h2>
           <p>
-            Version 1.0 is preserved by Zenodo under a permanent DOI. An arXiv version is forthcoming.
+            Identification is not the endpoint. The aim is to recover internal structure well
+            enough to intervene on something downstream: change a model behavior, move a target
+            quantity, or maintain a chosen property near a desired value. Control makes that
+            intent explicit by connecting an estimated mechanism to an action and then measuring
+            the resulting effect.
           </p>
-          <div class="actions">
-            <a class="button primary" href="assets/mechanistic-tomography-v1.pdf">PDF</a>
-            <a class="button secondary" href="https://doi.org/10.5281/zenodo.21797578">DOI record</a>
-          </div>
-        </div>
-        <div class="bibtex-wrap">
-          <div class="bibtex-label">BibTeX</div>
+          <p>
+            Once an estimate guides an intervention, it acts as an observer. A useful observer
+            must predict what the intervention will do, not merely reconstruct a mechanism on
+            the data used to fit it. In the two-HMM experiment, the controller and actuator are
+            fixed while the observer varies, exposing how identification error reaches
+            closed-loop error on the property being controlled. The measurement framework itself
+            applies more broadly to internal states and finite intervention effects.
+          </p>
+        </section>
+
+        <section id="citation">
+          <h2>Citation</h2>
+          <p>
+            Version 1.0 is preserved by Zenodo under a permanent DOI. An arXiv version is
+            forthcoming.
+          </p>
           <pre><code>@misc{erramilli2026mechanistic,
   title   = {Mechanistic Tomography: Designed Measurement
              for Control-Oriented Interpretability},
@@ -152,14 +148,15 @@
   doi     = {10.5281/zenodo.21797578},
   url     = {https://doi.org/10.5281/zenodo.21797578}
 }</code></pre>
-        </div>
-      </section>
+        </section>
+      </article>
     </main>
 
     <footer>
-      <p>Mechanistic Tomography · Vijay Erramilli · 2026</p>
-      <p><a href="mailto:evijay@gmail.com">evijay@gmail.com</a></p>
+      <span>Mechanistic Tomography · Vijay Erramilli · 2026</span>
+      <a href="mailto:evijay@gmail.com">evijay@gmail.com</a>
     </footer>
+
     <!-- Cloudflare Web Analytics -->
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "babc4e7118744fa6a9f1a18fb87df2eb"}'></script>
     <!-- End Cloudflare Web Analytics -->
