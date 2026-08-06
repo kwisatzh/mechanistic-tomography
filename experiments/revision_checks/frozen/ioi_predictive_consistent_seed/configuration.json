@@ -1,0 +1,18 @@
+{
+  "stage2d_script": "experiments/ioi/stage2d/ioi_stage2d_per_pair_decomposition.py",
+  "input_run": "experiments/ioi/stage2c/frozen",
+  "fold_seed": 777,
+  "bootstrap_sampling_seed": 999,
+  "bootstrap_repeats": 2000,
+  "fold_audit_count": 200,
+  "k_folds": 5,
+  "ridge": 1e-06,
+  "models": [
+    "additive_head",
+    "count_additive",
+    "count_plus_PB_count",
+    "count_plus_PE_count",
+    "count_plus_BE_count",
+    "count_plus_all_pairs"
+  ]
+}

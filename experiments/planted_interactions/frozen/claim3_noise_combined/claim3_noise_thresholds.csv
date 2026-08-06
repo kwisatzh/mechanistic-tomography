@@ -1,0 +1,15 @@
+method,epsilon,max_noise_r2_ge_0.95,max_noise_pair_ge_0.99,max_noise_both_ge_r2_0.95_pair_0.99,max_heldout_r2_mean,max_pair_topk_recall_mean
+finite_single,5.0,,,,0.5776756162220192,0.0
+first_order_omp,5.0,,,,0.6562685219344052,0.0
+lifted_omp,5.0,0.01,0.05,0.01,0.997694748821373,1.0
+multigain_atp,5.0,,,,0.6843453913185863,0.0
+raw_atp,5.0,,,,0.6718459140359828,0.0
+scalar_cal_atp,5.0,,,,0.6787925518284705,0.0
+subset_ridge,5.0,,,,0.07302676209241638,0.0
+finite_single,8.0,,,,0.3290277074748121,0.0
+first_order_omp,8.0,,,,0.3758737621457846,0.0
+lifted_omp,8.0,0.05,0.2,0.05,0.9983193174587596,1.0
+multigain_atp,8.0,,,,0.41527479040795073,0.0
+raw_atp,8.0,,,,0.38298653410616956,0.0
+scalar_cal_atp,8.0,,,,0.40182219585764445,0.0
+subset_ridge,8.0,,,,-0.7205468951592403,0.0

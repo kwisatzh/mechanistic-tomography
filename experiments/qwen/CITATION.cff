@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the paper and the archived release."
+title: "Mechanistic Tomography: Qwen weak-ground-truth follow-up"
+type: software
+authors:
+  - family-names: Erramilli
+    given-names: Vijay
+version: 0.1.0
+date-released: 2026-07-15

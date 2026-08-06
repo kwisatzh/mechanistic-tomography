@@ -1,0 +1,118 @@
+rank,term,coef,abs_coef,program,basis,method,feature_family
+1,tokens:A,0.40000026587308224,0.40000026587308224,first_order_is_A,full_native,ridge,first_order
+2,is_A_1,0.40000023834010306,0.40000023834010306,first_order_is_A,full_native,ridge,first_order
+3,tokens:C,-0.19999949384169258,0.19999949384169258,first_order_is_A,full_native,ridge,first_order
+4,tokens:B,-0.19999949382485757,0.19999949382485757,first_order_is_A,full_native,ridge,first_order
+5,indices:2,-1.2063099598490138e-08,1.2063099598490138e-08,first_order_is_A,full_native,ridge,first_order
+6,indices:4,-1.203868041132799e-08,1.203868041132799e-08,first_order_is_A,full_native,ridge,first_order
+7,indices:1,-1.2035685448874514e-08,1.2035685448874514e-08,first_order_is_A,full_native,ridge,first_order
+8,indices:3,-1.2034482354493003e-08,1.2034482354493003e-08,first_order_is_A,full_native,ridge,first_order
+9,indices:0,-1.2013226928785e-08,1.2013226928785e-08,first_order_is_A,full_native,ridge,first_order
+1,is_A_1,0.400000098277692,0.400000098277692,first_order_is_A,full_native,omp,first_order
+2,tokens:A,0.4000000973115353,0.4000000973115353,first_order_is_A,full_native,omp,first_order
+3,tokens:C,-0.199999802466706,0.199999802466706,first_order_is_A,full_native,omp,first_order
+4,tokens:B,-0.19999980244892532,0.19999980244892532,first_order_is_A,full_native,omp,first_order
+1,tokens:A,0.6666667802713568,0.6666667802713568,first_order_is_A,tokens_only,ridge,first_order
+2,tokens:C,-0.33333321648852543,0.33333321648852543,first_order_is_A,tokens_only,ridge,first_order
+3,tokens:B,-0.33333321645889613,0.33333321645889613,first_order_is_A,tokens_only,ridge,first_order
+1,tokens:A,0.666666821295307,0.666666821295307,first_order_is_A,tokens_only,omp,first_order
+2,tokens:C,-0.33333317546458024,0.33333317546458024,first_order_is_A,tokens_only,omp,first_order
+3,tokens:B,-0.3333331754349457,0.3333331754349457,first_order_is_A,tokens_only,omp,first_order
+1,detect_AB_num_2,0.38271611288881785,0.38271611288881785,paircat_AB_to_numeric,full_native,ridge,first_order
+2,paircat_AB_3:AB,0.38271611284786716,0.38271611284786716,paircat_AB_to_numeric,full_native,ridge,first_order
+3,paircat_AB_3:OTHER,-0.23456777147553204,0.23456777147553204,paircat_AB_to_numeric,full_native,ridge,first_order
+4,indices:0,-0.1481481211150983,0.1481481211150983,paircat_AB_to_numeric,full_native,ridge,first_order
+5,prev_token_4:A,0.04938258999071148,0.04938258999071148,paircat_AB_to_numeric,full_native,ridge,first_order
+6,prev_token_4:B,0.04938258923661647,0.04938258923661647,paircat_AB_to_numeric,full_native,ridge,first_order
+7,prev_token_4:C,0.049382589150586305,0.049382589150586305,paircat_AB_to_numeric,full_native,ridge,first_order
+8,indices:1,0.03703705129768277,0.03703705129768277,paircat_AB_to_numeric,full_native,ridge,first_order
+9,indices:4,0.03703705128165285,0.03703705128165285,paircat_AB_to_numeric,full_native,ridge,first_order
+10,indices:2,0.037037051277885924,0.037037051277885924,paircat_AB_to_numeric,full_native,ridge,first_order
+11,indices:3,0.037037051239513535,0.037037051239513535,paircat_AB_to_numeric,full_native,ridge,first_order
+12,tokens:A,1.211608421856002e-07,1.211608421856002e-07,paircat_AB_to_numeric,full_native,ridge,first_order
+1,paircat_AB_3:AB,0.39999998866874265,0.39999998866874265,paircat_AB_to_numeric,full_native,omp,first_order
+2,detect_AB_num_2,0.3999999886530656,0.3999999886530656,paircat_AB_to_numeric,full_native,omp,first_order
+3,paircat_AB_3:OTHER,-0.20000001711061965,0.20000001711061965,paircat_AB_to_numeric,full_native,omp,first_order
+4,indices:0,-0.2000000055759947,0.2000000055759947,paircat_AB_to_numeric,full_native,omp,first_order
+1,tokens:B,0.17117116744144836,0.17117116744144836,paircat_AB_to_numeric,tokens_only,ridge,first_order
+2,tokens:A,-0.08558558846183144,0.08558558846183144,paircat_AB_to_numeric,tokens_only,ridge,first_order
+3,tokens:C,-0.08558558845549549,0.08558558845549549,paircat_AB_to_numeric,tokens_only,ridge,first_order
+1,tokens:B,0.17117118638925544,0.17117118638925544,paircat_AB_to_numeric,tokens_only,omp,first_order
+2,tokens:A,-0.08558556951402561,0.08558556951402561,paircat_AB_to_numeric,tokens_only,omp,first_order
+3,tokens:C,-0.08558556950768881,0.08558556950768881,paircat_AB_to_numeric,tokens_only,omp,first_order
+1,prev_token_4:A,0.31771968864834027,0.31771968864834027,paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order
+2,tokens:B,0.17507171666937188,0.17507171666937188,paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order
+3,tokens:C,-0.09314483098926131,0.09314483098926131,paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order
+4,tokens:A,-0.08192689466217296,0.08192689466217296,paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order
+5,prev_token_4:C,0.005319087491436807,0.005319087491436807,paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order
+6,prev_token_4:B,-0.000276325844301901,0.000276325844301901,paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order
+1,prev_token_4:A,0.3178781576926373,0.3178781576926373,paircat_AB_to_numeric,restricted_pre_interaction,omp,first_order
+2,tokens:B,0.25699669507957484,0.25699669507957484,paircat_AB_to_numeric,restricted_pre_interaction,omp,first_order
+3,tokens:C,-0.01122129222214021,0.01122129222214021,paircat_AB_to_numeric,restricted_pre_interaction,omp,first_order
+4,prev_token_4:C,0.005477456147687483,0.005477456147687483,paircat_AB_to_numeric,restricted_pre_interaction,omp,first_order
+1,prev_token_4:A × tokens:B,0.7499998209193249,0.7499998209193249,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+2,prev_token_4:A,0.25000018544306546,0.25000018544306546,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+3,prev_token_4:A × tokens:A,-0.2500001783498011,0.2500001783498011,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+4,prev_token_4:A × tokens:C,-0.25000017808860997,0.25000017808860997,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+5,tokens:B,-1.6317792241140098e-07,1.6317792241140098e-07,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+6,tokens:C,-1.5149256152895414e-07,1.5149256152895414e-07,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+7,tokens:A,-1.5091536013056323e-07,1.5091536013056323e-07,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+8,prev_token_4:C,5.961250999260261e-08,5.961250999260261e-08,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+9,prev_token_4:C × tokens:A,-5.564424892472181e-08,5.564424892472181e-08,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+10,prev_token_4:C × tokens:C,-5.506704807454194e-08,5.506704807454194e-08,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+11,prev_token_4:C × tokens:B,-4.338168816435002e-08,4.338168816435002e-08,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+12,prev_token_4:B × tokens:B,2.5684422752951303e-08,2.5684422752951303e-08,paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs
+1,prev_token_4:A × tokens:B,0.7500000174015056,0.7500000174015056,paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs
+2,prev_token_4:A,0.24999998101012935,0.24999998101012935,paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs
+3,prev_token_4:A × tokens:C,-0.2499999699210837,0.2499999699210837,paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs
+4,prev_token_4:A × tokens:A,-0.24999996960507243,0.24999996960507243,paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs
+5,prev_token_4:C,8.280056745493376e-09,8.280056745493376e-09,paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs
+6,prev_token_4:B,8.280056675341976e-09,8.280056675341976e-09,paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs
+1,detect_pattern_AB_raw_6:True,0.6111106529000722,0.6111106529000722,detect_pattern_AB_raw,full_native,ridge,first_order
+2,detect_pattern_AB_raw_6:False,-0.38888933995344016,0.38888933995344016,detect_pattern_AB_raw,full_native,ridge,first_order
+3,indices:0,-0.22222254849365172,0.22222254849365172,detect_pattern_AB_raw,full_native,ridge,first_order
+4,shift_by(1)_7:True,0.1111111737990561,0.1111111737990561,detect_pattern_AB_raw,full_native,ridge,first_order
+5,shift_by(1)_7:False,0.11111117187113255,0.11111117187113255,detect_pattern_AB_raw,full_native,ridge,first_order
+6,indices:1,0.05555559863214015,0.05555559863214015,detect_pattern_AB_raw,full_native,ridge,first_order
+7,indices:2,0.05555559859312675,0.05555559859312675,detect_pattern_AB_raw,full_native,ridge,first_order
+8,indices:4,0.05555559853490132,0.05555559853490132,detect_pattern_AB_raw,full_native,ridge,first_order
+9,indices:3,0.05555559850335936,0.05555559850335936,detect_pattern_AB_raw,full_native,ridge,first_order
+10,tokens:C,-8.45542962394161e-08,8.45542962394161e-08,detect_pattern_AB_raw,full_native,ridge,first_order
+11,map_8:False,3.727338882285127e-08,3.727338882285127e-08,detect_pattern_AB_raw,full_native,ridge,first_order
+12,map_10:False,3.4375398045314426e-08,3.4375398045314426e-08,detect_pattern_AB_raw,full_native,ridge,first_order
+1,detect_pattern_AB_raw_6:True,0.666666622289238,0.666666622289238,detect_pattern_AB_raw,full_native,omp,first_order
+2,detect_pattern_AB_raw_6:False,-0.3333333715815668,0.3333333715815668,detect_pattern_AB_raw,full_native,omp,first_order
+3,indices:0,-0.33333334447365504,0.33333334447365504,detect_pattern_AB_raw,full_native,omp,first_order
+4,map_8:False,4.164205179916807e-09,4.164205179916807e-09,detect_pattern_AB_raw,full_native,omp,first_order
+1,tokens:B,0.17117116744144836,0.17117116744144836,detect_pattern_AB_raw,tokens_only,ridge,first_order
+2,tokens:A,-0.08558558846183144,0.08558558846183144,detect_pattern_AB_raw,tokens_only,ridge,first_order
+3,tokens:C,-0.08558558845549549,0.08558558845549549,detect_pattern_AB_raw,tokens_only,ridge,first_order
+1,tokens:B,0.17117118638925544,0.17117118638925544,detect_pattern_AB_raw,tokens_only,omp,first_order
+2,tokens:A,-0.08558556951402561,0.08558556951402561,detect_pattern_AB_raw,tokens_only,omp,first_order
+3,tokens:C,-0.08558556950768881,0.08558556950768881,detect_pattern_AB_raw,tokens_only,omp,first_order
+1,shift_by(1)_7:True,0.31771910995648633,0.31771910995648633,detect_pattern_AB_raw,restricted_pre_interaction,ridge,first_order
+2,tokens:B,0.1750225745729591,0.1750225745729591,detect_pattern_AB_raw,restricted_pre_interaction,ridge,first_order
+3,tokens:C,-0.09313742405258878,0.09313742405258878,detect_pattern_AB_raw,restricted_pre_interaction,ridge,first_order
+4,tokens:A,-0.08188514645349251,0.08188514645349251,detect_pattern_AB_raw,restricted_pre_interaction,ridge,first_order
+5,shift_by(1)_7:False,0.0025785221889184848,0.0025785221889184848,detect_pattern_AB_raw,restricted_pre_interaction,ridge,first_order
+1,shift_by(1)_7:True,0.3177191099781327,0.3177191099781327,detect_pattern_AB_raw,restricted_pre_interaction,omp,first_order
+2,tokens:B,0.25690772022322916,0.25690772022322916,detect_pattern_AB_raw,restricted_pre_interaction,omp,first_order
+3,tokens:C,-0.011252278395709924,0.011252278395709924,detect_pattern_AB_raw,restricted_pre_interaction,omp,first_order
+4,shift_by(1)_7:False,0.0025785221965581666,0.0025785221965581666,detect_pattern_AB_raw,restricted_pre_interaction,omp,first_order
+1,shift_by(1)_7:True × tokens:B,0.7499998173754444,0.7499998173754444,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+2,shift_by(1)_7:True,0.2500001889869456,0.2500001889869456,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+3,shift_by(1)_7:True × tokens:A,-0.2500001818936787,0.2500001818936787,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+4,shift_by(1)_7:True × tokens:C,-0.25000018163249116,0.25000018163249116,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+5,tokens:B,-1.6272751492370273e-07,1.6272751492370273e-07,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+6,tokens:C,-1.5104215328917907e-07,1.5104215328917907e-07,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+7,tokens:A,-1.5046495545890227e-07,1.5046495545890227e-07,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+8,shift_by(1)_7:False,5.641894347291456e-08,5.641894347291456e-08,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+9,shift_by(1)_7:False × tokens:A,-5.245067969303125e-08,5.245067969303125e-08,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+10,shift_by(1)_7:False × tokens:C,-5.187348198572985e-08,5.187348198572985e-08,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+11,shift_by(1)_7:False × tokens:B,-4.018812147182968e-08,4.018812147182968e-08,detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs
+1,shift_by(1)_7:True × tokens:B,0.7500000200013949,0.7500000200013949,detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs
+2,shift_by(1)_7:True,0.24999998055694464,0.24999998055694464,detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs
+3,shift_by(1)_7:True × tokens:C,-0.24999997055944317,0.24999997055944317,detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs
+4,shift_by(1)_7:True × tokens:A,-0.24999997024343185,0.24999997024343185,detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs
+5,shift_by(1)_7:False,8.250233628544793e-09,8.250233628544793e-09,detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs
+6,tokens:B,-3.2382487654664218e-09,3.2382487654664218e-09,detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs

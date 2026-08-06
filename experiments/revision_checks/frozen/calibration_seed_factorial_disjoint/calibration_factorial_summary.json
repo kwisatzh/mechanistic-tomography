@@ -1,0 +1,109 @@
+{
+  "checkpoint": "experiments/hmm/frozen/model.pt",
+  "fixed_direction_seed": 7,
+  "context_seeds": [
+    17,
+    18,
+    19
+  ],
+  "measurement_design_seeds": [
+    7,
+    8,
+    9
+  ],
+  "gain_subset_seed": 1701,
+  "epsilons": [
+    5.0,
+    8.0
+  ],
+  "n_components": 32,
+  "n_measurements": 128,
+  "split_counts": {
+    "train": 72,
+    "validation": 24,
+    "holdout": 32,
+    "calibration_pool": 96
+  },
+  "config": {
+    "seed": 7,
+    "seq_len": 64,
+    "batch_size": 256,
+    "steps": 1500,
+    "eval_every": 100,
+    "lr": 0.0003,
+    "d_model": 96,
+    "n_layers": 4,
+    "n_heads": 4,
+    "d_mlp": 384,
+    "dropout": 0.0,
+    "probe_batches": 40,
+    "probe_samples": 250000,
+    "control_batches": 20,
+    "control_batch_size": 256,
+    "target_z": 2.0,
+    "controller_gain": 0.8,
+    "max_strength": 8.0,
+    "ridge": 0.001,
+    "aux_posterior_weight": 0.0,
+    "device": "mps",
+    "outdir": "runs/m4_baseline_seed7"
+  },
+  "eight_probe_gate": [
+    {
+      "epsilon": 5.0,
+      "cells": 9,
+      "calibrated_r2_mean": 0.9512014834333541,
+      "calibrated_r2_min": 0.923629805103624,
+      "calibrated_r2_max": 0.9726691263904087,
+      "omp_r2_mean": 0.9645965237614248,
+      "gap_mean": 0.01339504032807052,
+      "gap_max": 0.04882239701467839,
+      "cells_within_002": 6
+    },
+    {
+      "epsilon": 8.0,
+      "cells": 9,
+      "calibrated_r2_mean": 0.9476861638867784,
+      "calibrated_r2_min": 0.9083977747682429,
+      "calibrated_r2_max": 0.9647606255271775,
+      "omp_r2_mean": 0.9690295864322328,
+      "gap_mean": 0.021343422545454196,
+      "gap_max": 0.06457314281614346,
+      "cells_within_002": 5
+    }
+  ],
+  "cross_context_summary": [
+    {
+      "index": 0,
+      "mode": "leave_one_context_out",
+      "epsilon": 5.0,
+      "mean": 0.963132518650204,
+      "min": 0.930623424097195,
+      "max": 0.981209946735123
+    },
+    {
+      "index": 1,
+      "mode": "leave_one_context_out",
+      "epsilon": 8.0,
+      "mean": 0.9587724201136714,
+      "min": 0.9252107103109881,
+      "max": 0.9742653827951093
+    },
+    {
+      "index": 2,
+      "mode": "single_source",
+      "epsilon": 5.0,
+      "mean": 0.963060685915251,
+      "min": 0.9251068347907996,
+      "max": 0.9828214022531235
+    },
+    {
+      "index": 3,
+      "mode": "single_source",
+      "epsilon": 8.0,
+      "mean": 0.9590279035827612,
+      "min": 0.9238048510625023,
+      "max": 0.9779881262366255
+    }
+  ]
+}

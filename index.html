@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Experiments designed/conceived by Vijay Erramilli. Code written by Vijay Erramilli and Codex. -->
+<!-- Experiments designed/concieved by Vijay Erramilli. Code written by Vijay Erramilli and Codex -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,9 +9,8 @@
     <meta name="author" content="Vijay Erramilli">
     <meta name="citation_title" content="Mechanistic Tomography: Designed Measurement for Control-Oriented Interpretability">
     <meta name="citation_author" content="Vijay Erramilli">
-    <meta name="citation_publication_date" content="2026/08/04">
-    <meta name="citation_doi" content="10.5281/zenodo.21797578">
-    <meta name="citation_pdf_url" content="https://kwisatzh.github.io/mechanistic-tomography/assets/mechanistic-tomography-v1.pdf">
+    <meta name="citation_publication_date" content="2026/08/06">
+    <meta name="citation_pdf_url" content="https://kwisatzh.github.io/mechanistic-tomography/assets/mechanistic-tomography-v2.pdf">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Mechanistic Tomography">
     <meta property="og:description" content="Designed Measurement for Control-Oriented Interpretability.">
@@ -28,6 +27,7 @@
         <div class="nav-links">
           <a href="#summary">Summary</a>
           <a href="#results">Results</a>
+          <a href="#artifacts">Artifacts</a>
           <a href="#citation">Citation</a>
         </div>
       </nav>
@@ -36,13 +36,14 @@
     <main id="top">
       <article>
         <header class="paper-header">
-          <p class="paper-type">Preprint, version 1.0 · August 4, 2026</p>
+          <p class="paper-type">Preprint, version 2.0 · August 6, 2026</p>
           <h1>Mechanistic Tomography</h1>
           <p class="subtitle">Designed Measurement for Control-Oriented Interpretability</p>
           <p class="author">Vijay Erramilli</p>
           <div class="paper-links" aria-label="Paper links">
-            <a class="primary-link" href="assets/mechanistic-tomography-v1.pdf">Read the PDF</a>
-            <a href="https://doi.org/10.5281/zenodo.21797578">DOI: 10.5281/zenodo.21797578</a>
+            <a class="primary-link" href="assets/mechanistic-tomography-v2.pdf">Read version 2</a>
+            <a href="https://doi.org/10.5281/zenodo.21797578">Archived version 1</a>
+            <a href="https://github.com/kwisatzh/mechanistic-tomography">Code and experiments</a>
           </div>
         </header>
 
@@ -87,7 +88,7 @@
             </li>
             <li>
               Experiments spanning a two-HMM control setting, planted sparse effects, Tracr,
-              and GPT-2-small on IOI.
+              GPT-2-small on IOI, and a held-out Qwen-2.5-7B response surface.
             </li>
           </ul>
         </section>
@@ -103,7 +104,7 @@
         </section>
 
         <section id="results">
-          <h2>Selected result</h2>
+          <h2>Selected results</h2>
           <figure>
             <img src="assets/nt-sample-efficiency.png" alt="Held-out recovery score versus number of aggregate measurements, showing sparse recovery above 0.9 with fewer than 32 measurements.">
             <figcaption>
@@ -112,6 +113,29 @@
               explicit when fewer interventions are sufficient.
             </figcaption>
           </figure>
+          <p>
+            On Qwen-2.5-7B, a calibrated additive map predicts a finite
+            refusal-response surface with held-out R² 0.9829. Pairwise lifting does not
+            improve held-out MAE: the estimated relative improvement is −0.29%, with a
+            paired bootstrap 95% interval of [−3.56%, 5.65%]. The result illustrates the
+            framework's stopping rule: use the richer family only when the measured
+            residual requires it.
+          </p>
+        </section>
+
+        <section id="artifacts">
+          <h2>Code and reproducibility</h2>
+          <p>
+            Version 2 releases all paper experiments, frozen result tables and measurements,
+            the manuscript source, and a public Qwen Colab notebook. The notebook's default
+            path reproduces the Qwen table without loading the model; an optional resumable
+            GPU path reruns the 401-action measurement surface.
+          </p>
+          <div class="paper-links" aria-label="Artifact links">
+            <a class="primary-link" href="https://github.com/kwisatzh/mechanistic-tomography/tree/main/experiments">Experiment guide</a>
+            <a href="https://github.com/kwisatzh/mechanistic-tomography/blob/main/experiments/qwen/notebooks/mechanistic_tomography_qwen_colab.ipynb">Qwen notebook</a>
+            <a href="https://github.com/kwisatzh/mechanistic-tomography/tree/main/paper/source">Paper source</a>
+          </div>
         </section>
 
         <section>
@@ -136,17 +160,17 @@
         <section id="citation">
           <h2>Citation</h2>
           <p>
-            Version 1.0 is preserved by Zenodo under a permanent DOI. An arXiv version is
-            forthcoming.
+            Version 2.0 is the current public manuscript. Version 1.0 is preserved by
+            Zenodo under a permanent DOI; an arXiv version is forthcoming.
           </p>
           <pre><code>@misc{erramilli2026mechanistic,
   title   = {Mechanistic Tomography: Designed Measurement
              for Control-Oriented Interpretability},
   author  = {Vijay Erramilli},
   year    = {2026},
-  version = {1.0},
-  doi     = {10.5281/zenodo.21797578},
-  url     = {https://doi.org/10.5281/zenodo.21797578}
+  version = {2.0},
+  url     = {https://kwisatzh.github.io/mechanistic-tomography/},
+  note    = {Version 1 archived at doi:10.5281/zenodo.21797578}
 }</code></pre>
         </section>
       </article>

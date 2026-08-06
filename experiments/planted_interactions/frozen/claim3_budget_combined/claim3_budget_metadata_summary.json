@@ -1,0 +1,52 @@
+{
+  "num_input_files": 13,
+  "input_files": [
+    "runs/claim3_budget_m112/claim3_results.csv",
+    "runs/claim3_budget_m128/claim3_results.csv",
+    "runs/claim3_budget_m16/claim3_results.csv",
+    "runs/claim3_budget_m192/claim3_results.csv",
+    "runs/claim3_budget_m24/claim3_results.csv",
+    "runs/claim3_budget_m256/claim3_results.csv",
+    "runs/claim3_budget_m32/claim3_results.csv",
+    "runs/claim3_budget_m48/claim3_results.csv",
+    "runs/claim3_budget_m56/claim3_results.csv",
+    "runs/claim3_budget_m64/claim3_results.csv",
+    "runs/claim3_budget_m72/claim3_results.csv",
+    "runs/claim3_budget_m80/claim3_results.csv",
+    "runs/claim3_budget_m96/claim3_results.csv"
+  ],
+  "n_components": 64,
+  "n_pairs": 2016,
+  "lifted_dim": 2080,
+  "support_k": 5,
+  "cs_heuristic": 30.153426301306318,
+  "exhaustive_pair_budget": 2016,
+  "budgets": [
+    16,
+    24,
+    32,
+    48,
+    56,
+    64,
+    72,
+    80,
+    96,
+    112,
+    128,
+    192,
+    256
+  ],
+  "epsilons": [
+    5.0,
+    8.0
+  ],
+  "methods": [
+    "finite_single",
+    "first_order_omp",
+    "lifted_omp",
+    "multigain_atp",
+    "raw_atp",
+    "scalar_cal_atp",
+    "subset_ridge"
+  ]
+}

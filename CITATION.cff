@@ -5,8 +5,12 @@ type: article
 authors:
   - family-names: Erramilli
     given-names: Vijay
-doi: 10.5281/zenodo.21797578
-url: https://doi.org/10.5281/zenodo.21797578
-version: "1.0"
-date-released: 2026-08-04
+url: https://kwisatzh.github.io/mechanistic-tomography/
+repository-code: https://github.com/kwisatzh/mechanistic-tomography
+version: "2.0"
+date-released: 2026-08-06
 license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21797578
+    description: Frozen archival record for version 1.0

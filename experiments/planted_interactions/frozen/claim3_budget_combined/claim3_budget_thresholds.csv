@@ -1,0 +1,15 @@
+epsilon,method,first_budget_r2_ge_0.95,first_budget_pair_ge_0.99,first_budget_both_ge_r2_0.95_pair_0.99,max_heldout_r2_mean,max_pair_topk_recall_mean
+5.0,finite_single,,,,0.6094748086174643,0.0
+5.0,first_order_omp,,,,0.7216421116262847,0.0
+5.0,lifted_omp,64.0,64.0,64.0,0.9982639545186145,1.0
+5.0,multigain_atp,,,,0.7216352465268866,0.0
+5.0,raw_atp,,,,0.7110977432560603,0.0
+5.0,scalar_cal_atp,,,,0.714454608390971,0.0
+5.0,subset_ridge,,,,0.6230899979086263,0.0
+8.0,finite_single,,,,0.3706016193233788,0.0
+8.0,first_order_omp,,,,0.4728525941494865,0.0
+8.0,lifted_omp,72.0,24.0,72.0,0.9983820404129741,1.0
+8.0,multigain_atp,,,,0.47284584924749645,0.0
+8.0,raw_atp,,,,0.4446383460007804,0.0
+8.0,scalar_cal_atp,,,,0.45524629040530035,0.0
+8.0,subset_ridge,,,,0.2839366134523274,0.0
