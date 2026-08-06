@@ -1,0 +1,5 @@
+numpy
+pandas
+matplotlib
+# Optional Tracr backend:
+# git+https://github.com/google-deepmind/tracr.git

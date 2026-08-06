@@ -1,0 +1,7 @@
+epsilon,method,first_hvp_budget_r2_ge_0.95,first_hvp_budget_pair_ge_0.99,first_hvp_budget_both_ge_r2_0.95_pair_0.99,max_heldout_r2_mean,max_pair_topk_recall_mean
+5.0,hvp_pairs_atp_main,1.0,1.0,1.0,0.9875174164202534,1.0
+5.0,hvp_pairs_finite_main,,1.0,,0.9009419681974468,1.0
+5.0,hvp_pairs_only,,1.0,,0.37477914506932053,1.0
+8.0,hvp_pairs_atp_main,1.0,1.0,1.0,0.9766471351826278,1.0
+8.0,hvp_pairs_finite_main,,1.0,,0.9253944800192028,1.0
+8.0,hvp_pairs_only,,1.0,,0.62669642996378,1.0

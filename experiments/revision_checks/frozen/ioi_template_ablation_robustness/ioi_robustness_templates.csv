@@ -1,0 +1,9 @@
+template_id,order,frame_id,lexical_description,template
+abba_t0,ABBA,t0,went/store/ring,"Then, {io} and {s} went to the store. {s} gave a ring to"
+baba_t0,BABA,t0,went/store/ring,"Then, {s} and {io} went to the store. {s} gave a ring to"
+abba_t1,ABBA,t1,fun/garden/drink,"Then, {io} and {s} had a lot of fun at the garden. {s} gave a drink to"
+baba_t1,BABA,t1,fun/garden/drink,"Then, {s} and {io} had a lot of fun at the garden. {s} gave a drink to"
+abba_t2,ABBA,t2,working/office/computer,"Then, {io} and {s} were working at the office. {s} decided to give a computer to"
+baba_t2,BABA,t2,working/office/computer,"Then, {s} and {io} were working at the office. {s} decided to give a computer to"
+abba_t3,ABBA,t3,thinking/station/necklace,"Then, {io} and {s} were thinking about going to the station. {s} wanted to give a necklace to"
+baba_t3,BABA,t3,thinking/station/necklace,"Then, {s} and {io} were thinking about going to the station. {s} wanted to give a necklace to"

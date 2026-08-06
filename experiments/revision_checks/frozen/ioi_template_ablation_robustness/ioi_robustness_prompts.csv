@@ -1,0 +1,1025 @@
+template_id,order,frame_id,prompt_idx,prompt,io_name,s_name,io_token,s_token
+abba_t0,ABBA,t0,0,"Then, Nancy and Daniel went to the store. Daniel gave a ring to",Nancy,Daniel,18496,7806
+abba_t0,ABBA,t0,1,"Then, Brian and Eric went to the store. Eric gave a ring to",Brian,Eric,8403,7651
+abba_t0,ABBA,t0,2,"Then, Emma and Mary went to the store. Mary gave a ring to",Emma,Mary,18966,5335
+abba_t0,ABBA,t0,3,"Then, Michael and Jacob went to the store. Jacob gave a ring to",Michael,Jacob,3899,12806
+abba_t0,ABBA,t0,4,"Then, Anna and Daniel went to the store. Daniel gave a ring to",Anna,Daniel,11735,7806
+abba_t0,ABBA,t0,5,"Then, Helen and Karen went to the store. Karen gave a ring to",Helen,Karen,22695,18678
+abba_t0,ABBA,t0,6,"Then, Jason and Jessica went to the store. Jessica gave a ring to",Jason,Jessica,8982,17352
+abba_t0,ABBA,t0,7,"Then, Anna and Laura went to the store. Laura gave a ring to",Anna,Laura,11735,16753
+abba_t0,ABBA,t0,8,"Then, Kevin and Eric went to the store. Eric gave a ring to",Kevin,Eric,7939,7651
+abba_t0,ABBA,t0,9,"Then, Helen and James went to the store. James gave a ring to",Helen,James,22695,3700
+abba_t0,ABBA,t0,10,"Then, Jacob and Tom went to the store. Tom gave a ring to",Jacob,Tom,12806,4186
+abba_t0,ABBA,t0,11,"Then, Jessica and Tom went to the store. Tom gave a ring to",Jessica,Tom,17352,4186
+abba_t0,ABBA,t0,12,"Then, Brian and Alice went to the store. Alice gave a ring to",Brian,Alice,8403,14862
+abba_t0,ABBA,t0,13,"Then, Lisa and Karen went to the store. Karen gave a ring to",Lisa,Karen,15378,18678
+abba_t0,ABBA,t0,14,"Then, Michael and Helen went to the store. Helen gave a ring to",Michael,Helen,3899,22695
+abba_t0,ABBA,t0,15,"Then, Scott and Steven went to the store. Steven gave a ring to",Scott,Steven,4746,8239
+abba_t0,ABBA,t0,16,"Then, Karen and Lisa went to the store. Lisa gave a ring to",Karen,Lisa,18678,15378
+abba_t0,ABBA,t0,17,"Then, Eric and Tom went to the store. Tom gave a ring to",Eric,Tom,7651,4186
+abba_t0,ABBA,t0,18,"Then, Jessica and Alice went to the store. Alice gave a ring to",Jessica,Alice,17352,14862
+abba_t0,ABBA,t0,19,"Then, Rachel and Bob went to the store. Bob gave a ring to",Rachel,Bob,15984,5811
+abba_t0,ABBA,t0,20,"Then, Eric and Nancy went to the store. Nancy gave a ring to",Eric,Nancy,7651,18496
+abba_t0,ABBA,t0,21,"Then, Susan and David went to the store. David gave a ring to",Susan,David,14919,3271
+abba_t0,ABBA,t0,22,"Then, Anna and Scott went to the store. Scott gave a ring to",Anna,Scott,11735,4746
+abba_t0,ABBA,t0,23,"Then, Alice and Laura went to the store. Laura gave a ring to",Alice,Laura,14862,16753
+abba_t0,ABBA,t0,24,"Then, Emma and David went to the store. David gave a ring to",Emma,David,18966,3271
+abba_t0,ABBA,t0,25,"Then, Lisa and Mark went to the store. Mark gave a ring to",Lisa,Mark,15378,2940
+abba_t0,ABBA,t0,26,"Then, Scott and Anna went to the store. Anna gave a ring to",Scott,Anna,4746,11735
+abba_t0,ABBA,t0,27,"Then, Robert and Nancy went to the store. Nancy gave a ring to",Robert,Nancy,5199,18496
+abba_t0,ABBA,t0,28,"Then, Jacob and Michael went to the store. Michael gave a ring to",Jacob,Michael,12806,3899
+abba_t0,ABBA,t0,29,"Then, Mary and Karen went to the store. Karen gave a ring to",Mary,Karen,5335,18678
+abba_t0,ABBA,t0,30,"Then, Helen and Scott went to the store. Scott gave a ring to",Helen,Scott,22695,4746
+abba_t0,ABBA,t0,31,"Then, Helen and John went to the store. John gave a ring to",Helen,John,22695,1757
+abba_t0,ABBA,t0,32,"Then, Bob and Rachel went to the store. Rachel gave a ring to",Bob,Rachel,5811,15984
+abba_t0,ABBA,t0,33,"Then, Jason and Daniel went to the store. Daniel gave a ring to",Jason,Daniel,8982,7806
+abba_t0,ABBA,t0,34,"Then, Steven and Jason went to the store. Jason gave a ring to",Steven,Jason,8239,8982
+abba_t0,ABBA,t0,35,"Then, Karen and Susan went to the store. Susan gave a ring to",Karen,Susan,18678,14919
+abba_t0,ABBA,t0,36,"Then, Mark and John went to the store. John gave a ring to",Mark,John,2940,1757
+abba_t0,ABBA,t0,37,"Then, Lisa and Anna went to the store. Anna gave a ring to",Lisa,Anna,15378,11735
+abba_t0,ABBA,t0,38,"Then, Jason and Nancy went to the store. Nancy gave a ring to",Jason,Nancy,8982,18496
+abba_t0,ABBA,t0,39,"Then, David and Emily went to the store. Emily gave a ring to",David,Emily,3271,17608
+abba_t0,ABBA,t0,40,"Then, Rachel and David went to the store. David gave a ring to",Rachel,David,15984,3271
+abba_t0,ABBA,t0,41,"Then, Steven and Nancy went to the store. Nancy gave a ring to",Steven,Nancy,8239,18496
+abba_t0,ABBA,t0,42,"Then, Bob and James went to the store. James gave a ring to",Bob,James,5811,3700
+abba_t0,ABBA,t0,43,"Then, Helen and Kevin went to the store. Kevin gave a ring to",Helen,Kevin,22695,7939
+abba_t0,ABBA,t0,44,"Then, Emily and Karen went to the store. Karen gave a ring to",Emily,Karen,17608,18678
+abba_t0,ABBA,t0,45,"Then, Tom and Karen went to the store. Karen gave a ring to",Tom,Karen,4186,18678
+abba_t0,ABBA,t0,46,"Then, Scott and Robert went to the store. Robert gave a ring to",Scott,Robert,4746,5199
+abba_t0,ABBA,t0,47,"Then, Bob and David went to the store. David gave a ring to",Bob,David,5811,3271
+abba_t0,ABBA,t0,48,"Then, Eric and Jacob went to the store. Jacob gave a ring to",Eric,Jacob,7651,12806
+abba_t0,ABBA,t0,49,"Then, Helen and Anna went to the store. Anna gave a ring to",Helen,Anna,22695,11735
+abba_t0,ABBA,t0,50,"Then, Alice and Jessica went to the store. Jessica gave a ring to",Alice,Jessica,14862,17352
+abba_t0,ABBA,t0,51,"Then, Scott and Jessica went to the store. Jessica gave a ring to",Scott,Jessica,4746,17352
+abba_t0,ABBA,t0,52,"Then, Steven and Alice went to the store. Alice gave a ring to",Steven,Alice,8239,14862
+abba_t0,ABBA,t0,53,"Then, Scott and David went to the store. David gave a ring to",Scott,David,4746,3271
+abba_t0,ABBA,t0,54,"Then, Jason and Helen went to the store. Helen gave a ring to",Jason,Helen,8982,22695
+abba_t0,ABBA,t0,55,"Then, Scott and James went to the store. James gave a ring to",Scott,James,4746,3700
+abba_t0,ABBA,t0,56,"Then, Scott and Kevin went to the store. Kevin gave a ring to",Scott,Kevin,4746,7939
+abba_t0,ABBA,t0,57,"Then, Jessica and Robert went to the store. Robert gave a ring to",Jessica,Robert,17352,5199
+abba_t0,ABBA,t0,58,"Then, Bob and Lisa went to the store. Lisa gave a ring to",Bob,Lisa,5811,15378
+abba_t0,ABBA,t0,59,"Then, Karen and Daniel went to the store. Daniel gave a ring to",Karen,Daniel,18678,7806
+abba_t0,ABBA,t0,60,"Then, David and Kevin went to the store. Kevin gave a ring to",David,Kevin,3271,7939
+abba_t0,ABBA,t0,61,"Then, Emily and Jessica went to the store. Jessica gave a ring to",Emily,Jessica,17608,17352
+abba_t0,ABBA,t0,62,"Then, Sarah and James went to the store. James gave a ring to",Sarah,James,10490,3700
+abba_t0,ABBA,t0,63,"Then, Jason and Sarah went to the store. Sarah gave a ring to",Jason,Sarah,8982,10490
+abba_t0,ABBA,t0,64,"Then, Mary and Lisa went to the store. Lisa gave a ring to",Mary,Lisa,5335,15378
+abba_t0,ABBA,t0,65,"Then, Susan and Michael went to the store. Michael gave a ring to",Susan,Michael,14919,3899
+abba_t0,ABBA,t0,66,"Then, Anna and Bob went to the store. Bob gave a ring to",Anna,Bob,11735,5811
+abba_t0,ABBA,t0,67,"Then, Bob and Susan went to the store. Susan gave a ring to",Bob,Susan,5811,14919
+abba_t0,ABBA,t0,68,"Then, Brian and Tom went to the store. Tom gave a ring to",Brian,Tom,8403,4186
+abba_t0,ABBA,t0,69,"Then, Helen and Mary went to the store. Mary gave a ring to",Helen,Mary,22695,5335
+abba_t0,ABBA,t0,70,"Then, Jason and Bob went to the store. Bob gave a ring to",Jason,Bob,8982,5811
+abba_t0,ABBA,t0,71,"Then, Eric and Steven went to the store. Steven gave a ring to",Eric,Steven,7651,8239
+abba_t0,ABBA,t0,72,"Then, Helen and Jason went to the store. Jason gave a ring to",Helen,Jason,22695,8982
+abba_t0,ABBA,t0,73,"Then, Scott and Susan went to the store. Susan gave a ring to",Scott,Susan,4746,14919
+abba_t0,ABBA,t0,74,"Then, Daniel and Jason went to the store. Jason gave a ring to",Daniel,Jason,7806,8982
+abba_t0,ABBA,t0,75,"Then, Steven and Jacob went to the store. Jacob gave a ring to",Steven,Jacob,8239,12806
+abba_t0,ABBA,t0,76,"Then, Karen and Emily went to the store. Emily gave a ring to",Karen,Emily,18678,17608
+abba_t0,ABBA,t0,77,"Then, Nancy and James went to the store. James gave a ring to",Nancy,James,18496,3700
+abba_t0,ABBA,t0,78,"Then, Eric and Susan went to the store. Susan gave a ring to",Eric,Susan,7651,14919
+abba_t0,ABBA,t0,79,"Then, Kevin and Jason went to the store. Jason gave a ring to",Kevin,Jason,7939,8982
+abba_t0,ABBA,t0,80,"Then, Emma and Kevin went to the store. Kevin gave a ring to",Emma,Kevin,18966,7939
+abba_t0,ABBA,t0,81,"Then, Michael and Robert went to the store. Robert gave a ring to",Michael,Robert,3899,5199
+abba_t0,ABBA,t0,82,"Then, Anna and Susan went to the store. Susan gave a ring to",Anna,Susan,11735,14919
+abba_t0,ABBA,t0,83,"Then, Mark and Steven went to the store. Steven gave a ring to",Mark,Steven,2940,8239
+abba_t0,ABBA,t0,84,"Then, Laura and Bob went to the store. Bob gave a ring to",Laura,Bob,16753,5811
+abba_t0,ABBA,t0,85,"Then, David and Lisa went to the store. Lisa gave a ring to",David,Lisa,3271,15378
+abba_t0,ABBA,t0,86,"Then, Alice and Anna went to the store. Anna gave a ring to",Alice,Anna,14862,11735
+abba_t0,ABBA,t0,87,"Then, Kevin and Mark went to the store. Mark gave a ring to",Kevin,Mark,7939,2940
+abba_t0,ABBA,t0,88,"Then, David and Nancy went to the store. Nancy gave a ring to",David,Nancy,3271,18496
+abba_t0,ABBA,t0,89,"Then, James and Emily went to the store. Emily gave a ring to",James,Emily,3700,17608
+abba_t0,ABBA,t0,90,"Then, John and Rachel went to the store. Rachel gave a ring to",John,Rachel,1757,15984
+abba_t0,ABBA,t0,91,"Then, Michael and Alice went to the store. Alice gave a ring to",Michael,Alice,3899,14862
+abba_t0,ABBA,t0,92,"Then, Steven and Emily went to the store. Emily gave a ring to",Steven,Emily,8239,17608
+abba_t0,ABBA,t0,93,"Then, Laura and Karen went to the store. Karen gave a ring to",Laura,Karen,16753,18678
+abba_t0,ABBA,t0,94,"Then, Sarah and David went to the store. David gave a ring to",Sarah,David,10490,3271
+abba_t0,ABBA,t0,95,"Then, Emma and Jason went to the store. Jason gave a ring to",Emma,Jason,18966,8982
+abba_t0,ABBA,t0,96,"Then, Mary and Alice went to the store. Alice gave a ring to",Mary,Alice,5335,14862
+abba_t0,ABBA,t0,97,"Then, Karen and Tom went to the store. Tom gave a ring to",Karen,Tom,18678,4186
+abba_t0,ABBA,t0,98,"Then, Nancy and Steven went to the store. Steven gave a ring to",Nancy,Steven,18496,8239
+abba_t0,ABBA,t0,99,"Then, Emily and Mary went to the store. Mary gave a ring to",Emily,Mary,17608,5335
+abba_t0,ABBA,t0,100,"Then, Jason and Kevin went to the store. Kevin gave a ring to",Jason,Kevin,8982,7939
+abba_t0,ABBA,t0,101,"Then, Mark and Helen went to the store. Helen gave a ring to",Mark,Helen,2940,22695
+abba_t0,ABBA,t0,102,"Then, Lisa and Susan went to the store. Susan gave a ring to",Lisa,Susan,15378,14919
+abba_t0,ABBA,t0,103,"Then, Bob and John went to the store. John gave a ring to",Bob,John,5811,1757
+abba_t0,ABBA,t0,104,"Then, Alice and Mark went to the store. Mark gave a ring to",Alice,Mark,14862,2940
+abba_t0,ABBA,t0,105,"Then, James and Lisa went to the store. Lisa gave a ring to",James,Lisa,3700,15378
+abba_t0,ABBA,t0,106,"Then, Alice and Daniel went to the store. Daniel gave a ring to",Alice,Daniel,14862,7806
+abba_t0,ABBA,t0,107,"Then, Bob and Laura went to the store. Laura gave a ring to",Bob,Laura,5811,16753
+abba_t0,ABBA,t0,108,"Then, Jason and Alice went to the store. Alice gave a ring to",Jason,Alice,8982,14862
+abba_t0,ABBA,t0,109,"Then, John and James went to the store. James gave a ring to",John,James,1757,3700
+abba_t0,ABBA,t0,110,"Then, Sarah and Steven went to the store. Steven gave a ring to",Sarah,Steven,10490,8239
+abba_t0,ABBA,t0,111,"Then, James and Rachel went to the store. Rachel gave a ring to",James,Rachel,3700,15984
+abba_t0,ABBA,t0,112,"Then, Karen and Mary went to the store. Mary gave a ring to",Karen,Mary,18678,5335
+abba_t0,ABBA,t0,113,"Then, Helen and Susan went to the store. Susan gave a ring to",Helen,Susan,22695,14919
+abba_t0,ABBA,t0,114,"Then, John and Scott went to the store. Scott gave a ring to",John,Scott,1757,4746
+abba_t0,ABBA,t0,115,"Then, Emma and Lisa went to the store. Lisa gave a ring to",Emma,Lisa,18966,15378
+abba_t0,ABBA,t0,116,"Then, Alice and Jason went to the store. Jason gave a ring to",Alice,Jason,14862,8982
+abba_t0,ABBA,t0,117,"Then, Michael and Bob went to the store. Bob gave a ring to",Michael,Bob,3899,5811
+abba_t0,ABBA,t0,118,"Then, Emily and Bob went to the store. Bob gave a ring to",Emily,Bob,17608,5811
+abba_t0,ABBA,t0,119,"Then, Mark and Jessica went to the store. Jessica gave a ring to",Mark,Jessica,2940,17352
+abba_t0,ABBA,t0,120,"Then, Laura and Emma went to the store. Emma gave a ring to",Laura,Emma,16753,18966
+abba_t0,ABBA,t0,121,"Then, Sarah and Mary went to the store. Mary gave a ring to",Sarah,Mary,10490,5335
+abba_t0,ABBA,t0,122,"Then, Jacob and Robert went to the store. Robert gave a ring to",Jacob,Robert,12806,5199
+abba_t0,ABBA,t0,123,"Then, Alice and Steven went to the store. Steven gave a ring to",Alice,Steven,14862,8239
+abba_t0,ABBA,t0,124,"Then, Daniel and James went to the store. James gave a ring to",Daniel,James,7806,3700
+abba_t0,ABBA,t0,125,"Then, Michael and Laura went to the store. Laura gave a ring to",Michael,Laura,3899,16753
+abba_t0,ABBA,t0,126,"Then, Eric and Rachel went to the store. Rachel gave a ring to",Eric,Rachel,7651,15984
+abba_t0,ABBA,t0,127,"Then, Anna and Jason went to the store. Jason gave a ring to",Anna,Jason,11735,8982
+baba_t0,BABA,t0,0,"Then, Daniel and Nancy went to the store. Daniel gave a ring to",Nancy,Daniel,18496,7806
+baba_t0,BABA,t0,1,"Then, Eric and Brian went to the store. Eric gave a ring to",Brian,Eric,8403,7651
+baba_t0,BABA,t0,2,"Then, Mary and Emma went to the store. Mary gave a ring to",Emma,Mary,18966,5335
+baba_t0,BABA,t0,3,"Then, Jacob and Michael went to the store. Jacob gave a ring to",Michael,Jacob,3899,12806
+baba_t0,BABA,t0,4,"Then, Daniel and Anna went to the store. Daniel gave a ring to",Anna,Daniel,11735,7806
+baba_t0,BABA,t0,5,"Then, Karen and Helen went to the store. Karen gave a ring to",Helen,Karen,22695,18678
+baba_t0,BABA,t0,6,"Then, Jessica and Jason went to the store. Jessica gave a ring to",Jason,Jessica,8982,17352
+baba_t0,BABA,t0,7,"Then, Laura and Anna went to the store. Laura gave a ring to",Anna,Laura,11735,16753
+baba_t0,BABA,t0,8,"Then, Eric and Kevin went to the store. Eric gave a ring to",Kevin,Eric,7939,7651
+baba_t0,BABA,t0,9,"Then, James and Helen went to the store. James gave a ring to",Helen,James,22695,3700
+baba_t0,BABA,t0,10,"Then, Tom and Jacob went to the store. Tom gave a ring to",Jacob,Tom,12806,4186
+baba_t0,BABA,t0,11,"Then, Tom and Jessica went to the store. Tom gave a ring to",Jessica,Tom,17352,4186
+baba_t0,BABA,t0,12,"Then, Alice and Brian went to the store. Alice gave a ring to",Brian,Alice,8403,14862
+baba_t0,BABA,t0,13,"Then, Karen and Lisa went to the store. Karen gave a ring to",Lisa,Karen,15378,18678
+baba_t0,BABA,t0,14,"Then, Helen and Michael went to the store. Helen gave a ring to",Michael,Helen,3899,22695
+baba_t0,BABA,t0,15,"Then, Steven and Scott went to the store. Steven gave a ring to",Scott,Steven,4746,8239
+baba_t0,BABA,t0,16,"Then, Lisa and Karen went to the store. Lisa gave a ring to",Karen,Lisa,18678,15378
+baba_t0,BABA,t0,17,"Then, Tom and Eric went to the store. Tom gave a ring to",Eric,Tom,7651,4186
+baba_t0,BABA,t0,18,"Then, Alice and Jessica went to the store. Alice gave a ring to",Jessica,Alice,17352,14862
+baba_t0,BABA,t0,19,"Then, Bob and Rachel went to the store. Bob gave a ring to",Rachel,Bob,15984,5811
+baba_t0,BABA,t0,20,"Then, Nancy and Eric went to the store. Nancy gave a ring to",Eric,Nancy,7651,18496
+baba_t0,BABA,t0,21,"Then, David and Susan went to the store. David gave a ring to",Susan,David,14919,3271
+baba_t0,BABA,t0,22,"Then, Scott and Anna went to the store. Scott gave a ring to",Anna,Scott,11735,4746
+baba_t0,BABA,t0,23,"Then, Laura and Alice went to the store. Laura gave a ring to",Alice,Laura,14862,16753
+baba_t0,BABA,t0,24,"Then, David and Emma went to the store. David gave a ring to",Emma,David,18966,3271
+baba_t0,BABA,t0,25,"Then, Mark and Lisa went to the store. Mark gave a ring to",Lisa,Mark,15378,2940
+baba_t0,BABA,t0,26,"Then, Anna and Scott went to the store. Anna gave a ring to",Scott,Anna,4746,11735
+baba_t0,BABA,t0,27,"Then, Nancy and Robert went to the store. Nancy gave a ring to",Robert,Nancy,5199,18496
+baba_t0,BABA,t0,28,"Then, Michael and Jacob went to the store. Michael gave a ring to",Jacob,Michael,12806,3899
+baba_t0,BABA,t0,29,"Then, Karen and Mary went to the store. Karen gave a ring to",Mary,Karen,5335,18678
+baba_t0,BABA,t0,30,"Then, Scott and Helen went to the store. Scott gave a ring to",Helen,Scott,22695,4746
+baba_t0,BABA,t0,31,"Then, John and Helen went to the store. John gave a ring to",Helen,John,22695,1757
+baba_t0,BABA,t0,32,"Then, Rachel and Bob went to the store. Rachel gave a ring to",Bob,Rachel,5811,15984
+baba_t0,BABA,t0,33,"Then, Daniel and Jason went to the store. Daniel gave a ring to",Jason,Daniel,8982,7806
+baba_t0,BABA,t0,34,"Then, Jason and Steven went to the store. Jason gave a ring to",Steven,Jason,8239,8982
+baba_t0,BABA,t0,35,"Then, Susan and Karen went to the store. Susan gave a ring to",Karen,Susan,18678,14919
+baba_t0,BABA,t0,36,"Then, John and Mark went to the store. John gave a ring to",Mark,John,2940,1757
+baba_t0,BABA,t0,37,"Then, Anna and Lisa went to the store. Anna gave a ring to",Lisa,Anna,15378,11735
+baba_t0,BABA,t0,38,"Then, Nancy and Jason went to the store. Nancy gave a ring to",Jason,Nancy,8982,18496
+baba_t0,BABA,t0,39,"Then, Emily and David went to the store. Emily gave a ring to",David,Emily,3271,17608
+baba_t0,BABA,t0,40,"Then, David and Rachel went to the store. David gave a ring to",Rachel,David,15984,3271
+baba_t0,BABA,t0,41,"Then, Nancy and Steven went to the store. Nancy gave a ring to",Steven,Nancy,8239,18496
+baba_t0,BABA,t0,42,"Then, James and Bob went to the store. James gave a ring to",Bob,James,5811,3700
+baba_t0,BABA,t0,43,"Then, Kevin and Helen went to the store. Kevin gave a ring to",Helen,Kevin,22695,7939
+baba_t0,BABA,t0,44,"Then, Karen and Emily went to the store. Karen gave a ring to",Emily,Karen,17608,18678
+baba_t0,BABA,t0,45,"Then, Karen and Tom went to the store. Karen gave a ring to",Tom,Karen,4186,18678
+baba_t0,BABA,t0,46,"Then, Robert and Scott went to the store. Robert gave a ring to",Scott,Robert,4746,5199
+baba_t0,BABA,t0,47,"Then, David and Bob went to the store. David gave a ring to",Bob,David,5811,3271
+baba_t0,BABA,t0,48,"Then, Jacob and Eric went to the store. Jacob gave a ring to",Eric,Jacob,7651,12806
+baba_t0,BABA,t0,49,"Then, Anna and Helen went to the store. Anna gave a ring to",Helen,Anna,22695,11735
+baba_t0,BABA,t0,50,"Then, Jessica and Alice went to the store. Jessica gave a ring to",Alice,Jessica,14862,17352
+baba_t0,BABA,t0,51,"Then, Jessica and Scott went to the store. Jessica gave a ring to",Scott,Jessica,4746,17352
+baba_t0,BABA,t0,52,"Then, Alice and Steven went to the store. Alice gave a ring to",Steven,Alice,8239,14862
+baba_t0,BABA,t0,53,"Then, David and Scott went to the store. David gave a ring to",Scott,David,4746,3271
+baba_t0,BABA,t0,54,"Then, Helen and Jason went to the store. Helen gave a ring to",Jason,Helen,8982,22695
+baba_t0,BABA,t0,55,"Then, James and Scott went to the store. James gave a ring to",Scott,James,4746,3700
+baba_t0,BABA,t0,56,"Then, Kevin and Scott went to the store. Kevin gave a ring to",Scott,Kevin,4746,7939
+baba_t0,BABA,t0,57,"Then, Robert and Jessica went to the store. Robert gave a ring to",Jessica,Robert,17352,5199
+baba_t0,BABA,t0,58,"Then, Lisa and Bob went to the store. Lisa gave a ring to",Bob,Lisa,5811,15378
+baba_t0,BABA,t0,59,"Then, Daniel and Karen went to the store. Daniel gave a ring to",Karen,Daniel,18678,7806
+baba_t0,BABA,t0,60,"Then, Kevin and David went to the store. Kevin gave a ring to",David,Kevin,3271,7939
+baba_t0,BABA,t0,61,"Then, Jessica and Emily went to the store. Jessica gave a ring to",Emily,Jessica,17608,17352
+baba_t0,BABA,t0,62,"Then, James and Sarah went to the store. James gave a ring to",Sarah,James,10490,3700
+baba_t0,BABA,t0,63,"Then, Sarah and Jason went to the store. Sarah gave a ring to",Jason,Sarah,8982,10490
+baba_t0,BABA,t0,64,"Then, Lisa and Mary went to the store. Lisa gave a ring to",Mary,Lisa,5335,15378
+baba_t0,BABA,t0,65,"Then, Michael and Susan went to the store. Michael gave a ring to",Susan,Michael,14919,3899
+baba_t0,BABA,t0,66,"Then, Bob and Anna went to the store. Bob gave a ring to",Anna,Bob,11735,5811
+baba_t0,BABA,t0,67,"Then, Susan and Bob went to the store. Susan gave a ring to",Bob,Susan,5811,14919
+baba_t0,BABA,t0,68,"Then, Tom and Brian went to the store. Tom gave a ring to",Brian,Tom,8403,4186
+baba_t0,BABA,t0,69,"Then, Mary and Helen went to the store. Mary gave a ring to",Helen,Mary,22695,5335
+baba_t0,BABA,t0,70,"Then, Bob and Jason went to the store. Bob gave a ring to",Jason,Bob,8982,5811
+baba_t0,BABA,t0,71,"Then, Steven and Eric went to the store. Steven gave a ring to",Eric,Steven,7651,8239
+baba_t0,BABA,t0,72,"Then, Jason and Helen went to the store. Jason gave a ring to",Helen,Jason,22695,8982
+baba_t0,BABA,t0,73,"Then, Susan and Scott went to the store. Susan gave a ring to",Scott,Susan,4746,14919
+baba_t0,BABA,t0,74,"Then, Jason and Daniel went to the store. Jason gave a ring to",Daniel,Jason,7806,8982
+baba_t0,BABA,t0,75,"Then, Jacob and Steven went to the store. Jacob gave a ring to",Steven,Jacob,8239,12806
+baba_t0,BABA,t0,76,"Then, Emily and Karen went to the store. Emily gave a ring to",Karen,Emily,18678,17608
+baba_t0,BABA,t0,77,"Then, James and Nancy went to the store. James gave a ring to",Nancy,James,18496,3700
+baba_t0,BABA,t0,78,"Then, Susan and Eric went to the store. Susan gave a ring to",Eric,Susan,7651,14919
+baba_t0,BABA,t0,79,"Then, Jason and Kevin went to the store. Jason gave a ring to",Kevin,Jason,7939,8982
+baba_t0,BABA,t0,80,"Then, Kevin and Emma went to the store. Kevin gave a ring to",Emma,Kevin,18966,7939
+baba_t0,BABA,t0,81,"Then, Robert and Michael went to the store. Robert gave a ring to",Michael,Robert,3899,5199
+baba_t0,BABA,t0,82,"Then, Susan and Anna went to the store. Susan gave a ring to",Anna,Susan,11735,14919
+baba_t0,BABA,t0,83,"Then, Steven and Mark went to the store. Steven gave a ring to",Mark,Steven,2940,8239
+baba_t0,BABA,t0,84,"Then, Bob and Laura went to the store. Bob gave a ring to",Laura,Bob,16753,5811
+baba_t0,BABA,t0,85,"Then, Lisa and David went to the store. Lisa gave a ring to",David,Lisa,3271,15378
+baba_t0,BABA,t0,86,"Then, Anna and Alice went to the store. Anna gave a ring to",Alice,Anna,14862,11735
+baba_t0,BABA,t0,87,"Then, Mark and Kevin went to the store. Mark gave a ring to",Kevin,Mark,7939,2940
+baba_t0,BABA,t0,88,"Then, Nancy and David went to the store. Nancy gave a ring to",David,Nancy,3271,18496
+baba_t0,BABA,t0,89,"Then, Emily and James went to the store. Emily gave a ring to",James,Emily,3700,17608
+baba_t0,BABA,t0,90,"Then, Rachel and John went to the store. Rachel gave a ring to",John,Rachel,1757,15984
+baba_t0,BABA,t0,91,"Then, Alice and Michael went to the store. Alice gave a ring to",Michael,Alice,3899,14862
+baba_t0,BABA,t0,92,"Then, Emily and Steven went to the store. Emily gave a ring to",Steven,Emily,8239,17608
+baba_t0,BABA,t0,93,"Then, Karen and Laura went to the store. Karen gave a ring to",Laura,Karen,16753,18678
+baba_t0,BABA,t0,94,"Then, David and Sarah went to the store. David gave a ring to",Sarah,David,10490,3271
+baba_t0,BABA,t0,95,"Then, Jason and Emma went to the store. Jason gave a ring to",Emma,Jason,18966,8982
+baba_t0,BABA,t0,96,"Then, Alice and Mary went to the store. Alice gave a ring to",Mary,Alice,5335,14862
+baba_t0,BABA,t0,97,"Then, Tom and Karen went to the store. Tom gave a ring to",Karen,Tom,18678,4186
+baba_t0,BABA,t0,98,"Then, Steven and Nancy went to the store. Steven gave a ring to",Nancy,Steven,18496,8239
+baba_t0,BABA,t0,99,"Then, Mary and Emily went to the store. Mary gave a ring to",Emily,Mary,17608,5335
+baba_t0,BABA,t0,100,"Then, Kevin and Jason went to the store. Kevin gave a ring to",Jason,Kevin,8982,7939
+baba_t0,BABA,t0,101,"Then, Helen and Mark went to the store. Helen gave a ring to",Mark,Helen,2940,22695
+baba_t0,BABA,t0,102,"Then, Susan and Lisa went to the store. Susan gave a ring to",Lisa,Susan,15378,14919
+baba_t0,BABA,t0,103,"Then, John and Bob went to the store. John gave a ring to",Bob,John,5811,1757
+baba_t0,BABA,t0,104,"Then, Mark and Alice went to the store. Mark gave a ring to",Alice,Mark,14862,2940
+baba_t0,BABA,t0,105,"Then, Lisa and James went to the store. Lisa gave a ring to",James,Lisa,3700,15378
+baba_t0,BABA,t0,106,"Then, Daniel and Alice went to the store. Daniel gave a ring to",Alice,Daniel,14862,7806
+baba_t0,BABA,t0,107,"Then, Laura and Bob went to the store. Laura gave a ring to",Bob,Laura,5811,16753
+baba_t0,BABA,t0,108,"Then, Alice and Jason went to the store. Alice gave a ring to",Jason,Alice,8982,14862
+baba_t0,BABA,t0,109,"Then, James and John went to the store. James gave a ring to",John,James,1757,3700
+baba_t0,BABA,t0,110,"Then, Steven and Sarah went to the store. Steven gave a ring to",Sarah,Steven,10490,8239
+baba_t0,BABA,t0,111,"Then, Rachel and James went to the store. Rachel gave a ring to",James,Rachel,3700,15984
+baba_t0,BABA,t0,112,"Then, Mary and Karen went to the store. Mary gave a ring to",Karen,Mary,18678,5335
+baba_t0,BABA,t0,113,"Then, Susan and Helen went to the store. Susan gave a ring to",Helen,Susan,22695,14919
+baba_t0,BABA,t0,114,"Then, Scott and John went to the store. Scott gave a ring to",John,Scott,1757,4746
+baba_t0,BABA,t0,115,"Then, Lisa and Emma went to the store. Lisa gave a ring to",Emma,Lisa,18966,15378
+baba_t0,BABA,t0,116,"Then, Jason and Alice went to the store. Jason gave a ring to",Alice,Jason,14862,8982
+baba_t0,BABA,t0,117,"Then, Bob and Michael went to the store. Bob gave a ring to",Michael,Bob,3899,5811
+baba_t0,BABA,t0,118,"Then, Bob and Emily went to the store. Bob gave a ring to",Emily,Bob,17608,5811
+baba_t0,BABA,t0,119,"Then, Jessica and Mark went to the store. Jessica gave a ring to",Mark,Jessica,2940,17352
+baba_t0,BABA,t0,120,"Then, Emma and Laura went to the store. Emma gave a ring to",Laura,Emma,16753,18966
+baba_t0,BABA,t0,121,"Then, Mary and Sarah went to the store. Mary gave a ring to",Sarah,Mary,10490,5335
+baba_t0,BABA,t0,122,"Then, Robert and Jacob went to the store. Robert gave a ring to",Jacob,Robert,12806,5199
+baba_t0,BABA,t0,123,"Then, Steven and Alice went to the store. Steven gave a ring to",Alice,Steven,14862,8239
+baba_t0,BABA,t0,124,"Then, James and Daniel went to the store. James gave a ring to",Daniel,James,7806,3700
+baba_t0,BABA,t0,125,"Then, Laura and Michael went to the store. Laura gave a ring to",Michael,Laura,3899,16753
+baba_t0,BABA,t0,126,"Then, Rachel and Eric went to the store. Rachel gave a ring to",Eric,Rachel,7651,15984
+baba_t0,BABA,t0,127,"Then, Jason and Anna went to the store. Jason gave a ring to",Anna,Jason,11735,8982
+abba_t1,ABBA,t1,0,"Then, Nancy and Daniel had a lot of fun at the garden. Daniel gave a drink to",Nancy,Daniel,18496,7806
+abba_t1,ABBA,t1,1,"Then, Brian and Eric had a lot of fun at the garden. Eric gave a drink to",Brian,Eric,8403,7651
+abba_t1,ABBA,t1,2,"Then, Emma and Mary had a lot of fun at the garden. Mary gave a drink to",Emma,Mary,18966,5335
+abba_t1,ABBA,t1,3,"Then, Michael and Jacob had a lot of fun at the garden. Jacob gave a drink to",Michael,Jacob,3899,12806
+abba_t1,ABBA,t1,4,"Then, Anna and Daniel had a lot of fun at the garden. Daniel gave a drink to",Anna,Daniel,11735,7806
+abba_t1,ABBA,t1,5,"Then, Helen and Karen had a lot of fun at the garden. Karen gave a drink to",Helen,Karen,22695,18678
+abba_t1,ABBA,t1,6,"Then, Jason and Jessica had a lot of fun at the garden. Jessica gave a drink to",Jason,Jessica,8982,17352
+abba_t1,ABBA,t1,7,"Then, Anna and Laura had a lot of fun at the garden. Laura gave a drink to",Anna,Laura,11735,16753
+abba_t1,ABBA,t1,8,"Then, Kevin and Eric had a lot of fun at the garden. Eric gave a drink to",Kevin,Eric,7939,7651
+abba_t1,ABBA,t1,9,"Then, Helen and James had a lot of fun at the garden. James gave a drink to",Helen,James,22695,3700
+abba_t1,ABBA,t1,10,"Then, Jacob and Tom had a lot of fun at the garden. Tom gave a drink to",Jacob,Tom,12806,4186
+abba_t1,ABBA,t1,11,"Then, Jessica and Tom had a lot of fun at the garden. Tom gave a drink to",Jessica,Tom,17352,4186
+abba_t1,ABBA,t1,12,"Then, Brian and Alice had a lot of fun at the garden. Alice gave a drink to",Brian,Alice,8403,14862
+abba_t1,ABBA,t1,13,"Then, Lisa and Karen had a lot of fun at the garden. Karen gave a drink to",Lisa,Karen,15378,18678
+abba_t1,ABBA,t1,14,"Then, Michael and Helen had a lot of fun at the garden. Helen gave a drink to",Michael,Helen,3899,22695
+abba_t1,ABBA,t1,15,"Then, Scott and Steven had a lot of fun at the garden. Steven gave a drink to",Scott,Steven,4746,8239
+abba_t1,ABBA,t1,16,"Then, Karen and Lisa had a lot of fun at the garden. Lisa gave a drink to",Karen,Lisa,18678,15378
+abba_t1,ABBA,t1,17,"Then, Eric and Tom had a lot of fun at the garden. Tom gave a drink to",Eric,Tom,7651,4186
+abba_t1,ABBA,t1,18,"Then, Jessica and Alice had a lot of fun at the garden. Alice gave a drink to",Jessica,Alice,17352,14862
+abba_t1,ABBA,t1,19,"Then, Rachel and Bob had a lot of fun at the garden. Bob gave a drink to",Rachel,Bob,15984,5811
+abba_t1,ABBA,t1,20,"Then, Eric and Nancy had a lot of fun at the garden. Nancy gave a drink to",Eric,Nancy,7651,18496
+abba_t1,ABBA,t1,21,"Then, Susan and David had a lot of fun at the garden. David gave a drink to",Susan,David,14919,3271
+abba_t1,ABBA,t1,22,"Then, Anna and Scott had a lot of fun at the garden. Scott gave a drink to",Anna,Scott,11735,4746
+abba_t1,ABBA,t1,23,"Then, Alice and Laura had a lot of fun at the garden. Laura gave a drink to",Alice,Laura,14862,16753
+abba_t1,ABBA,t1,24,"Then, Emma and David had a lot of fun at the garden. David gave a drink to",Emma,David,18966,3271
+abba_t1,ABBA,t1,25,"Then, Lisa and Mark had a lot of fun at the garden. Mark gave a drink to",Lisa,Mark,15378,2940
+abba_t1,ABBA,t1,26,"Then, Scott and Anna had a lot of fun at the garden. Anna gave a drink to",Scott,Anna,4746,11735
+abba_t1,ABBA,t1,27,"Then, Robert and Nancy had a lot of fun at the garden. Nancy gave a drink to",Robert,Nancy,5199,18496
+abba_t1,ABBA,t1,28,"Then, Jacob and Michael had a lot of fun at the garden. Michael gave a drink to",Jacob,Michael,12806,3899
+abba_t1,ABBA,t1,29,"Then, Mary and Karen had a lot of fun at the garden. Karen gave a drink to",Mary,Karen,5335,18678
+abba_t1,ABBA,t1,30,"Then, Helen and Scott had a lot of fun at the garden. Scott gave a drink to",Helen,Scott,22695,4746
+abba_t1,ABBA,t1,31,"Then, Helen and John had a lot of fun at the garden. John gave a drink to",Helen,John,22695,1757
+abba_t1,ABBA,t1,32,"Then, Bob and Rachel had a lot of fun at the garden. Rachel gave a drink to",Bob,Rachel,5811,15984
+abba_t1,ABBA,t1,33,"Then, Jason and Daniel had a lot of fun at the garden. Daniel gave a drink to",Jason,Daniel,8982,7806
+abba_t1,ABBA,t1,34,"Then, Steven and Jason had a lot of fun at the garden. Jason gave a drink to",Steven,Jason,8239,8982
+abba_t1,ABBA,t1,35,"Then, Karen and Susan had a lot of fun at the garden. Susan gave a drink to",Karen,Susan,18678,14919
+abba_t1,ABBA,t1,36,"Then, Mark and John had a lot of fun at the garden. John gave a drink to",Mark,John,2940,1757
+abba_t1,ABBA,t1,37,"Then, Lisa and Anna had a lot of fun at the garden. Anna gave a drink to",Lisa,Anna,15378,11735
+abba_t1,ABBA,t1,38,"Then, Jason and Nancy had a lot of fun at the garden. Nancy gave a drink to",Jason,Nancy,8982,18496
+abba_t1,ABBA,t1,39,"Then, David and Emily had a lot of fun at the garden. Emily gave a drink to",David,Emily,3271,17608
+abba_t1,ABBA,t1,40,"Then, Rachel and David had a lot of fun at the garden. David gave a drink to",Rachel,David,15984,3271
+abba_t1,ABBA,t1,41,"Then, Steven and Nancy had a lot of fun at the garden. Nancy gave a drink to",Steven,Nancy,8239,18496
+abba_t1,ABBA,t1,42,"Then, Bob and James had a lot of fun at the garden. James gave a drink to",Bob,James,5811,3700
+abba_t1,ABBA,t1,43,"Then, Helen and Kevin had a lot of fun at the garden. Kevin gave a drink to",Helen,Kevin,22695,7939
+abba_t1,ABBA,t1,44,"Then, Emily and Karen had a lot of fun at the garden. Karen gave a drink to",Emily,Karen,17608,18678
+abba_t1,ABBA,t1,45,"Then, Tom and Karen had a lot of fun at the garden. Karen gave a drink to",Tom,Karen,4186,18678
+abba_t1,ABBA,t1,46,"Then, Scott and Robert had a lot of fun at the garden. Robert gave a drink to",Scott,Robert,4746,5199
+abba_t1,ABBA,t1,47,"Then, Bob and David had a lot of fun at the garden. David gave a drink to",Bob,David,5811,3271
+abba_t1,ABBA,t1,48,"Then, Eric and Jacob had a lot of fun at the garden. Jacob gave a drink to",Eric,Jacob,7651,12806
+abba_t1,ABBA,t1,49,"Then, Helen and Anna had a lot of fun at the garden. Anna gave a drink to",Helen,Anna,22695,11735
+abba_t1,ABBA,t1,50,"Then, Alice and Jessica had a lot of fun at the garden. Jessica gave a drink to",Alice,Jessica,14862,17352
+abba_t1,ABBA,t1,51,"Then, Scott and Jessica had a lot of fun at the garden. Jessica gave a drink to",Scott,Jessica,4746,17352
+abba_t1,ABBA,t1,52,"Then, Steven and Alice had a lot of fun at the garden. Alice gave a drink to",Steven,Alice,8239,14862
+abba_t1,ABBA,t1,53,"Then, Scott and David had a lot of fun at the garden. David gave a drink to",Scott,David,4746,3271
+abba_t1,ABBA,t1,54,"Then, Jason and Helen had a lot of fun at the garden. Helen gave a drink to",Jason,Helen,8982,22695
+abba_t1,ABBA,t1,55,"Then, Scott and James had a lot of fun at the garden. James gave a drink to",Scott,James,4746,3700
+abba_t1,ABBA,t1,56,"Then, Scott and Kevin had a lot of fun at the garden. Kevin gave a drink to",Scott,Kevin,4746,7939
+abba_t1,ABBA,t1,57,"Then, Jessica and Robert had a lot of fun at the garden. Robert gave a drink to",Jessica,Robert,17352,5199
+abba_t1,ABBA,t1,58,"Then, Bob and Lisa had a lot of fun at the garden. Lisa gave a drink to",Bob,Lisa,5811,15378
+abba_t1,ABBA,t1,59,"Then, Karen and Daniel had a lot of fun at the garden. Daniel gave a drink to",Karen,Daniel,18678,7806
+abba_t1,ABBA,t1,60,"Then, David and Kevin had a lot of fun at the garden. Kevin gave a drink to",David,Kevin,3271,7939
+abba_t1,ABBA,t1,61,"Then, Emily and Jessica had a lot of fun at the garden. Jessica gave a drink to",Emily,Jessica,17608,17352
+abba_t1,ABBA,t1,62,"Then, Sarah and James had a lot of fun at the garden. James gave a drink to",Sarah,James,10490,3700
+abba_t1,ABBA,t1,63,"Then, Jason and Sarah had a lot of fun at the garden. Sarah gave a drink to",Jason,Sarah,8982,10490
+abba_t1,ABBA,t1,64,"Then, Mary and Lisa had a lot of fun at the garden. Lisa gave a drink to",Mary,Lisa,5335,15378
+abba_t1,ABBA,t1,65,"Then, Susan and Michael had a lot of fun at the garden. Michael gave a drink to",Susan,Michael,14919,3899
+abba_t1,ABBA,t1,66,"Then, Anna and Bob had a lot of fun at the garden. Bob gave a drink to",Anna,Bob,11735,5811
+abba_t1,ABBA,t1,67,"Then, Bob and Susan had a lot of fun at the garden. Susan gave a drink to",Bob,Susan,5811,14919
+abba_t1,ABBA,t1,68,"Then, Brian and Tom had a lot of fun at the garden. Tom gave a drink to",Brian,Tom,8403,4186
+abba_t1,ABBA,t1,69,"Then, Helen and Mary had a lot of fun at the garden. Mary gave a drink to",Helen,Mary,22695,5335
+abba_t1,ABBA,t1,70,"Then, Jason and Bob had a lot of fun at the garden. Bob gave a drink to",Jason,Bob,8982,5811
+abba_t1,ABBA,t1,71,"Then, Eric and Steven had a lot of fun at the garden. Steven gave a drink to",Eric,Steven,7651,8239
+abba_t1,ABBA,t1,72,"Then, Helen and Jason had a lot of fun at the garden. Jason gave a drink to",Helen,Jason,22695,8982
+abba_t1,ABBA,t1,73,"Then, Scott and Susan had a lot of fun at the garden. Susan gave a drink to",Scott,Susan,4746,14919
+abba_t1,ABBA,t1,74,"Then, Daniel and Jason had a lot of fun at the garden. Jason gave a drink to",Daniel,Jason,7806,8982
+abba_t1,ABBA,t1,75,"Then, Steven and Jacob had a lot of fun at the garden. Jacob gave a drink to",Steven,Jacob,8239,12806
+abba_t1,ABBA,t1,76,"Then, Karen and Emily had a lot of fun at the garden. Emily gave a drink to",Karen,Emily,18678,17608
+abba_t1,ABBA,t1,77,"Then, Nancy and James had a lot of fun at the garden. James gave a drink to",Nancy,James,18496,3700
+abba_t1,ABBA,t1,78,"Then, Eric and Susan had a lot of fun at the garden. Susan gave a drink to",Eric,Susan,7651,14919
+abba_t1,ABBA,t1,79,"Then, Kevin and Jason had a lot of fun at the garden. Jason gave a drink to",Kevin,Jason,7939,8982
+abba_t1,ABBA,t1,80,"Then, Emma and Kevin had a lot of fun at the garden. Kevin gave a drink to",Emma,Kevin,18966,7939
+abba_t1,ABBA,t1,81,"Then, Michael and Robert had a lot of fun at the garden. Robert gave a drink to",Michael,Robert,3899,5199
+abba_t1,ABBA,t1,82,"Then, Anna and Susan had a lot of fun at the garden. Susan gave a drink to",Anna,Susan,11735,14919
+abba_t1,ABBA,t1,83,"Then, Mark and Steven had a lot of fun at the garden. Steven gave a drink to",Mark,Steven,2940,8239
+abba_t1,ABBA,t1,84,"Then, Laura and Bob had a lot of fun at the garden. Bob gave a drink to",Laura,Bob,16753,5811
+abba_t1,ABBA,t1,85,"Then, David and Lisa had a lot of fun at the garden. Lisa gave a drink to",David,Lisa,3271,15378
+abba_t1,ABBA,t1,86,"Then, Alice and Anna had a lot of fun at the garden. Anna gave a drink to",Alice,Anna,14862,11735
+abba_t1,ABBA,t1,87,"Then, Kevin and Mark had a lot of fun at the garden. Mark gave a drink to",Kevin,Mark,7939,2940
+abba_t1,ABBA,t1,88,"Then, David and Nancy had a lot of fun at the garden. Nancy gave a drink to",David,Nancy,3271,18496
+abba_t1,ABBA,t1,89,"Then, James and Emily had a lot of fun at the garden. Emily gave a drink to",James,Emily,3700,17608
+abba_t1,ABBA,t1,90,"Then, John and Rachel had a lot of fun at the garden. Rachel gave a drink to",John,Rachel,1757,15984
+abba_t1,ABBA,t1,91,"Then, Michael and Alice had a lot of fun at the garden. Alice gave a drink to",Michael,Alice,3899,14862
+abba_t1,ABBA,t1,92,"Then, Steven and Emily had a lot of fun at the garden. Emily gave a drink to",Steven,Emily,8239,17608
+abba_t1,ABBA,t1,93,"Then, Laura and Karen had a lot of fun at the garden. Karen gave a drink to",Laura,Karen,16753,18678
+abba_t1,ABBA,t1,94,"Then, Sarah and David had a lot of fun at the garden. David gave a drink to",Sarah,David,10490,3271
+abba_t1,ABBA,t1,95,"Then, Emma and Jason had a lot of fun at the garden. Jason gave a drink to",Emma,Jason,18966,8982
+abba_t1,ABBA,t1,96,"Then, Mary and Alice had a lot of fun at the garden. Alice gave a drink to",Mary,Alice,5335,14862
+abba_t1,ABBA,t1,97,"Then, Karen and Tom had a lot of fun at the garden. Tom gave a drink to",Karen,Tom,18678,4186
+abba_t1,ABBA,t1,98,"Then, Nancy and Steven had a lot of fun at the garden. Steven gave a drink to",Nancy,Steven,18496,8239
+abba_t1,ABBA,t1,99,"Then, Emily and Mary had a lot of fun at the garden. Mary gave a drink to",Emily,Mary,17608,5335
+abba_t1,ABBA,t1,100,"Then, Jason and Kevin had a lot of fun at the garden. Kevin gave a drink to",Jason,Kevin,8982,7939
+abba_t1,ABBA,t1,101,"Then, Mark and Helen had a lot of fun at the garden. Helen gave a drink to",Mark,Helen,2940,22695
+abba_t1,ABBA,t1,102,"Then, Lisa and Susan had a lot of fun at the garden. Susan gave a drink to",Lisa,Susan,15378,14919
+abba_t1,ABBA,t1,103,"Then, Bob and John had a lot of fun at the garden. John gave a drink to",Bob,John,5811,1757
+abba_t1,ABBA,t1,104,"Then, Alice and Mark had a lot of fun at the garden. Mark gave a drink to",Alice,Mark,14862,2940
+abba_t1,ABBA,t1,105,"Then, James and Lisa had a lot of fun at the garden. Lisa gave a drink to",James,Lisa,3700,15378
+abba_t1,ABBA,t1,106,"Then, Alice and Daniel had a lot of fun at the garden. Daniel gave a drink to",Alice,Daniel,14862,7806
+abba_t1,ABBA,t1,107,"Then, Bob and Laura had a lot of fun at the garden. Laura gave a drink to",Bob,Laura,5811,16753
+abba_t1,ABBA,t1,108,"Then, Jason and Alice had a lot of fun at the garden. Alice gave a drink to",Jason,Alice,8982,14862
+abba_t1,ABBA,t1,109,"Then, John and James had a lot of fun at the garden. James gave a drink to",John,James,1757,3700
+abba_t1,ABBA,t1,110,"Then, Sarah and Steven had a lot of fun at the garden. Steven gave a drink to",Sarah,Steven,10490,8239
+abba_t1,ABBA,t1,111,"Then, James and Rachel had a lot of fun at the garden. Rachel gave a drink to",James,Rachel,3700,15984
+abba_t1,ABBA,t1,112,"Then, Karen and Mary had a lot of fun at the garden. Mary gave a drink to",Karen,Mary,18678,5335
+abba_t1,ABBA,t1,113,"Then, Helen and Susan had a lot of fun at the garden. Susan gave a drink to",Helen,Susan,22695,14919
+abba_t1,ABBA,t1,114,"Then, John and Scott had a lot of fun at the garden. Scott gave a drink to",John,Scott,1757,4746
+abba_t1,ABBA,t1,115,"Then, Emma and Lisa had a lot of fun at the garden. Lisa gave a drink to",Emma,Lisa,18966,15378
+abba_t1,ABBA,t1,116,"Then, Alice and Jason had a lot of fun at the garden. Jason gave a drink to",Alice,Jason,14862,8982
+abba_t1,ABBA,t1,117,"Then, Michael and Bob had a lot of fun at the garden. Bob gave a drink to",Michael,Bob,3899,5811
+abba_t1,ABBA,t1,118,"Then, Emily and Bob had a lot of fun at the garden. Bob gave a drink to",Emily,Bob,17608,5811
+abba_t1,ABBA,t1,119,"Then, Mark and Jessica had a lot of fun at the garden. Jessica gave a drink to",Mark,Jessica,2940,17352
+abba_t1,ABBA,t1,120,"Then, Laura and Emma had a lot of fun at the garden. Emma gave a drink to",Laura,Emma,16753,18966
+abba_t1,ABBA,t1,121,"Then, Sarah and Mary had a lot of fun at the garden. Mary gave a drink to",Sarah,Mary,10490,5335
+abba_t1,ABBA,t1,122,"Then, Jacob and Robert had a lot of fun at the garden. Robert gave a drink to",Jacob,Robert,12806,5199
+abba_t1,ABBA,t1,123,"Then, Alice and Steven had a lot of fun at the garden. Steven gave a drink to",Alice,Steven,14862,8239
+abba_t1,ABBA,t1,124,"Then, Daniel and James had a lot of fun at the garden. James gave a drink to",Daniel,James,7806,3700
+abba_t1,ABBA,t1,125,"Then, Michael and Laura had a lot of fun at the garden. Laura gave a drink to",Michael,Laura,3899,16753
+abba_t1,ABBA,t1,126,"Then, Eric and Rachel had a lot of fun at the garden. Rachel gave a drink to",Eric,Rachel,7651,15984
+abba_t1,ABBA,t1,127,"Then, Anna and Jason had a lot of fun at the garden. Jason gave a drink to",Anna,Jason,11735,8982
+baba_t1,BABA,t1,0,"Then, Daniel and Nancy had a lot of fun at the garden. Daniel gave a drink to",Nancy,Daniel,18496,7806
+baba_t1,BABA,t1,1,"Then, Eric and Brian had a lot of fun at the garden. Eric gave a drink to",Brian,Eric,8403,7651
+baba_t1,BABA,t1,2,"Then, Mary and Emma had a lot of fun at the garden. Mary gave a drink to",Emma,Mary,18966,5335
+baba_t1,BABA,t1,3,"Then, Jacob and Michael had a lot of fun at the garden. Jacob gave a drink to",Michael,Jacob,3899,12806
+baba_t1,BABA,t1,4,"Then, Daniel and Anna had a lot of fun at the garden. Daniel gave a drink to",Anna,Daniel,11735,7806
+baba_t1,BABA,t1,5,"Then, Karen and Helen had a lot of fun at the garden. Karen gave a drink to",Helen,Karen,22695,18678
+baba_t1,BABA,t1,6,"Then, Jessica and Jason had a lot of fun at the garden. Jessica gave a drink to",Jason,Jessica,8982,17352
+baba_t1,BABA,t1,7,"Then, Laura and Anna had a lot of fun at the garden. Laura gave a drink to",Anna,Laura,11735,16753
+baba_t1,BABA,t1,8,"Then, Eric and Kevin had a lot of fun at the garden. Eric gave a drink to",Kevin,Eric,7939,7651
+baba_t1,BABA,t1,9,"Then, James and Helen had a lot of fun at the garden. James gave a drink to",Helen,James,22695,3700
+baba_t1,BABA,t1,10,"Then, Tom and Jacob had a lot of fun at the garden. Tom gave a drink to",Jacob,Tom,12806,4186
+baba_t1,BABA,t1,11,"Then, Tom and Jessica had a lot of fun at the garden. Tom gave a drink to",Jessica,Tom,17352,4186
+baba_t1,BABA,t1,12,"Then, Alice and Brian had a lot of fun at the garden. Alice gave a drink to",Brian,Alice,8403,14862
+baba_t1,BABA,t1,13,"Then, Karen and Lisa had a lot of fun at the garden. Karen gave a drink to",Lisa,Karen,15378,18678
+baba_t1,BABA,t1,14,"Then, Helen and Michael had a lot of fun at the garden. Helen gave a drink to",Michael,Helen,3899,22695
+baba_t1,BABA,t1,15,"Then, Steven and Scott had a lot of fun at the garden. Steven gave a drink to",Scott,Steven,4746,8239
+baba_t1,BABA,t1,16,"Then, Lisa and Karen had a lot of fun at the garden. Lisa gave a drink to",Karen,Lisa,18678,15378
+baba_t1,BABA,t1,17,"Then, Tom and Eric had a lot of fun at the garden. Tom gave a drink to",Eric,Tom,7651,4186
+baba_t1,BABA,t1,18,"Then, Alice and Jessica had a lot of fun at the garden. Alice gave a drink to",Jessica,Alice,17352,14862
+baba_t1,BABA,t1,19,"Then, Bob and Rachel had a lot of fun at the garden. Bob gave a drink to",Rachel,Bob,15984,5811
+baba_t1,BABA,t1,20,"Then, Nancy and Eric had a lot of fun at the garden. Nancy gave a drink to",Eric,Nancy,7651,18496
+baba_t1,BABA,t1,21,"Then, David and Susan had a lot of fun at the garden. David gave a drink to",Susan,David,14919,3271
+baba_t1,BABA,t1,22,"Then, Scott and Anna had a lot of fun at the garden. Scott gave a drink to",Anna,Scott,11735,4746
+baba_t1,BABA,t1,23,"Then, Laura and Alice had a lot of fun at the garden. Laura gave a drink to",Alice,Laura,14862,16753
+baba_t1,BABA,t1,24,"Then, David and Emma had a lot of fun at the garden. David gave a drink to",Emma,David,18966,3271
+baba_t1,BABA,t1,25,"Then, Mark and Lisa had a lot of fun at the garden. Mark gave a drink to",Lisa,Mark,15378,2940
+baba_t1,BABA,t1,26,"Then, Anna and Scott had a lot of fun at the garden. Anna gave a drink to",Scott,Anna,4746,11735
+baba_t1,BABA,t1,27,"Then, Nancy and Robert had a lot of fun at the garden. Nancy gave a drink to",Robert,Nancy,5199,18496
+baba_t1,BABA,t1,28,"Then, Michael and Jacob had a lot of fun at the garden. Michael gave a drink to",Jacob,Michael,12806,3899
+baba_t1,BABA,t1,29,"Then, Karen and Mary had a lot of fun at the garden. Karen gave a drink to",Mary,Karen,5335,18678
+baba_t1,BABA,t1,30,"Then, Scott and Helen had a lot of fun at the garden. Scott gave a drink to",Helen,Scott,22695,4746
+baba_t1,BABA,t1,31,"Then, John and Helen had a lot of fun at the garden. John gave a drink to",Helen,John,22695,1757
+baba_t1,BABA,t1,32,"Then, Rachel and Bob had a lot of fun at the garden. Rachel gave a drink to",Bob,Rachel,5811,15984
+baba_t1,BABA,t1,33,"Then, Daniel and Jason had a lot of fun at the garden. Daniel gave a drink to",Jason,Daniel,8982,7806
+baba_t1,BABA,t1,34,"Then, Jason and Steven had a lot of fun at the garden. Jason gave a drink to",Steven,Jason,8239,8982
+baba_t1,BABA,t1,35,"Then, Susan and Karen had a lot of fun at the garden. Susan gave a drink to",Karen,Susan,18678,14919
+baba_t1,BABA,t1,36,"Then, John and Mark had a lot of fun at the garden. John gave a drink to",Mark,John,2940,1757
+baba_t1,BABA,t1,37,"Then, Anna and Lisa had a lot of fun at the garden. Anna gave a drink to",Lisa,Anna,15378,11735
+baba_t1,BABA,t1,38,"Then, Nancy and Jason had a lot of fun at the garden. Nancy gave a drink to",Jason,Nancy,8982,18496
+baba_t1,BABA,t1,39,"Then, Emily and David had a lot of fun at the garden. Emily gave a drink to",David,Emily,3271,17608
+baba_t1,BABA,t1,40,"Then, David and Rachel had a lot of fun at the garden. David gave a drink to",Rachel,David,15984,3271
+baba_t1,BABA,t1,41,"Then, Nancy and Steven had a lot of fun at the garden. Nancy gave a drink to",Steven,Nancy,8239,18496
+baba_t1,BABA,t1,42,"Then, James and Bob had a lot of fun at the garden. James gave a drink to",Bob,James,5811,3700
+baba_t1,BABA,t1,43,"Then, Kevin and Helen had a lot of fun at the garden. Kevin gave a drink to",Helen,Kevin,22695,7939
+baba_t1,BABA,t1,44,"Then, Karen and Emily had a lot of fun at the garden. Karen gave a drink to",Emily,Karen,17608,18678
+baba_t1,BABA,t1,45,"Then, Karen and Tom had a lot of fun at the garden. Karen gave a drink to",Tom,Karen,4186,18678
+baba_t1,BABA,t1,46,"Then, Robert and Scott had a lot of fun at the garden. Robert gave a drink to",Scott,Robert,4746,5199
+baba_t1,BABA,t1,47,"Then, David and Bob had a lot of fun at the garden. David gave a drink to",Bob,David,5811,3271
+baba_t1,BABA,t1,48,"Then, Jacob and Eric had a lot of fun at the garden. Jacob gave a drink to",Eric,Jacob,7651,12806
+baba_t1,BABA,t1,49,"Then, Anna and Helen had a lot of fun at the garden. Anna gave a drink to",Helen,Anna,22695,11735
+baba_t1,BABA,t1,50,"Then, Jessica and Alice had a lot of fun at the garden. Jessica gave a drink to",Alice,Jessica,14862,17352
+baba_t1,BABA,t1,51,"Then, Jessica and Scott had a lot of fun at the garden. Jessica gave a drink to",Scott,Jessica,4746,17352
+baba_t1,BABA,t1,52,"Then, Alice and Steven had a lot of fun at the garden. Alice gave a drink to",Steven,Alice,8239,14862
+baba_t1,BABA,t1,53,"Then, David and Scott had a lot of fun at the garden. David gave a drink to",Scott,David,4746,3271
+baba_t1,BABA,t1,54,"Then, Helen and Jason had a lot of fun at the garden. Helen gave a drink to",Jason,Helen,8982,22695
+baba_t1,BABA,t1,55,"Then, James and Scott had a lot of fun at the garden. James gave a drink to",Scott,James,4746,3700
+baba_t1,BABA,t1,56,"Then, Kevin and Scott had a lot of fun at the garden. Kevin gave a drink to",Scott,Kevin,4746,7939
+baba_t1,BABA,t1,57,"Then, Robert and Jessica had a lot of fun at the garden. Robert gave a drink to",Jessica,Robert,17352,5199
+baba_t1,BABA,t1,58,"Then, Lisa and Bob had a lot of fun at the garden. Lisa gave a drink to",Bob,Lisa,5811,15378
+baba_t1,BABA,t1,59,"Then, Daniel and Karen had a lot of fun at the garden. Daniel gave a drink to",Karen,Daniel,18678,7806
+baba_t1,BABA,t1,60,"Then, Kevin and David had a lot of fun at the garden. Kevin gave a drink to",David,Kevin,3271,7939
+baba_t1,BABA,t1,61,"Then, Jessica and Emily had a lot of fun at the garden. Jessica gave a drink to",Emily,Jessica,17608,17352
+baba_t1,BABA,t1,62,"Then, James and Sarah had a lot of fun at the garden. James gave a drink to",Sarah,James,10490,3700
+baba_t1,BABA,t1,63,"Then, Sarah and Jason had a lot of fun at the garden. Sarah gave a drink to",Jason,Sarah,8982,10490
+baba_t1,BABA,t1,64,"Then, Lisa and Mary had a lot of fun at the garden. Lisa gave a drink to",Mary,Lisa,5335,15378
+baba_t1,BABA,t1,65,"Then, Michael and Susan had a lot of fun at the garden. Michael gave a drink to",Susan,Michael,14919,3899
+baba_t1,BABA,t1,66,"Then, Bob and Anna had a lot of fun at the garden. Bob gave a drink to",Anna,Bob,11735,5811
+baba_t1,BABA,t1,67,"Then, Susan and Bob had a lot of fun at the garden. Susan gave a drink to",Bob,Susan,5811,14919
+baba_t1,BABA,t1,68,"Then, Tom and Brian had a lot of fun at the garden. Tom gave a drink to",Brian,Tom,8403,4186
+baba_t1,BABA,t1,69,"Then, Mary and Helen had a lot of fun at the garden. Mary gave a drink to",Helen,Mary,22695,5335
+baba_t1,BABA,t1,70,"Then, Bob and Jason had a lot of fun at the garden. Bob gave a drink to",Jason,Bob,8982,5811
+baba_t1,BABA,t1,71,"Then, Steven and Eric had a lot of fun at the garden. Steven gave a drink to",Eric,Steven,7651,8239
+baba_t1,BABA,t1,72,"Then, Jason and Helen had a lot of fun at the garden. Jason gave a drink to",Helen,Jason,22695,8982
+baba_t1,BABA,t1,73,"Then, Susan and Scott had a lot of fun at the garden. Susan gave a drink to",Scott,Susan,4746,14919
+baba_t1,BABA,t1,74,"Then, Jason and Daniel had a lot of fun at the garden. Jason gave a drink to",Daniel,Jason,7806,8982
+baba_t1,BABA,t1,75,"Then, Jacob and Steven had a lot of fun at the garden. Jacob gave a drink to",Steven,Jacob,8239,12806
+baba_t1,BABA,t1,76,"Then, Emily and Karen had a lot of fun at the garden. Emily gave a drink to",Karen,Emily,18678,17608
+baba_t1,BABA,t1,77,"Then, James and Nancy had a lot of fun at the garden. James gave a drink to",Nancy,James,18496,3700
+baba_t1,BABA,t1,78,"Then, Susan and Eric had a lot of fun at the garden. Susan gave a drink to",Eric,Susan,7651,14919
+baba_t1,BABA,t1,79,"Then, Jason and Kevin had a lot of fun at the garden. Jason gave a drink to",Kevin,Jason,7939,8982
+baba_t1,BABA,t1,80,"Then, Kevin and Emma had a lot of fun at the garden. Kevin gave a drink to",Emma,Kevin,18966,7939
+baba_t1,BABA,t1,81,"Then, Robert and Michael had a lot of fun at the garden. Robert gave a drink to",Michael,Robert,3899,5199
+baba_t1,BABA,t1,82,"Then, Susan and Anna had a lot of fun at the garden. Susan gave a drink to",Anna,Susan,11735,14919
+baba_t1,BABA,t1,83,"Then, Steven and Mark had a lot of fun at the garden. Steven gave a drink to",Mark,Steven,2940,8239
+baba_t1,BABA,t1,84,"Then, Bob and Laura had a lot of fun at the garden. Bob gave a drink to",Laura,Bob,16753,5811
+baba_t1,BABA,t1,85,"Then, Lisa and David had a lot of fun at the garden. Lisa gave a drink to",David,Lisa,3271,15378
+baba_t1,BABA,t1,86,"Then, Anna and Alice had a lot of fun at the garden. Anna gave a drink to",Alice,Anna,14862,11735
+baba_t1,BABA,t1,87,"Then, Mark and Kevin had a lot of fun at the garden. Mark gave a drink to",Kevin,Mark,7939,2940
+baba_t1,BABA,t1,88,"Then, Nancy and David had a lot of fun at the garden. Nancy gave a drink to",David,Nancy,3271,18496
+baba_t1,BABA,t1,89,"Then, Emily and James had a lot of fun at the garden. Emily gave a drink to",James,Emily,3700,17608
+baba_t1,BABA,t1,90,"Then, Rachel and John had a lot of fun at the garden. Rachel gave a drink to",John,Rachel,1757,15984
+baba_t1,BABA,t1,91,"Then, Alice and Michael had a lot of fun at the garden. Alice gave a drink to",Michael,Alice,3899,14862
+baba_t1,BABA,t1,92,"Then, Emily and Steven had a lot of fun at the garden. Emily gave a drink to",Steven,Emily,8239,17608
+baba_t1,BABA,t1,93,"Then, Karen and Laura had a lot of fun at the garden. Karen gave a drink to",Laura,Karen,16753,18678
+baba_t1,BABA,t1,94,"Then, David and Sarah had a lot of fun at the garden. David gave a drink to",Sarah,David,10490,3271
+baba_t1,BABA,t1,95,"Then, Jason and Emma had a lot of fun at the garden. Jason gave a drink to",Emma,Jason,18966,8982
+baba_t1,BABA,t1,96,"Then, Alice and Mary had a lot of fun at the garden. Alice gave a drink to",Mary,Alice,5335,14862
+baba_t1,BABA,t1,97,"Then, Tom and Karen had a lot of fun at the garden. Tom gave a drink to",Karen,Tom,18678,4186
+baba_t1,BABA,t1,98,"Then, Steven and Nancy had a lot of fun at the garden. Steven gave a drink to",Nancy,Steven,18496,8239
+baba_t1,BABA,t1,99,"Then, Mary and Emily had a lot of fun at the garden. Mary gave a drink to",Emily,Mary,17608,5335
+baba_t1,BABA,t1,100,"Then, Kevin and Jason had a lot of fun at the garden. Kevin gave a drink to",Jason,Kevin,8982,7939
+baba_t1,BABA,t1,101,"Then, Helen and Mark had a lot of fun at the garden. Helen gave a drink to",Mark,Helen,2940,22695
+baba_t1,BABA,t1,102,"Then, Susan and Lisa had a lot of fun at the garden. Susan gave a drink to",Lisa,Susan,15378,14919
+baba_t1,BABA,t1,103,"Then, John and Bob had a lot of fun at the garden. John gave a drink to",Bob,John,5811,1757
+baba_t1,BABA,t1,104,"Then, Mark and Alice had a lot of fun at the garden. Mark gave a drink to",Alice,Mark,14862,2940
+baba_t1,BABA,t1,105,"Then, Lisa and James had a lot of fun at the garden. Lisa gave a drink to",James,Lisa,3700,15378
+baba_t1,BABA,t1,106,"Then, Daniel and Alice had a lot of fun at the garden. Daniel gave a drink to",Alice,Daniel,14862,7806
+baba_t1,BABA,t1,107,"Then, Laura and Bob had a lot of fun at the garden. Laura gave a drink to",Bob,Laura,5811,16753
+baba_t1,BABA,t1,108,"Then, Alice and Jason had a lot of fun at the garden. Alice gave a drink to",Jason,Alice,8982,14862
+baba_t1,BABA,t1,109,"Then, James and John had a lot of fun at the garden. James gave a drink to",John,James,1757,3700
+baba_t1,BABA,t1,110,"Then, Steven and Sarah had a lot of fun at the garden. Steven gave a drink to",Sarah,Steven,10490,8239
+baba_t1,BABA,t1,111,"Then, Rachel and James had a lot of fun at the garden. Rachel gave a drink to",James,Rachel,3700,15984
+baba_t1,BABA,t1,112,"Then, Mary and Karen had a lot of fun at the garden. Mary gave a drink to",Karen,Mary,18678,5335
+baba_t1,BABA,t1,113,"Then, Susan and Helen had a lot of fun at the garden. Susan gave a drink to",Helen,Susan,22695,14919
+baba_t1,BABA,t1,114,"Then, Scott and John had a lot of fun at the garden. Scott gave a drink to",John,Scott,1757,4746
+baba_t1,BABA,t1,115,"Then, Lisa and Emma had a lot of fun at the garden. Lisa gave a drink to",Emma,Lisa,18966,15378
+baba_t1,BABA,t1,116,"Then, Jason and Alice had a lot of fun at the garden. Jason gave a drink to",Alice,Jason,14862,8982
+baba_t1,BABA,t1,117,"Then, Bob and Michael had a lot of fun at the garden. Bob gave a drink to",Michael,Bob,3899,5811
+baba_t1,BABA,t1,118,"Then, Bob and Emily had a lot of fun at the garden. Bob gave a drink to",Emily,Bob,17608,5811
+baba_t1,BABA,t1,119,"Then, Jessica and Mark had a lot of fun at the garden. Jessica gave a drink to",Mark,Jessica,2940,17352
+baba_t1,BABA,t1,120,"Then, Emma and Laura had a lot of fun at the garden. Emma gave a drink to",Laura,Emma,16753,18966
+baba_t1,BABA,t1,121,"Then, Mary and Sarah had a lot of fun at the garden. Mary gave a drink to",Sarah,Mary,10490,5335
+baba_t1,BABA,t1,122,"Then, Robert and Jacob had a lot of fun at the garden. Robert gave a drink to",Jacob,Robert,12806,5199
+baba_t1,BABA,t1,123,"Then, Steven and Alice had a lot of fun at the garden. Steven gave a drink to",Alice,Steven,14862,8239
+baba_t1,BABA,t1,124,"Then, James and Daniel had a lot of fun at the garden. James gave a drink to",Daniel,James,7806,3700
+baba_t1,BABA,t1,125,"Then, Laura and Michael had a lot of fun at the garden. Laura gave a drink to",Michael,Laura,3899,16753
+baba_t1,BABA,t1,126,"Then, Rachel and Eric had a lot of fun at the garden. Rachel gave a drink to",Eric,Rachel,7651,15984
+baba_t1,BABA,t1,127,"Then, Jason and Anna had a lot of fun at the garden. Jason gave a drink to",Anna,Jason,11735,8982
+abba_t2,ABBA,t2,0,"Then, Nancy and Daniel were working at the office. Daniel decided to give a computer to",Nancy,Daniel,18496,7806
+abba_t2,ABBA,t2,1,"Then, Brian and Eric were working at the office. Eric decided to give a computer to",Brian,Eric,8403,7651
+abba_t2,ABBA,t2,2,"Then, Emma and Mary were working at the office. Mary decided to give a computer to",Emma,Mary,18966,5335
+abba_t2,ABBA,t2,3,"Then, Michael and Jacob were working at the office. Jacob decided to give a computer to",Michael,Jacob,3899,12806
+abba_t2,ABBA,t2,4,"Then, Anna and Daniel were working at the office. Daniel decided to give a computer to",Anna,Daniel,11735,7806
+abba_t2,ABBA,t2,5,"Then, Helen and Karen were working at the office. Karen decided to give a computer to",Helen,Karen,22695,18678
+abba_t2,ABBA,t2,6,"Then, Jason and Jessica were working at the office. Jessica decided to give a computer to",Jason,Jessica,8982,17352
+abba_t2,ABBA,t2,7,"Then, Anna and Laura were working at the office. Laura decided to give a computer to",Anna,Laura,11735,16753
+abba_t2,ABBA,t2,8,"Then, Kevin and Eric were working at the office. Eric decided to give a computer to",Kevin,Eric,7939,7651
+abba_t2,ABBA,t2,9,"Then, Helen and James were working at the office. James decided to give a computer to",Helen,James,22695,3700
+abba_t2,ABBA,t2,10,"Then, Jacob and Tom were working at the office. Tom decided to give a computer to",Jacob,Tom,12806,4186
+abba_t2,ABBA,t2,11,"Then, Jessica and Tom were working at the office. Tom decided to give a computer to",Jessica,Tom,17352,4186
+abba_t2,ABBA,t2,12,"Then, Brian and Alice were working at the office. Alice decided to give a computer to",Brian,Alice,8403,14862
+abba_t2,ABBA,t2,13,"Then, Lisa and Karen were working at the office. Karen decided to give a computer to",Lisa,Karen,15378,18678
+abba_t2,ABBA,t2,14,"Then, Michael and Helen were working at the office. Helen decided to give a computer to",Michael,Helen,3899,22695
+abba_t2,ABBA,t2,15,"Then, Scott and Steven were working at the office. Steven decided to give a computer to",Scott,Steven,4746,8239
+abba_t2,ABBA,t2,16,"Then, Karen and Lisa were working at the office. Lisa decided to give a computer to",Karen,Lisa,18678,15378
+abba_t2,ABBA,t2,17,"Then, Eric and Tom were working at the office. Tom decided to give a computer to",Eric,Tom,7651,4186
+abba_t2,ABBA,t2,18,"Then, Jessica and Alice were working at the office. Alice decided to give a computer to",Jessica,Alice,17352,14862
+abba_t2,ABBA,t2,19,"Then, Rachel and Bob were working at the office. Bob decided to give a computer to",Rachel,Bob,15984,5811
+abba_t2,ABBA,t2,20,"Then, Eric and Nancy were working at the office. Nancy decided to give a computer to",Eric,Nancy,7651,18496
+abba_t2,ABBA,t2,21,"Then, Susan and David were working at the office. David decided to give a computer to",Susan,David,14919,3271
+abba_t2,ABBA,t2,22,"Then, Anna and Scott were working at the office. Scott decided to give a computer to",Anna,Scott,11735,4746
+abba_t2,ABBA,t2,23,"Then, Alice and Laura were working at the office. Laura decided to give a computer to",Alice,Laura,14862,16753
+abba_t2,ABBA,t2,24,"Then, Emma and David were working at the office. David decided to give a computer to",Emma,David,18966,3271
+abba_t2,ABBA,t2,25,"Then, Lisa and Mark were working at the office. Mark decided to give a computer to",Lisa,Mark,15378,2940
+abba_t2,ABBA,t2,26,"Then, Scott and Anna were working at the office. Anna decided to give a computer to",Scott,Anna,4746,11735
+abba_t2,ABBA,t2,27,"Then, Robert and Nancy were working at the office. Nancy decided to give a computer to",Robert,Nancy,5199,18496
+abba_t2,ABBA,t2,28,"Then, Jacob and Michael were working at the office. Michael decided to give a computer to",Jacob,Michael,12806,3899
+abba_t2,ABBA,t2,29,"Then, Mary and Karen were working at the office. Karen decided to give a computer to",Mary,Karen,5335,18678
+abba_t2,ABBA,t2,30,"Then, Helen and Scott were working at the office. Scott decided to give a computer to",Helen,Scott,22695,4746
+abba_t2,ABBA,t2,31,"Then, Helen and John were working at the office. John decided to give a computer to",Helen,John,22695,1757
+abba_t2,ABBA,t2,32,"Then, Bob and Rachel were working at the office. Rachel decided to give a computer to",Bob,Rachel,5811,15984
+abba_t2,ABBA,t2,33,"Then, Jason and Daniel were working at the office. Daniel decided to give a computer to",Jason,Daniel,8982,7806
+abba_t2,ABBA,t2,34,"Then, Steven and Jason were working at the office. Jason decided to give a computer to",Steven,Jason,8239,8982
+abba_t2,ABBA,t2,35,"Then, Karen and Susan were working at the office. Susan decided to give a computer to",Karen,Susan,18678,14919
+abba_t2,ABBA,t2,36,"Then, Mark and John were working at the office. John decided to give a computer to",Mark,John,2940,1757
+abba_t2,ABBA,t2,37,"Then, Lisa and Anna were working at the office. Anna decided to give a computer to",Lisa,Anna,15378,11735
+abba_t2,ABBA,t2,38,"Then, Jason and Nancy were working at the office. Nancy decided to give a computer to",Jason,Nancy,8982,18496
+abba_t2,ABBA,t2,39,"Then, David and Emily were working at the office. Emily decided to give a computer to",David,Emily,3271,17608
+abba_t2,ABBA,t2,40,"Then, Rachel and David were working at the office. David decided to give a computer to",Rachel,David,15984,3271
+abba_t2,ABBA,t2,41,"Then, Steven and Nancy were working at the office. Nancy decided to give a computer to",Steven,Nancy,8239,18496
+abba_t2,ABBA,t2,42,"Then, Bob and James were working at the office. James decided to give a computer to",Bob,James,5811,3700
+abba_t2,ABBA,t2,43,"Then, Helen and Kevin were working at the office. Kevin decided to give a computer to",Helen,Kevin,22695,7939
+abba_t2,ABBA,t2,44,"Then, Emily and Karen were working at the office. Karen decided to give a computer to",Emily,Karen,17608,18678
+abba_t2,ABBA,t2,45,"Then, Tom and Karen were working at the office. Karen decided to give a computer to",Tom,Karen,4186,18678
+abba_t2,ABBA,t2,46,"Then, Scott and Robert were working at the office. Robert decided to give a computer to",Scott,Robert,4746,5199
+abba_t2,ABBA,t2,47,"Then, Bob and David were working at the office. David decided to give a computer to",Bob,David,5811,3271
+abba_t2,ABBA,t2,48,"Then, Eric and Jacob were working at the office. Jacob decided to give a computer to",Eric,Jacob,7651,12806
+abba_t2,ABBA,t2,49,"Then, Helen and Anna were working at the office. Anna decided to give a computer to",Helen,Anna,22695,11735
+abba_t2,ABBA,t2,50,"Then, Alice and Jessica were working at the office. Jessica decided to give a computer to",Alice,Jessica,14862,17352
+abba_t2,ABBA,t2,51,"Then, Scott and Jessica were working at the office. Jessica decided to give a computer to",Scott,Jessica,4746,17352
+abba_t2,ABBA,t2,52,"Then, Steven and Alice were working at the office. Alice decided to give a computer to",Steven,Alice,8239,14862
+abba_t2,ABBA,t2,53,"Then, Scott and David were working at the office. David decided to give a computer to",Scott,David,4746,3271
+abba_t2,ABBA,t2,54,"Then, Jason and Helen were working at the office. Helen decided to give a computer to",Jason,Helen,8982,22695
+abba_t2,ABBA,t2,55,"Then, Scott and James were working at the office. James decided to give a computer to",Scott,James,4746,3700
+abba_t2,ABBA,t2,56,"Then, Scott and Kevin were working at the office. Kevin decided to give a computer to",Scott,Kevin,4746,7939
+abba_t2,ABBA,t2,57,"Then, Jessica and Robert were working at the office. Robert decided to give a computer to",Jessica,Robert,17352,5199
+abba_t2,ABBA,t2,58,"Then, Bob and Lisa were working at the office. Lisa decided to give a computer to",Bob,Lisa,5811,15378
+abba_t2,ABBA,t2,59,"Then, Karen and Daniel were working at the office. Daniel decided to give a computer to",Karen,Daniel,18678,7806
+abba_t2,ABBA,t2,60,"Then, David and Kevin were working at the office. Kevin decided to give a computer to",David,Kevin,3271,7939
+abba_t2,ABBA,t2,61,"Then, Emily and Jessica were working at the office. Jessica decided to give a computer to",Emily,Jessica,17608,17352
+abba_t2,ABBA,t2,62,"Then, Sarah and James were working at the office. James decided to give a computer to",Sarah,James,10490,3700
+abba_t2,ABBA,t2,63,"Then, Jason and Sarah were working at the office. Sarah decided to give a computer to",Jason,Sarah,8982,10490
+abba_t2,ABBA,t2,64,"Then, Mary and Lisa were working at the office. Lisa decided to give a computer to",Mary,Lisa,5335,15378
+abba_t2,ABBA,t2,65,"Then, Susan and Michael were working at the office. Michael decided to give a computer to",Susan,Michael,14919,3899
+abba_t2,ABBA,t2,66,"Then, Anna and Bob were working at the office. Bob decided to give a computer to",Anna,Bob,11735,5811
+abba_t2,ABBA,t2,67,"Then, Bob and Susan were working at the office. Susan decided to give a computer to",Bob,Susan,5811,14919
+abba_t2,ABBA,t2,68,"Then, Brian and Tom were working at the office. Tom decided to give a computer to",Brian,Tom,8403,4186
+abba_t2,ABBA,t2,69,"Then, Helen and Mary were working at the office. Mary decided to give a computer to",Helen,Mary,22695,5335
+abba_t2,ABBA,t2,70,"Then, Jason and Bob were working at the office. Bob decided to give a computer to",Jason,Bob,8982,5811
+abba_t2,ABBA,t2,71,"Then, Eric and Steven were working at the office. Steven decided to give a computer to",Eric,Steven,7651,8239
+abba_t2,ABBA,t2,72,"Then, Helen and Jason were working at the office. Jason decided to give a computer to",Helen,Jason,22695,8982
+abba_t2,ABBA,t2,73,"Then, Scott and Susan were working at the office. Susan decided to give a computer to",Scott,Susan,4746,14919
+abba_t2,ABBA,t2,74,"Then, Daniel and Jason were working at the office. Jason decided to give a computer to",Daniel,Jason,7806,8982
+abba_t2,ABBA,t2,75,"Then, Steven and Jacob were working at the office. Jacob decided to give a computer to",Steven,Jacob,8239,12806
+abba_t2,ABBA,t2,76,"Then, Karen and Emily were working at the office. Emily decided to give a computer to",Karen,Emily,18678,17608
+abba_t2,ABBA,t2,77,"Then, Nancy and James were working at the office. James decided to give a computer to",Nancy,James,18496,3700
+abba_t2,ABBA,t2,78,"Then, Eric and Susan were working at the office. Susan decided to give a computer to",Eric,Susan,7651,14919
+abba_t2,ABBA,t2,79,"Then, Kevin and Jason were working at the office. Jason decided to give a computer to",Kevin,Jason,7939,8982
+abba_t2,ABBA,t2,80,"Then, Emma and Kevin were working at the office. Kevin decided to give a computer to",Emma,Kevin,18966,7939
+abba_t2,ABBA,t2,81,"Then, Michael and Robert were working at the office. Robert decided to give a computer to",Michael,Robert,3899,5199
+abba_t2,ABBA,t2,82,"Then, Anna and Susan were working at the office. Susan decided to give a computer to",Anna,Susan,11735,14919
+abba_t2,ABBA,t2,83,"Then, Mark and Steven were working at the office. Steven decided to give a computer to",Mark,Steven,2940,8239
+abba_t2,ABBA,t2,84,"Then, Laura and Bob were working at the office. Bob decided to give a computer to",Laura,Bob,16753,5811
+abba_t2,ABBA,t2,85,"Then, David and Lisa were working at the office. Lisa decided to give a computer to",David,Lisa,3271,15378
+abba_t2,ABBA,t2,86,"Then, Alice and Anna were working at the office. Anna decided to give a computer to",Alice,Anna,14862,11735
+abba_t2,ABBA,t2,87,"Then, Kevin and Mark were working at the office. Mark decided to give a computer to",Kevin,Mark,7939,2940
+abba_t2,ABBA,t2,88,"Then, David and Nancy were working at the office. Nancy decided to give a computer to",David,Nancy,3271,18496
+abba_t2,ABBA,t2,89,"Then, James and Emily were working at the office. Emily decided to give a computer to",James,Emily,3700,17608
+abba_t2,ABBA,t2,90,"Then, John and Rachel were working at the office. Rachel decided to give a computer to",John,Rachel,1757,15984
+abba_t2,ABBA,t2,91,"Then, Michael and Alice were working at the office. Alice decided to give a computer to",Michael,Alice,3899,14862
+abba_t2,ABBA,t2,92,"Then, Steven and Emily were working at the office. Emily decided to give a computer to",Steven,Emily,8239,17608
+abba_t2,ABBA,t2,93,"Then, Laura and Karen were working at the office. Karen decided to give a computer to",Laura,Karen,16753,18678
+abba_t2,ABBA,t2,94,"Then, Sarah and David were working at the office. David decided to give a computer to",Sarah,David,10490,3271
+abba_t2,ABBA,t2,95,"Then, Emma and Jason were working at the office. Jason decided to give a computer to",Emma,Jason,18966,8982
+abba_t2,ABBA,t2,96,"Then, Mary and Alice were working at the office. Alice decided to give a computer to",Mary,Alice,5335,14862
+abba_t2,ABBA,t2,97,"Then, Karen and Tom were working at the office. Tom decided to give a computer to",Karen,Tom,18678,4186
+abba_t2,ABBA,t2,98,"Then, Nancy and Steven were working at the office. Steven decided to give a computer to",Nancy,Steven,18496,8239
+abba_t2,ABBA,t2,99,"Then, Emily and Mary were working at the office. Mary decided to give a computer to",Emily,Mary,17608,5335
+abba_t2,ABBA,t2,100,"Then, Jason and Kevin were working at the office. Kevin decided to give a computer to",Jason,Kevin,8982,7939
+abba_t2,ABBA,t2,101,"Then, Mark and Helen were working at the office. Helen decided to give a computer to",Mark,Helen,2940,22695
+abba_t2,ABBA,t2,102,"Then, Lisa and Susan were working at the office. Susan decided to give a computer to",Lisa,Susan,15378,14919
+abba_t2,ABBA,t2,103,"Then, Bob and John were working at the office. John decided to give a computer to",Bob,John,5811,1757
+abba_t2,ABBA,t2,104,"Then, Alice and Mark were working at the office. Mark decided to give a computer to",Alice,Mark,14862,2940
+abba_t2,ABBA,t2,105,"Then, James and Lisa were working at the office. Lisa decided to give a computer to",James,Lisa,3700,15378
+abba_t2,ABBA,t2,106,"Then, Alice and Daniel were working at the office. Daniel decided to give a computer to",Alice,Daniel,14862,7806
+abba_t2,ABBA,t2,107,"Then, Bob and Laura were working at the office. Laura decided to give a computer to",Bob,Laura,5811,16753
+abba_t2,ABBA,t2,108,"Then, Jason and Alice were working at the office. Alice decided to give a computer to",Jason,Alice,8982,14862
+abba_t2,ABBA,t2,109,"Then, John and James were working at the office. James decided to give a computer to",John,James,1757,3700
+abba_t2,ABBA,t2,110,"Then, Sarah and Steven were working at the office. Steven decided to give a computer to",Sarah,Steven,10490,8239
+abba_t2,ABBA,t2,111,"Then, James and Rachel were working at the office. Rachel decided to give a computer to",James,Rachel,3700,15984
+abba_t2,ABBA,t2,112,"Then, Karen and Mary were working at the office. Mary decided to give a computer to",Karen,Mary,18678,5335
+abba_t2,ABBA,t2,113,"Then, Helen and Susan were working at the office. Susan decided to give a computer to",Helen,Susan,22695,14919
+abba_t2,ABBA,t2,114,"Then, John and Scott were working at the office. Scott decided to give a computer to",John,Scott,1757,4746
+abba_t2,ABBA,t2,115,"Then, Emma and Lisa were working at the office. Lisa decided to give a computer to",Emma,Lisa,18966,15378
+abba_t2,ABBA,t2,116,"Then, Alice and Jason were working at the office. Jason decided to give a computer to",Alice,Jason,14862,8982
+abba_t2,ABBA,t2,117,"Then, Michael and Bob were working at the office. Bob decided to give a computer to",Michael,Bob,3899,5811
+abba_t2,ABBA,t2,118,"Then, Emily and Bob were working at the office. Bob decided to give a computer to",Emily,Bob,17608,5811
+abba_t2,ABBA,t2,119,"Then, Mark and Jessica were working at the office. Jessica decided to give a computer to",Mark,Jessica,2940,17352
+abba_t2,ABBA,t2,120,"Then, Laura and Emma were working at the office. Emma decided to give a computer to",Laura,Emma,16753,18966
+abba_t2,ABBA,t2,121,"Then, Sarah and Mary were working at the office. Mary decided to give a computer to",Sarah,Mary,10490,5335
+abba_t2,ABBA,t2,122,"Then, Jacob and Robert were working at the office. Robert decided to give a computer to",Jacob,Robert,12806,5199
+abba_t2,ABBA,t2,123,"Then, Alice and Steven were working at the office. Steven decided to give a computer to",Alice,Steven,14862,8239
+abba_t2,ABBA,t2,124,"Then, Daniel and James were working at the office. James decided to give a computer to",Daniel,James,7806,3700
+abba_t2,ABBA,t2,125,"Then, Michael and Laura were working at the office. Laura decided to give a computer to",Michael,Laura,3899,16753
+abba_t2,ABBA,t2,126,"Then, Eric and Rachel were working at the office. Rachel decided to give a computer to",Eric,Rachel,7651,15984
+abba_t2,ABBA,t2,127,"Then, Anna and Jason were working at the office. Jason decided to give a computer to",Anna,Jason,11735,8982
+baba_t2,BABA,t2,0,"Then, Daniel and Nancy were working at the office. Daniel decided to give a computer to",Nancy,Daniel,18496,7806
+baba_t2,BABA,t2,1,"Then, Eric and Brian were working at the office. Eric decided to give a computer to",Brian,Eric,8403,7651
+baba_t2,BABA,t2,2,"Then, Mary and Emma were working at the office. Mary decided to give a computer to",Emma,Mary,18966,5335
+baba_t2,BABA,t2,3,"Then, Jacob and Michael were working at the office. Jacob decided to give a computer to",Michael,Jacob,3899,12806
+baba_t2,BABA,t2,4,"Then, Daniel and Anna were working at the office. Daniel decided to give a computer to",Anna,Daniel,11735,7806
+baba_t2,BABA,t2,5,"Then, Karen and Helen were working at the office. Karen decided to give a computer to",Helen,Karen,22695,18678
+baba_t2,BABA,t2,6,"Then, Jessica and Jason were working at the office. Jessica decided to give a computer to",Jason,Jessica,8982,17352
+baba_t2,BABA,t2,7,"Then, Laura and Anna were working at the office. Laura decided to give a computer to",Anna,Laura,11735,16753
+baba_t2,BABA,t2,8,"Then, Eric and Kevin were working at the office. Eric decided to give a computer to",Kevin,Eric,7939,7651
+baba_t2,BABA,t2,9,"Then, James and Helen were working at the office. James decided to give a computer to",Helen,James,22695,3700
+baba_t2,BABA,t2,10,"Then, Tom and Jacob were working at the office. Tom decided to give a computer to",Jacob,Tom,12806,4186
+baba_t2,BABA,t2,11,"Then, Tom and Jessica were working at the office. Tom decided to give a computer to",Jessica,Tom,17352,4186
+baba_t2,BABA,t2,12,"Then, Alice and Brian were working at the office. Alice decided to give a computer to",Brian,Alice,8403,14862
+baba_t2,BABA,t2,13,"Then, Karen and Lisa were working at the office. Karen decided to give a computer to",Lisa,Karen,15378,18678
+baba_t2,BABA,t2,14,"Then, Helen and Michael were working at the office. Helen decided to give a computer to",Michael,Helen,3899,22695
+baba_t2,BABA,t2,15,"Then, Steven and Scott were working at the office. Steven decided to give a computer to",Scott,Steven,4746,8239
+baba_t2,BABA,t2,16,"Then, Lisa and Karen were working at the office. Lisa decided to give a computer to",Karen,Lisa,18678,15378
+baba_t2,BABA,t2,17,"Then, Tom and Eric were working at the office. Tom decided to give a computer to",Eric,Tom,7651,4186
+baba_t2,BABA,t2,18,"Then, Alice and Jessica were working at the office. Alice decided to give a computer to",Jessica,Alice,17352,14862
+baba_t2,BABA,t2,19,"Then, Bob and Rachel were working at the office. Bob decided to give a computer to",Rachel,Bob,15984,5811
+baba_t2,BABA,t2,20,"Then, Nancy and Eric were working at the office. Nancy decided to give a computer to",Eric,Nancy,7651,18496
+baba_t2,BABA,t2,21,"Then, David and Susan were working at the office. David decided to give a computer to",Susan,David,14919,3271
+baba_t2,BABA,t2,22,"Then, Scott and Anna were working at the office. Scott decided to give a computer to",Anna,Scott,11735,4746
+baba_t2,BABA,t2,23,"Then, Laura and Alice were working at the office. Laura decided to give a computer to",Alice,Laura,14862,16753
+baba_t2,BABA,t2,24,"Then, David and Emma were working at the office. David decided to give a computer to",Emma,David,18966,3271
+baba_t2,BABA,t2,25,"Then, Mark and Lisa were working at the office. Mark decided to give a computer to",Lisa,Mark,15378,2940
+baba_t2,BABA,t2,26,"Then, Anna and Scott were working at the office. Anna decided to give a computer to",Scott,Anna,4746,11735
+baba_t2,BABA,t2,27,"Then, Nancy and Robert were working at the office. Nancy decided to give a computer to",Robert,Nancy,5199,18496
+baba_t2,BABA,t2,28,"Then, Michael and Jacob were working at the office. Michael decided to give a computer to",Jacob,Michael,12806,3899
+baba_t2,BABA,t2,29,"Then, Karen and Mary were working at the office. Karen decided to give a computer to",Mary,Karen,5335,18678
+baba_t2,BABA,t2,30,"Then, Scott and Helen were working at the office. Scott decided to give a computer to",Helen,Scott,22695,4746
+baba_t2,BABA,t2,31,"Then, John and Helen were working at the office. John decided to give a computer to",Helen,John,22695,1757
+baba_t2,BABA,t2,32,"Then, Rachel and Bob were working at the office. Rachel decided to give a computer to",Bob,Rachel,5811,15984
+baba_t2,BABA,t2,33,"Then, Daniel and Jason were working at the office. Daniel decided to give a computer to",Jason,Daniel,8982,7806
+baba_t2,BABA,t2,34,"Then, Jason and Steven were working at the office. Jason decided to give a computer to",Steven,Jason,8239,8982
+baba_t2,BABA,t2,35,"Then, Susan and Karen were working at the office. Susan decided to give a computer to",Karen,Susan,18678,14919
+baba_t2,BABA,t2,36,"Then, John and Mark were working at the office. John decided to give a computer to",Mark,John,2940,1757
+baba_t2,BABA,t2,37,"Then, Anna and Lisa were working at the office. Anna decided to give a computer to",Lisa,Anna,15378,11735
+baba_t2,BABA,t2,38,"Then, Nancy and Jason were working at the office. Nancy decided to give a computer to",Jason,Nancy,8982,18496
+baba_t2,BABA,t2,39,"Then, Emily and David were working at the office. Emily decided to give a computer to",David,Emily,3271,17608
+baba_t2,BABA,t2,40,"Then, David and Rachel were working at the office. David decided to give a computer to",Rachel,David,15984,3271
+baba_t2,BABA,t2,41,"Then, Nancy and Steven were working at the office. Nancy decided to give a computer to",Steven,Nancy,8239,18496
+baba_t2,BABA,t2,42,"Then, James and Bob were working at the office. James decided to give a computer to",Bob,James,5811,3700
+baba_t2,BABA,t2,43,"Then, Kevin and Helen were working at the office. Kevin decided to give a computer to",Helen,Kevin,22695,7939
+baba_t2,BABA,t2,44,"Then, Karen and Emily were working at the office. Karen decided to give a computer to",Emily,Karen,17608,18678
+baba_t2,BABA,t2,45,"Then, Karen and Tom were working at the office. Karen decided to give a computer to",Tom,Karen,4186,18678
+baba_t2,BABA,t2,46,"Then, Robert and Scott were working at the office. Robert decided to give a computer to",Scott,Robert,4746,5199
+baba_t2,BABA,t2,47,"Then, David and Bob were working at the office. David decided to give a computer to",Bob,David,5811,3271
+baba_t2,BABA,t2,48,"Then, Jacob and Eric were working at the office. Jacob decided to give a computer to",Eric,Jacob,7651,12806
+baba_t2,BABA,t2,49,"Then, Anna and Helen were working at the office. Anna decided to give a computer to",Helen,Anna,22695,11735
+baba_t2,BABA,t2,50,"Then, Jessica and Alice were working at the office. Jessica decided to give a computer to",Alice,Jessica,14862,17352
+baba_t2,BABA,t2,51,"Then, Jessica and Scott were working at the office. Jessica decided to give a computer to",Scott,Jessica,4746,17352
+baba_t2,BABA,t2,52,"Then, Alice and Steven were working at the office. Alice decided to give a computer to",Steven,Alice,8239,14862
+baba_t2,BABA,t2,53,"Then, David and Scott were working at the office. David decided to give a computer to",Scott,David,4746,3271
+baba_t2,BABA,t2,54,"Then, Helen and Jason were working at the office. Helen decided to give a computer to",Jason,Helen,8982,22695
+baba_t2,BABA,t2,55,"Then, James and Scott were working at the office. James decided to give a computer to",Scott,James,4746,3700
+baba_t2,BABA,t2,56,"Then, Kevin and Scott were working at the office. Kevin decided to give a computer to",Scott,Kevin,4746,7939
+baba_t2,BABA,t2,57,"Then, Robert and Jessica were working at the office. Robert decided to give a computer to",Jessica,Robert,17352,5199
+baba_t2,BABA,t2,58,"Then, Lisa and Bob were working at the office. Lisa decided to give a computer to",Bob,Lisa,5811,15378
+baba_t2,BABA,t2,59,"Then, Daniel and Karen were working at the office. Daniel decided to give a computer to",Karen,Daniel,18678,7806
+baba_t2,BABA,t2,60,"Then, Kevin and David were working at the office. Kevin decided to give a computer to",David,Kevin,3271,7939
+baba_t2,BABA,t2,61,"Then, Jessica and Emily were working at the office. Jessica decided to give a computer to",Emily,Jessica,17608,17352
+baba_t2,BABA,t2,62,"Then, James and Sarah were working at the office. James decided to give a computer to",Sarah,James,10490,3700
+baba_t2,BABA,t2,63,"Then, Sarah and Jason were working at the office. Sarah decided to give a computer to",Jason,Sarah,8982,10490
+baba_t2,BABA,t2,64,"Then, Lisa and Mary were working at the office. Lisa decided to give a computer to",Mary,Lisa,5335,15378
+baba_t2,BABA,t2,65,"Then, Michael and Susan were working at the office. Michael decided to give a computer to",Susan,Michael,14919,3899
+baba_t2,BABA,t2,66,"Then, Bob and Anna were working at the office. Bob decided to give a computer to",Anna,Bob,11735,5811
+baba_t2,BABA,t2,67,"Then, Susan and Bob were working at the office. Susan decided to give a computer to",Bob,Susan,5811,14919
+baba_t2,BABA,t2,68,"Then, Tom and Brian were working at the office. Tom decided to give a computer to",Brian,Tom,8403,4186
+baba_t2,BABA,t2,69,"Then, Mary and Helen were working at the office. Mary decided to give a computer to",Helen,Mary,22695,5335
+baba_t2,BABA,t2,70,"Then, Bob and Jason were working at the office. Bob decided to give a computer to",Jason,Bob,8982,5811
+baba_t2,BABA,t2,71,"Then, Steven and Eric were working at the office. Steven decided to give a computer to",Eric,Steven,7651,8239
+baba_t2,BABA,t2,72,"Then, Jason and Helen were working at the office. Jason decided to give a computer to",Helen,Jason,22695,8982
+baba_t2,BABA,t2,73,"Then, Susan and Scott were working at the office. Susan decided to give a computer to",Scott,Susan,4746,14919
+baba_t2,BABA,t2,74,"Then, Jason and Daniel were working at the office. Jason decided to give a computer to",Daniel,Jason,7806,8982
+baba_t2,BABA,t2,75,"Then, Jacob and Steven were working at the office. Jacob decided to give a computer to",Steven,Jacob,8239,12806
+baba_t2,BABA,t2,76,"Then, Emily and Karen were working at the office. Emily decided to give a computer to",Karen,Emily,18678,17608
+baba_t2,BABA,t2,77,"Then, James and Nancy were working at the office. James decided to give a computer to",Nancy,James,18496,3700
+baba_t2,BABA,t2,78,"Then, Susan and Eric were working at the office. Susan decided to give a computer to",Eric,Susan,7651,14919
+baba_t2,BABA,t2,79,"Then, Jason and Kevin were working at the office. Jason decided to give a computer to",Kevin,Jason,7939,8982
+baba_t2,BABA,t2,80,"Then, Kevin and Emma were working at the office. Kevin decided to give a computer to",Emma,Kevin,18966,7939
+baba_t2,BABA,t2,81,"Then, Robert and Michael were working at the office. Robert decided to give a computer to",Michael,Robert,3899,5199
+baba_t2,BABA,t2,82,"Then, Susan and Anna were working at the office. Susan decided to give a computer to",Anna,Susan,11735,14919
+baba_t2,BABA,t2,83,"Then, Steven and Mark were working at the office. Steven decided to give a computer to",Mark,Steven,2940,8239
+baba_t2,BABA,t2,84,"Then, Bob and Laura were working at the office. Bob decided to give a computer to",Laura,Bob,16753,5811
+baba_t2,BABA,t2,85,"Then, Lisa and David were working at the office. Lisa decided to give a computer to",David,Lisa,3271,15378
+baba_t2,BABA,t2,86,"Then, Anna and Alice were working at the office. Anna decided to give a computer to",Alice,Anna,14862,11735
+baba_t2,BABA,t2,87,"Then, Mark and Kevin were working at the office. Mark decided to give a computer to",Kevin,Mark,7939,2940
+baba_t2,BABA,t2,88,"Then, Nancy and David were working at the office. Nancy decided to give a computer to",David,Nancy,3271,18496
+baba_t2,BABA,t2,89,"Then, Emily and James were working at the office. Emily decided to give a computer to",James,Emily,3700,17608
+baba_t2,BABA,t2,90,"Then, Rachel and John were working at the office. Rachel decided to give a computer to",John,Rachel,1757,15984
+baba_t2,BABA,t2,91,"Then, Alice and Michael were working at the office. Alice decided to give a computer to",Michael,Alice,3899,14862
+baba_t2,BABA,t2,92,"Then, Emily and Steven were working at the office. Emily decided to give a computer to",Steven,Emily,8239,17608
+baba_t2,BABA,t2,93,"Then, Karen and Laura were working at the office. Karen decided to give a computer to",Laura,Karen,16753,18678
+baba_t2,BABA,t2,94,"Then, David and Sarah were working at the office. David decided to give a computer to",Sarah,David,10490,3271
+baba_t2,BABA,t2,95,"Then, Jason and Emma were working at the office. Jason decided to give a computer to",Emma,Jason,18966,8982
+baba_t2,BABA,t2,96,"Then, Alice and Mary were working at the office. Alice decided to give a computer to",Mary,Alice,5335,14862
+baba_t2,BABA,t2,97,"Then, Tom and Karen were working at the office. Tom decided to give a computer to",Karen,Tom,18678,4186
+baba_t2,BABA,t2,98,"Then, Steven and Nancy were working at the office. Steven decided to give a computer to",Nancy,Steven,18496,8239
+baba_t2,BABA,t2,99,"Then, Mary and Emily were working at the office. Mary decided to give a computer to",Emily,Mary,17608,5335
+baba_t2,BABA,t2,100,"Then, Kevin and Jason were working at the office. Kevin decided to give a computer to",Jason,Kevin,8982,7939
+baba_t2,BABA,t2,101,"Then, Helen and Mark were working at the office. Helen decided to give a computer to",Mark,Helen,2940,22695
+baba_t2,BABA,t2,102,"Then, Susan and Lisa were working at the office. Susan decided to give a computer to",Lisa,Susan,15378,14919
+baba_t2,BABA,t2,103,"Then, John and Bob were working at the office. John decided to give a computer to",Bob,John,5811,1757
+baba_t2,BABA,t2,104,"Then, Mark and Alice were working at the office. Mark decided to give a computer to",Alice,Mark,14862,2940
+baba_t2,BABA,t2,105,"Then, Lisa and James were working at the office. Lisa decided to give a computer to",James,Lisa,3700,15378
+baba_t2,BABA,t2,106,"Then, Daniel and Alice were working at the office. Daniel decided to give a computer to",Alice,Daniel,14862,7806
+baba_t2,BABA,t2,107,"Then, Laura and Bob were working at the office. Laura decided to give a computer to",Bob,Laura,5811,16753
+baba_t2,BABA,t2,108,"Then, Alice and Jason were working at the office. Alice decided to give a computer to",Jason,Alice,8982,14862
+baba_t2,BABA,t2,109,"Then, James and John were working at the office. James decided to give a computer to",John,James,1757,3700
+baba_t2,BABA,t2,110,"Then, Steven and Sarah were working at the office. Steven decided to give a computer to",Sarah,Steven,10490,8239
+baba_t2,BABA,t2,111,"Then, Rachel and James were working at the office. Rachel decided to give a computer to",James,Rachel,3700,15984
+baba_t2,BABA,t2,112,"Then, Mary and Karen were working at the office. Mary decided to give a computer to",Karen,Mary,18678,5335
+baba_t2,BABA,t2,113,"Then, Susan and Helen were working at the office. Susan decided to give a computer to",Helen,Susan,22695,14919
+baba_t2,BABA,t2,114,"Then, Scott and John were working at the office. Scott decided to give a computer to",John,Scott,1757,4746
+baba_t2,BABA,t2,115,"Then, Lisa and Emma were working at the office. Lisa decided to give a computer to",Emma,Lisa,18966,15378
+baba_t2,BABA,t2,116,"Then, Jason and Alice were working at the office. Jason decided to give a computer to",Alice,Jason,14862,8982
+baba_t2,BABA,t2,117,"Then, Bob and Michael were working at the office. Bob decided to give a computer to",Michael,Bob,3899,5811
+baba_t2,BABA,t2,118,"Then, Bob and Emily were working at the office. Bob decided to give a computer to",Emily,Bob,17608,5811
+baba_t2,BABA,t2,119,"Then, Jessica and Mark were working at the office. Jessica decided to give a computer to",Mark,Jessica,2940,17352
+baba_t2,BABA,t2,120,"Then, Emma and Laura were working at the office. Emma decided to give a computer to",Laura,Emma,16753,18966
+baba_t2,BABA,t2,121,"Then, Mary and Sarah were working at the office. Mary decided to give a computer to",Sarah,Mary,10490,5335
+baba_t2,BABA,t2,122,"Then, Robert and Jacob were working at the office. Robert decided to give a computer to",Jacob,Robert,12806,5199
+baba_t2,BABA,t2,123,"Then, Steven and Alice were working at the office. Steven decided to give a computer to",Alice,Steven,14862,8239
+baba_t2,BABA,t2,124,"Then, James and Daniel were working at the office. James decided to give a computer to",Daniel,James,7806,3700
+baba_t2,BABA,t2,125,"Then, Laura and Michael were working at the office. Laura decided to give a computer to",Michael,Laura,3899,16753
+baba_t2,BABA,t2,126,"Then, Rachel and Eric were working at the office. Rachel decided to give a computer to",Eric,Rachel,7651,15984
+baba_t2,BABA,t2,127,"Then, Jason and Anna were working at the office. Jason decided to give a computer to",Anna,Jason,11735,8982
+abba_t3,ABBA,t3,0,"Then, Nancy and Daniel were thinking about going to the station. Daniel wanted to give a necklace to",Nancy,Daniel,18496,7806
+abba_t3,ABBA,t3,1,"Then, Brian and Eric were thinking about going to the station. Eric wanted to give a necklace to",Brian,Eric,8403,7651
+abba_t3,ABBA,t3,2,"Then, Emma and Mary were thinking about going to the station. Mary wanted to give a necklace to",Emma,Mary,18966,5335
+abba_t3,ABBA,t3,3,"Then, Michael and Jacob were thinking about going to the station. Jacob wanted to give a necklace to",Michael,Jacob,3899,12806
+abba_t3,ABBA,t3,4,"Then, Anna and Daniel were thinking about going to the station. Daniel wanted to give a necklace to",Anna,Daniel,11735,7806
+abba_t3,ABBA,t3,5,"Then, Helen and Karen were thinking about going to the station. Karen wanted to give a necklace to",Helen,Karen,22695,18678
+abba_t3,ABBA,t3,6,"Then, Jason and Jessica were thinking about going to the station. Jessica wanted to give a necklace to",Jason,Jessica,8982,17352
+abba_t3,ABBA,t3,7,"Then, Anna and Laura were thinking about going to the station. Laura wanted to give a necklace to",Anna,Laura,11735,16753
+abba_t3,ABBA,t3,8,"Then, Kevin and Eric were thinking about going to the station. Eric wanted to give a necklace to",Kevin,Eric,7939,7651
+abba_t3,ABBA,t3,9,"Then, Helen and James were thinking about going to the station. James wanted to give a necklace to",Helen,James,22695,3700
+abba_t3,ABBA,t3,10,"Then, Jacob and Tom were thinking about going to the station. Tom wanted to give a necklace to",Jacob,Tom,12806,4186
+abba_t3,ABBA,t3,11,"Then, Jessica and Tom were thinking about going to the station. Tom wanted to give a necklace to",Jessica,Tom,17352,4186
+abba_t3,ABBA,t3,12,"Then, Brian and Alice were thinking about going to the station. Alice wanted to give a necklace to",Brian,Alice,8403,14862
+abba_t3,ABBA,t3,13,"Then, Lisa and Karen were thinking about going to the station. Karen wanted to give a necklace to",Lisa,Karen,15378,18678
+abba_t3,ABBA,t3,14,"Then, Michael and Helen were thinking about going to the station. Helen wanted to give a necklace to",Michael,Helen,3899,22695
+abba_t3,ABBA,t3,15,"Then, Scott and Steven were thinking about going to the station. Steven wanted to give a necklace to",Scott,Steven,4746,8239
+abba_t3,ABBA,t3,16,"Then, Karen and Lisa were thinking about going to the station. Lisa wanted to give a necklace to",Karen,Lisa,18678,15378
+abba_t3,ABBA,t3,17,"Then, Eric and Tom were thinking about going to the station. Tom wanted to give a necklace to",Eric,Tom,7651,4186
+abba_t3,ABBA,t3,18,"Then, Jessica and Alice were thinking about going to the station. Alice wanted to give a necklace to",Jessica,Alice,17352,14862
+abba_t3,ABBA,t3,19,"Then, Rachel and Bob were thinking about going to the station. Bob wanted to give a necklace to",Rachel,Bob,15984,5811
+abba_t3,ABBA,t3,20,"Then, Eric and Nancy were thinking about going to the station. Nancy wanted to give a necklace to",Eric,Nancy,7651,18496
+abba_t3,ABBA,t3,21,"Then, Susan and David were thinking about going to the station. David wanted to give a necklace to",Susan,David,14919,3271
+abba_t3,ABBA,t3,22,"Then, Anna and Scott were thinking about going to the station. Scott wanted to give a necklace to",Anna,Scott,11735,4746
+abba_t3,ABBA,t3,23,"Then, Alice and Laura were thinking about going to the station. Laura wanted to give a necklace to",Alice,Laura,14862,16753
+abba_t3,ABBA,t3,24,"Then, Emma and David were thinking about going to the station. David wanted to give a necklace to",Emma,David,18966,3271
+abba_t3,ABBA,t3,25,"Then, Lisa and Mark were thinking about going to the station. Mark wanted to give a necklace to",Lisa,Mark,15378,2940
+abba_t3,ABBA,t3,26,"Then, Scott and Anna were thinking about going to the station. Anna wanted to give a necklace to",Scott,Anna,4746,11735
+abba_t3,ABBA,t3,27,"Then, Robert and Nancy were thinking about going to the station. Nancy wanted to give a necklace to",Robert,Nancy,5199,18496
+abba_t3,ABBA,t3,28,"Then, Jacob and Michael were thinking about going to the station. Michael wanted to give a necklace to",Jacob,Michael,12806,3899
+abba_t3,ABBA,t3,29,"Then, Mary and Karen were thinking about going to the station. Karen wanted to give a necklace to",Mary,Karen,5335,18678
+abba_t3,ABBA,t3,30,"Then, Helen and Scott were thinking about going to the station. Scott wanted to give a necklace to",Helen,Scott,22695,4746
+abba_t3,ABBA,t3,31,"Then, Helen and John were thinking about going to the station. John wanted to give a necklace to",Helen,John,22695,1757
+abba_t3,ABBA,t3,32,"Then, Bob and Rachel were thinking about going to the station. Rachel wanted to give a necklace to",Bob,Rachel,5811,15984
+abba_t3,ABBA,t3,33,"Then, Jason and Daniel were thinking about going to the station. Daniel wanted to give a necklace to",Jason,Daniel,8982,7806
+abba_t3,ABBA,t3,34,"Then, Steven and Jason were thinking about going to the station. Jason wanted to give a necklace to",Steven,Jason,8239,8982
+abba_t3,ABBA,t3,35,"Then, Karen and Susan were thinking about going to the station. Susan wanted to give a necklace to",Karen,Susan,18678,14919
+abba_t3,ABBA,t3,36,"Then, Mark and John were thinking about going to the station. John wanted to give a necklace to",Mark,John,2940,1757
+abba_t3,ABBA,t3,37,"Then, Lisa and Anna were thinking about going to the station. Anna wanted to give a necklace to",Lisa,Anna,15378,11735
+abba_t3,ABBA,t3,38,"Then, Jason and Nancy were thinking about going to the station. Nancy wanted to give a necklace to",Jason,Nancy,8982,18496
+abba_t3,ABBA,t3,39,"Then, David and Emily were thinking about going to the station. Emily wanted to give a necklace to",David,Emily,3271,17608
+abba_t3,ABBA,t3,40,"Then, Rachel and David were thinking about going to the station. David wanted to give a necklace to",Rachel,David,15984,3271
+abba_t3,ABBA,t3,41,"Then, Steven and Nancy were thinking about going to the station. Nancy wanted to give a necklace to",Steven,Nancy,8239,18496
+abba_t3,ABBA,t3,42,"Then, Bob and James were thinking about going to the station. James wanted to give a necklace to",Bob,James,5811,3700
+abba_t3,ABBA,t3,43,"Then, Helen and Kevin were thinking about going to the station. Kevin wanted to give a necklace to",Helen,Kevin,22695,7939
+abba_t3,ABBA,t3,44,"Then, Emily and Karen were thinking about going to the station. Karen wanted to give a necklace to",Emily,Karen,17608,18678
+abba_t3,ABBA,t3,45,"Then, Tom and Karen were thinking about going to the station. Karen wanted to give a necklace to",Tom,Karen,4186,18678
+abba_t3,ABBA,t3,46,"Then, Scott and Robert were thinking about going to the station. Robert wanted to give a necklace to",Scott,Robert,4746,5199
+abba_t3,ABBA,t3,47,"Then, Bob and David were thinking about going to the station. David wanted to give a necklace to",Bob,David,5811,3271
+abba_t3,ABBA,t3,48,"Then, Eric and Jacob were thinking about going to the station. Jacob wanted to give a necklace to",Eric,Jacob,7651,12806
+abba_t3,ABBA,t3,49,"Then, Helen and Anna were thinking about going to the station. Anna wanted to give a necklace to",Helen,Anna,22695,11735
+abba_t3,ABBA,t3,50,"Then, Alice and Jessica were thinking about going to the station. Jessica wanted to give a necklace to",Alice,Jessica,14862,17352
+abba_t3,ABBA,t3,51,"Then, Scott and Jessica were thinking about going to the station. Jessica wanted to give a necklace to",Scott,Jessica,4746,17352
+abba_t3,ABBA,t3,52,"Then, Steven and Alice were thinking about going to the station. Alice wanted to give a necklace to",Steven,Alice,8239,14862
+abba_t3,ABBA,t3,53,"Then, Scott and David were thinking about going to the station. David wanted to give a necklace to",Scott,David,4746,3271
+abba_t3,ABBA,t3,54,"Then, Jason and Helen were thinking about going to the station. Helen wanted to give a necklace to",Jason,Helen,8982,22695
+abba_t3,ABBA,t3,55,"Then, Scott and James were thinking about going to the station. James wanted to give a necklace to",Scott,James,4746,3700
+abba_t3,ABBA,t3,56,"Then, Scott and Kevin were thinking about going to the station. Kevin wanted to give a necklace to",Scott,Kevin,4746,7939
+abba_t3,ABBA,t3,57,"Then, Jessica and Robert were thinking about going to the station. Robert wanted to give a necklace to",Jessica,Robert,17352,5199
+abba_t3,ABBA,t3,58,"Then, Bob and Lisa were thinking about going to the station. Lisa wanted to give a necklace to",Bob,Lisa,5811,15378
+abba_t3,ABBA,t3,59,"Then, Karen and Daniel were thinking about going to the station. Daniel wanted to give a necklace to",Karen,Daniel,18678,7806
+abba_t3,ABBA,t3,60,"Then, David and Kevin were thinking about going to the station. Kevin wanted to give a necklace to",David,Kevin,3271,7939
+abba_t3,ABBA,t3,61,"Then, Emily and Jessica were thinking about going to the station. Jessica wanted to give a necklace to",Emily,Jessica,17608,17352
+abba_t3,ABBA,t3,62,"Then, Sarah and James were thinking about going to the station. James wanted to give a necklace to",Sarah,James,10490,3700
+abba_t3,ABBA,t3,63,"Then, Jason and Sarah were thinking about going to the station. Sarah wanted to give a necklace to",Jason,Sarah,8982,10490
+abba_t3,ABBA,t3,64,"Then, Mary and Lisa were thinking about going to the station. Lisa wanted to give a necklace to",Mary,Lisa,5335,15378
+abba_t3,ABBA,t3,65,"Then, Susan and Michael were thinking about going to the station. Michael wanted to give a necklace to",Susan,Michael,14919,3899
+abba_t3,ABBA,t3,66,"Then, Anna and Bob were thinking about going to the station. Bob wanted to give a necklace to",Anna,Bob,11735,5811
+abba_t3,ABBA,t3,67,"Then, Bob and Susan were thinking about going to the station. Susan wanted to give a necklace to",Bob,Susan,5811,14919
+abba_t3,ABBA,t3,68,"Then, Brian and Tom were thinking about going to the station. Tom wanted to give a necklace to",Brian,Tom,8403,4186
+abba_t3,ABBA,t3,69,"Then, Helen and Mary were thinking about going to the station. Mary wanted to give a necklace to",Helen,Mary,22695,5335
+abba_t3,ABBA,t3,70,"Then, Jason and Bob were thinking about going to the station. Bob wanted to give a necklace to",Jason,Bob,8982,5811
+abba_t3,ABBA,t3,71,"Then, Eric and Steven were thinking about going to the station. Steven wanted to give a necklace to",Eric,Steven,7651,8239
+abba_t3,ABBA,t3,72,"Then, Helen and Jason were thinking about going to the station. Jason wanted to give a necklace to",Helen,Jason,22695,8982
+abba_t3,ABBA,t3,73,"Then, Scott and Susan were thinking about going to the station. Susan wanted to give a necklace to",Scott,Susan,4746,14919
+abba_t3,ABBA,t3,74,"Then, Daniel and Jason were thinking about going to the station. Jason wanted to give a necklace to",Daniel,Jason,7806,8982
+abba_t3,ABBA,t3,75,"Then, Steven and Jacob were thinking about going to the station. Jacob wanted to give a necklace to",Steven,Jacob,8239,12806
+abba_t3,ABBA,t3,76,"Then, Karen and Emily were thinking about going to the station. Emily wanted to give a necklace to",Karen,Emily,18678,17608
+abba_t3,ABBA,t3,77,"Then, Nancy and James were thinking about going to the station. James wanted to give a necklace to",Nancy,James,18496,3700
+abba_t3,ABBA,t3,78,"Then, Eric and Susan were thinking about going to the station. Susan wanted to give a necklace to",Eric,Susan,7651,14919
+abba_t3,ABBA,t3,79,"Then, Kevin and Jason were thinking about going to the station. Jason wanted to give a necklace to",Kevin,Jason,7939,8982
+abba_t3,ABBA,t3,80,"Then, Emma and Kevin were thinking about going to the station. Kevin wanted to give a necklace to",Emma,Kevin,18966,7939
+abba_t3,ABBA,t3,81,"Then, Michael and Robert were thinking about going to the station. Robert wanted to give a necklace to",Michael,Robert,3899,5199
+abba_t3,ABBA,t3,82,"Then, Anna and Susan were thinking about going to the station. Susan wanted to give a necklace to",Anna,Susan,11735,14919
+abba_t3,ABBA,t3,83,"Then, Mark and Steven were thinking about going to the station. Steven wanted to give a necklace to",Mark,Steven,2940,8239
+abba_t3,ABBA,t3,84,"Then, Laura and Bob were thinking about going to the station. Bob wanted to give a necklace to",Laura,Bob,16753,5811
+abba_t3,ABBA,t3,85,"Then, David and Lisa were thinking about going to the station. Lisa wanted to give a necklace to",David,Lisa,3271,15378
+abba_t3,ABBA,t3,86,"Then, Alice and Anna were thinking about going to the station. Anna wanted to give a necklace to",Alice,Anna,14862,11735
+abba_t3,ABBA,t3,87,"Then, Kevin and Mark were thinking about going to the station. Mark wanted to give a necklace to",Kevin,Mark,7939,2940
+abba_t3,ABBA,t3,88,"Then, David and Nancy were thinking about going to the station. Nancy wanted to give a necklace to",David,Nancy,3271,18496
+abba_t3,ABBA,t3,89,"Then, James and Emily were thinking about going to the station. Emily wanted to give a necklace to",James,Emily,3700,17608
+abba_t3,ABBA,t3,90,"Then, John and Rachel were thinking about going to the station. Rachel wanted to give a necklace to",John,Rachel,1757,15984
+abba_t3,ABBA,t3,91,"Then, Michael and Alice were thinking about going to the station. Alice wanted to give a necklace to",Michael,Alice,3899,14862
+abba_t3,ABBA,t3,92,"Then, Steven and Emily were thinking about going to the station. Emily wanted to give a necklace to",Steven,Emily,8239,17608
+abba_t3,ABBA,t3,93,"Then, Laura and Karen were thinking about going to the station. Karen wanted to give a necklace to",Laura,Karen,16753,18678
+abba_t3,ABBA,t3,94,"Then, Sarah and David were thinking about going to the station. David wanted to give a necklace to",Sarah,David,10490,3271
+abba_t3,ABBA,t3,95,"Then, Emma and Jason were thinking about going to the station. Jason wanted to give a necklace to",Emma,Jason,18966,8982
+abba_t3,ABBA,t3,96,"Then, Mary and Alice were thinking about going to the station. Alice wanted to give a necklace to",Mary,Alice,5335,14862
+abba_t3,ABBA,t3,97,"Then, Karen and Tom were thinking about going to the station. Tom wanted to give a necklace to",Karen,Tom,18678,4186
+abba_t3,ABBA,t3,98,"Then, Nancy and Steven were thinking about going to the station. Steven wanted to give a necklace to",Nancy,Steven,18496,8239
+abba_t3,ABBA,t3,99,"Then, Emily and Mary were thinking about going to the station. Mary wanted to give a necklace to",Emily,Mary,17608,5335
+abba_t3,ABBA,t3,100,"Then, Jason and Kevin were thinking about going to the station. Kevin wanted to give a necklace to",Jason,Kevin,8982,7939
+abba_t3,ABBA,t3,101,"Then, Mark and Helen were thinking about going to the station. Helen wanted to give a necklace to",Mark,Helen,2940,22695
+abba_t3,ABBA,t3,102,"Then, Lisa and Susan were thinking about going to the station. Susan wanted to give a necklace to",Lisa,Susan,15378,14919
+abba_t3,ABBA,t3,103,"Then, Bob and John were thinking about going to the station. John wanted to give a necklace to",Bob,John,5811,1757
+abba_t3,ABBA,t3,104,"Then, Alice and Mark were thinking about going to the station. Mark wanted to give a necklace to",Alice,Mark,14862,2940
+abba_t3,ABBA,t3,105,"Then, James and Lisa were thinking about going to the station. Lisa wanted to give a necklace to",James,Lisa,3700,15378
+abba_t3,ABBA,t3,106,"Then, Alice and Daniel were thinking about going to the station. Daniel wanted to give a necklace to",Alice,Daniel,14862,7806
+abba_t3,ABBA,t3,107,"Then, Bob and Laura were thinking about going to the station. Laura wanted to give a necklace to",Bob,Laura,5811,16753
+abba_t3,ABBA,t3,108,"Then, Jason and Alice were thinking about going to the station. Alice wanted to give a necklace to",Jason,Alice,8982,14862
+abba_t3,ABBA,t3,109,"Then, John and James were thinking about going to the station. James wanted to give a necklace to",John,James,1757,3700
+abba_t3,ABBA,t3,110,"Then, Sarah and Steven were thinking about going to the station. Steven wanted to give a necklace to",Sarah,Steven,10490,8239
+abba_t3,ABBA,t3,111,"Then, James and Rachel were thinking about going to the station. Rachel wanted to give a necklace to",James,Rachel,3700,15984
+abba_t3,ABBA,t3,112,"Then, Karen and Mary were thinking about going to the station. Mary wanted to give a necklace to",Karen,Mary,18678,5335
+abba_t3,ABBA,t3,113,"Then, Helen and Susan were thinking about going to the station. Susan wanted to give a necklace to",Helen,Susan,22695,14919
+abba_t3,ABBA,t3,114,"Then, John and Scott were thinking about going to the station. Scott wanted to give a necklace to",John,Scott,1757,4746
+abba_t3,ABBA,t3,115,"Then, Emma and Lisa were thinking about going to the station. Lisa wanted to give a necklace to",Emma,Lisa,18966,15378
+abba_t3,ABBA,t3,116,"Then, Alice and Jason were thinking about going to the station. Jason wanted to give a necklace to",Alice,Jason,14862,8982
+abba_t3,ABBA,t3,117,"Then, Michael and Bob were thinking about going to the station. Bob wanted to give a necklace to",Michael,Bob,3899,5811
+abba_t3,ABBA,t3,118,"Then, Emily and Bob were thinking about going to the station. Bob wanted to give a necklace to",Emily,Bob,17608,5811
+abba_t3,ABBA,t3,119,"Then, Mark and Jessica were thinking about going to the station. Jessica wanted to give a necklace to",Mark,Jessica,2940,17352
+abba_t3,ABBA,t3,120,"Then, Laura and Emma were thinking about going to the station. Emma wanted to give a necklace to",Laura,Emma,16753,18966
+abba_t3,ABBA,t3,121,"Then, Sarah and Mary were thinking about going to the station. Mary wanted to give a necklace to",Sarah,Mary,10490,5335
+abba_t3,ABBA,t3,122,"Then, Jacob and Robert were thinking about going to the station. Robert wanted to give a necklace to",Jacob,Robert,12806,5199
+abba_t3,ABBA,t3,123,"Then, Alice and Steven were thinking about going to the station. Steven wanted to give a necklace to",Alice,Steven,14862,8239
+abba_t3,ABBA,t3,124,"Then, Daniel and James were thinking about going to the station. James wanted to give a necklace to",Daniel,James,7806,3700
+abba_t3,ABBA,t3,125,"Then, Michael and Laura were thinking about going to the station. Laura wanted to give a necklace to",Michael,Laura,3899,16753
+abba_t3,ABBA,t3,126,"Then, Eric and Rachel were thinking about going to the station. Rachel wanted to give a necklace to",Eric,Rachel,7651,15984
+abba_t3,ABBA,t3,127,"Then, Anna and Jason were thinking about going to the station. Jason wanted to give a necklace to",Anna,Jason,11735,8982
+baba_t3,BABA,t3,0,"Then, Daniel and Nancy were thinking about going to the station. Daniel wanted to give a necklace to",Nancy,Daniel,18496,7806
+baba_t3,BABA,t3,1,"Then, Eric and Brian were thinking about going to the station. Eric wanted to give a necklace to",Brian,Eric,8403,7651
+baba_t3,BABA,t3,2,"Then, Mary and Emma were thinking about going to the station. Mary wanted to give a necklace to",Emma,Mary,18966,5335
+baba_t3,BABA,t3,3,"Then, Jacob and Michael were thinking about going to the station. Jacob wanted to give a necklace to",Michael,Jacob,3899,12806
+baba_t3,BABA,t3,4,"Then, Daniel and Anna were thinking about going to the station. Daniel wanted to give a necklace to",Anna,Daniel,11735,7806
+baba_t3,BABA,t3,5,"Then, Karen and Helen were thinking about going to the station. Karen wanted to give a necklace to",Helen,Karen,22695,18678
+baba_t3,BABA,t3,6,"Then, Jessica and Jason were thinking about going to the station. Jessica wanted to give a necklace to",Jason,Jessica,8982,17352
+baba_t3,BABA,t3,7,"Then, Laura and Anna were thinking about going to the station. Laura wanted to give a necklace to",Anna,Laura,11735,16753
+baba_t3,BABA,t3,8,"Then, Eric and Kevin were thinking about going to the station. Eric wanted to give a necklace to",Kevin,Eric,7939,7651
+baba_t3,BABA,t3,9,"Then, James and Helen were thinking about going to the station. James wanted to give a necklace to",Helen,James,22695,3700
+baba_t3,BABA,t3,10,"Then, Tom and Jacob were thinking about going to the station. Tom wanted to give a necklace to",Jacob,Tom,12806,4186
+baba_t3,BABA,t3,11,"Then, Tom and Jessica were thinking about going to the station. Tom wanted to give a necklace to",Jessica,Tom,17352,4186
+baba_t3,BABA,t3,12,"Then, Alice and Brian were thinking about going to the station. Alice wanted to give a necklace to",Brian,Alice,8403,14862
+baba_t3,BABA,t3,13,"Then, Karen and Lisa were thinking about going to the station. Karen wanted to give a necklace to",Lisa,Karen,15378,18678
+baba_t3,BABA,t3,14,"Then, Helen and Michael were thinking about going to the station. Helen wanted to give a necklace to",Michael,Helen,3899,22695
+baba_t3,BABA,t3,15,"Then, Steven and Scott were thinking about going to the station. Steven wanted to give a necklace to",Scott,Steven,4746,8239
+baba_t3,BABA,t3,16,"Then, Lisa and Karen were thinking about going to the station. Lisa wanted to give a necklace to",Karen,Lisa,18678,15378
+baba_t3,BABA,t3,17,"Then, Tom and Eric were thinking about going to the station. Tom wanted to give a necklace to",Eric,Tom,7651,4186
+baba_t3,BABA,t3,18,"Then, Alice and Jessica were thinking about going to the station. Alice wanted to give a necklace to",Jessica,Alice,17352,14862
+baba_t3,BABA,t3,19,"Then, Bob and Rachel were thinking about going to the station. Bob wanted to give a necklace to",Rachel,Bob,15984,5811
+baba_t3,BABA,t3,20,"Then, Nancy and Eric were thinking about going to the station. Nancy wanted to give a necklace to",Eric,Nancy,7651,18496
+baba_t3,BABA,t3,21,"Then, David and Susan were thinking about going to the station. David wanted to give a necklace to",Susan,David,14919,3271
+baba_t3,BABA,t3,22,"Then, Scott and Anna were thinking about going to the station. Scott wanted to give a necklace to",Anna,Scott,11735,4746
+baba_t3,BABA,t3,23,"Then, Laura and Alice were thinking about going to the station. Laura wanted to give a necklace to",Alice,Laura,14862,16753
+baba_t3,BABA,t3,24,"Then, David and Emma were thinking about going to the station. David wanted to give a necklace to",Emma,David,18966,3271
+baba_t3,BABA,t3,25,"Then, Mark and Lisa were thinking about going to the station. Mark wanted to give a necklace to",Lisa,Mark,15378,2940
+baba_t3,BABA,t3,26,"Then, Anna and Scott were thinking about going to the station. Anna wanted to give a necklace to",Scott,Anna,4746,11735
+baba_t3,BABA,t3,27,"Then, Nancy and Robert were thinking about going to the station. Nancy wanted to give a necklace to",Robert,Nancy,5199,18496
+baba_t3,BABA,t3,28,"Then, Michael and Jacob were thinking about going to the station. Michael wanted to give a necklace to",Jacob,Michael,12806,3899
+baba_t3,BABA,t3,29,"Then, Karen and Mary were thinking about going to the station. Karen wanted to give a necklace to",Mary,Karen,5335,18678
+baba_t3,BABA,t3,30,"Then, Scott and Helen were thinking about going to the station. Scott wanted to give a necklace to",Helen,Scott,22695,4746
+baba_t3,BABA,t3,31,"Then, John and Helen were thinking about going to the station. John wanted to give a necklace to",Helen,John,22695,1757
+baba_t3,BABA,t3,32,"Then, Rachel and Bob were thinking about going to the station. Rachel wanted to give a necklace to",Bob,Rachel,5811,15984
+baba_t3,BABA,t3,33,"Then, Daniel and Jason were thinking about going to the station. Daniel wanted to give a necklace to",Jason,Daniel,8982,7806
+baba_t3,BABA,t3,34,"Then, Jason and Steven were thinking about going to the station. Jason wanted to give a necklace to",Steven,Jason,8239,8982
+baba_t3,BABA,t3,35,"Then, Susan and Karen were thinking about going to the station. Susan wanted to give a necklace to",Karen,Susan,18678,14919
+baba_t3,BABA,t3,36,"Then, John and Mark were thinking about going to the station. John wanted to give a necklace to",Mark,John,2940,1757
+baba_t3,BABA,t3,37,"Then, Anna and Lisa were thinking about going to the station. Anna wanted to give a necklace to",Lisa,Anna,15378,11735
+baba_t3,BABA,t3,38,"Then, Nancy and Jason were thinking about going to the station. Nancy wanted to give a necklace to",Jason,Nancy,8982,18496
+baba_t3,BABA,t3,39,"Then, Emily and David were thinking about going to the station. Emily wanted to give a necklace to",David,Emily,3271,17608
+baba_t3,BABA,t3,40,"Then, David and Rachel were thinking about going to the station. David wanted to give a necklace to",Rachel,David,15984,3271
+baba_t3,BABA,t3,41,"Then, Nancy and Steven were thinking about going to the station. Nancy wanted to give a necklace to",Steven,Nancy,8239,18496
+baba_t3,BABA,t3,42,"Then, James and Bob were thinking about going to the station. James wanted to give a necklace to",Bob,James,5811,3700
+baba_t3,BABA,t3,43,"Then, Kevin and Helen were thinking about going to the station. Kevin wanted to give a necklace to",Helen,Kevin,22695,7939
+baba_t3,BABA,t3,44,"Then, Karen and Emily were thinking about going to the station. Karen wanted to give a necklace to",Emily,Karen,17608,18678
+baba_t3,BABA,t3,45,"Then, Karen and Tom were thinking about going to the station. Karen wanted to give a necklace to",Tom,Karen,4186,18678
+baba_t3,BABA,t3,46,"Then, Robert and Scott were thinking about going to the station. Robert wanted to give a necklace to",Scott,Robert,4746,5199
+baba_t3,BABA,t3,47,"Then, David and Bob were thinking about going to the station. David wanted to give a necklace to",Bob,David,5811,3271
+baba_t3,BABA,t3,48,"Then, Jacob and Eric were thinking about going to the station. Jacob wanted to give a necklace to",Eric,Jacob,7651,12806
+baba_t3,BABA,t3,49,"Then, Anna and Helen were thinking about going to the station. Anna wanted to give a necklace to",Helen,Anna,22695,11735
+baba_t3,BABA,t3,50,"Then, Jessica and Alice were thinking about going to the station. Jessica wanted to give a necklace to",Alice,Jessica,14862,17352
+baba_t3,BABA,t3,51,"Then, Jessica and Scott were thinking about going to the station. Jessica wanted to give a necklace to",Scott,Jessica,4746,17352
+baba_t3,BABA,t3,52,"Then, Alice and Steven were thinking about going to the station. Alice wanted to give a necklace to",Steven,Alice,8239,14862
+baba_t3,BABA,t3,53,"Then, David and Scott were thinking about going to the station. David wanted to give a necklace to",Scott,David,4746,3271
+baba_t3,BABA,t3,54,"Then, Helen and Jason were thinking about going to the station. Helen wanted to give a necklace to",Jason,Helen,8982,22695
+baba_t3,BABA,t3,55,"Then, James and Scott were thinking about going to the station. James wanted to give a necklace to",Scott,James,4746,3700
+baba_t3,BABA,t3,56,"Then, Kevin and Scott were thinking about going to the station. Kevin wanted to give a necklace to",Scott,Kevin,4746,7939
+baba_t3,BABA,t3,57,"Then, Robert and Jessica were thinking about going to the station. Robert wanted to give a necklace to",Jessica,Robert,17352,5199
+baba_t3,BABA,t3,58,"Then, Lisa and Bob were thinking about going to the station. Lisa wanted to give a necklace to",Bob,Lisa,5811,15378
+baba_t3,BABA,t3,59,"Then, Daniel and Karen were thinking about going to the station. Daniel wanted to give a necklace to",Karen,Daniel,18678,7806
+baba_t3,BABA,t3,60,"Then, Kevin and David were thinking about going to the station. Kevin wanted to give a necklace to",David,Kevin,3271,7939
+baba_t3,BABA,t3,61,"Then, Jessica and Emily were thinking about going to the station. Jessica wanted to give a necklace to",Emily,Jessica,17608,17352
+baba_t3,BABA,t3,62,"Then, James and Sarah were thinking about going to the station. James wanted to give a necklace to",Sarah,James,10490,3700
+baba_t3,BABA,t3,63,"Then, Sarah and Jason were thinking about going to the station. Sarah wanted to give a necklace to",Jason,Sarah,8982,10490
+baba_t3,BABA,t3,64,"Then, Lisa and Mary were thinking about going to the station. Lisa wanted to give a necklace to",Mary,Lisa,5335,15378
+baba_t3,BABA,t3,65,"Then, Michael and Susan were thinking about going to the station. Michael wanted to give a necklace to",Susan,Michael,14919,3899
+baba_t3,BABA,t3,66,"Then, Bob and Anna were thinking about going to the station. Bob wanted to give a necklace to",Anna,Bob,11735,5811
+baba_t3,BABA,t3,67,"Then, Susan and Bob were thinking about going to the station. Susan wanted to give a necklace to",Bob,Susan,5811,14919
+baba_t3,BABA,t3,68,"Then, Tom and Brian were thinking about going to the station. Tom wanted to give a necklace to",Brian,Tom,8403,4186
+baba_t3,BABA,t3,69,"Then, Mary and Helen were thinking about going to the station. Mary wanted to give a necklace to",Helen,Mary,22695,5335
+baba_t3,BABA,t3,70,"Then, Bob and Jason were thinking about going to the station. Bob wanted to give a necklace to",Jason,Bob,8982,5811
+baba_t3,BABA,t3,71,"Then, Steven and Eric were thinking about going to the station. Steven wanted to give a necklace to",Eric,Steven,7651,8239
+baba_t3,BABA,t3,72,"Then, Jason and Helen were thinking about going to the station. Jason wanted to give a necklace to",Helen,Jason,22695,8982
+baba_t3,BABA,t3,73,"Then, Susan and Scott were thinking about going to the station. Susan wanted to give a necklace to",Scott,Susan,4746,14919
+baba_t3,BABA,t3,74,"Then, Jason and Daniel were thinking about going to the station. Jason wanted to give a necklace to",Daniel,Jason,7806,8982
+baba_t3,BABA,t3,75,"Then, Jacob and Steven were thinking about going to the station. Jacob wanted to give a necklace to",Steven,Jacob,8239,12806
+baba_t3,BABA,t3,76,"Then, Emily and Karen were thinking about going to the station. Emily wanted to give a necklace to",Karen,Emily,18678,17608
+baba_t3,BABA,t3,77,"Then, James and Nancy were thinking about going to the station. James wanted to give a necklace to",Nancy,James,18496,3700
+baba_t3,BABA,t3,78,"Then, Susan and Eric were thinking about going to the station. Susan wanted to give a necklace to",Eric,Susan,7651,14919
+baba_t3,BABA,t3,79,"Then, Jason and Kevin were thinking about going to the station. Jason wanted to give a necklace to",Kevin,Jason,7939,8982
+baba_t3,BABA,t3,80,"Then, Kevin and Emma were thinking about going to the station. Kevin wanted to give a necklace to",Emma,Kevin,18966,7939
+baba_t3,BABA,t3,81,"Then, Robert and Michael were thinking about going to the station. Robert wanted to give a necklace to",Michael,Robert,3899,5199
+baba_t3,BABA,t3,82,"Then, Susan and Anna were thinking about going to the station. Susan wanted to give a necklace to",Anna,Susan,11735,14919
+baba_t3,BABA,t3,83,"Then, Steven and Mark were thinking about going to the station. Steven wanted to give a necklace to",Mark,Steven,2940,8239
+baba_t3,BABA,t3,84,"Then, Bob and Laura were thinking about going to the station. Bob wanted to give a necklace to",Laura,Bob,16753,5811
+baba_t3,BABA,t3,85,"Then, Lisa and David were thinking about going to the station. Lisa wanted to give a necklace to",David,Lisa,3271,15378
+baba_t3,BABA,t3,86,"Then, Anna and Alice were thinking about going to the station. Anna wanted to give a necklace to",Alice,Anna,14862,11735
+baba_t3,BABA,t3,87,"Then, Mark and Kevin were thinking about going to the station. Mark wanted to give a necklace to",Kevin,Mark,7939,2940
+baba_t3,BABA,t3,88,"Then, Nancy and David were thinking about going to the station. Nancy wanted to give a necklace to",David,Nancy,3271,18496
+baba_t3,BABA,t3,89,"Then, Emily and James were thinking about going to the station. Emily wanted to give a necklace to",James,Emily,3700,17608
+baba_t3,BABA,t3,90,"Then, Rachel and John were thinking about going to the station. Rachel wanted to give a necklace to",John,Rachel,1757,15984
+baba_t3,BABA,t3,91,"Then, Alice and Michael were thinking about going to the station. Alice wanted to give a necklace to",Michael,Alice,3899,14862
+baba_t3,BABA,t3,92,"Then, Emily and Steven were thinking about going to the station. Emily wanted to give a necklace to",Steven,Emily,8239,17608
+baba_t3,BABA,t3,93,"Then, Karen and Laura were thinking about going to the station. Karen wanted to give a necklace to",Laura,Karen,16753,18678
+baba_t3,BABA,t3,94,"Then, David and Sarah were thinking about going to the station. David wanted to give a necklace to",Sarah,David,10490,3271
+baba_t3,BABA,t3,95,"Then, Jason and Emma were thinking about going to the station. Jason wanted to give a necklace to",Emma,Jason,18966,8982
+baba_t3,BABA,t3,96,"Then, Alice and Mary were thinking about going to the station. Alice wanted to give a necklace to",Mary,Alice,5335,14862
+baba_t3,BABA,t3,97,"Then, Tom and Karen were thinking about going to the station. Tom wanted to give a necklace to",Karen,Tom,18678,4186
+baba_t3,BABA,t3,98,"Then, Steven and Nancy were thinking about going to the station. Steven wanted to give a necklace to",Nancy,Steven,18496,8239
+baba_t3,BABA,t3,99,"Then, Mary and Emily were thinking about going to the station. Mary wanted to give a necklace to",Emily,Mary,17608,5335
+baba_t3,BABA,t3,100,"Then, Kevin and Jason were thinking about going to the station. Kevin wanted to give a necklace to",Jason,Kevin,8982,7939
+baba_t3,BABA,t3,101,"Then, Helen and Mark were thinking about going to the station. Helen wanted to give a necklace to",Mark,Helen,2940,22695
+baba_t3,BABA,t3,102,"Then, Susan and Lisa were thinking about going to the station. Susan wanted to give a necklace to",Lisa,Susan,15378,14919
+baba_t3,BABA,t3,103,"Then, John and Bob were thinking about going to the station. John wanted to give a necklace to",Bob,John,5811,1757
+baba_t3,BABA,t3,104,"Then, Mark and Alice were thinking about going to the station. Mark wanted to give a necklace to",Alice,Mark,14862,2940
+baba_t3,BABA,t3,105,"Then, Lisa and James were thinking about going to the station. Lisa wanted to give a necklace to",James,Lisa,3700,15378
+baba_t3,BABA,t3,106,"Then, Daniel and Alice were thinking about going to the station. Daniel wanted to give a necklace to",Alice,Daniel,14862,7806
+baba_t3,BABA,t3,107,"Then, Laura and Bob were thinking about going to the station. Laura wanted to give a necklace to",Bob,Laura,5811,16753
+baba_t3,BABA,t3,108,"Then, Alice and Jason were thinking about going to the station. Alice wanted to give a necklace to",Jason,Alice,8982,14862
+baba_t3,BABA,t3,109,"Then, James and John were thinking about going to the station. James wanted to give a necklace to",John,James,1757,3700
+baba_t3,BABA,t3,110,"Then, Steven and Sarah were thinking about going to the station. Steven wanted to give a necklace to",Sarah,Steven,10490,8239
+baba_t3,BABA,t3,111,"Then, Rachel and James were thinking about going to the station. Rachel wanted to give a necklace to",James,Rachel,3700,15984
+baba_t3,BABA,t3,112,"Then, Mary and Karen were thinking about going to the station. Mary wanted to give a necklace to",Karen,Mary,18678,5335
+baba_t3,BABA,t3,113,"Then, Susan and Helen were thinking about going to the station. Susan wanted to give a necklace to",Helen,Susan,22695,14919
+baba_t3,BABA,t3,114,"Then, Scott and John were thinking about going to the station. Scott wanted to give a necklace to",John,Scott,1757,4746
+baba_t3,BABA,t3,115,"Then, Lisa and Emma were thinking about going to the station. Lisa wanted to give a necklace to",Emma,Lisa,18966,15378
+baba_t3,BABA,t3,116,"Then, Jason and Alice were thinking about going to the station. Jason wanted to give a necklace to",Alice,Jason,14862,8982
+baba_t3,BABA,t3,117,"Then, Bob and Michael were thinking about going to the station. Bob wanted to give a necklace to",Michael,Bob,3899,5811
+baba_t3,BABA,t3,118,"Then, Bob and Emily were thinking about going to the station. Bob wanted to give a necklace to",Emily,Bob,17608,5811
+baba_t3,BABA,t3,119,"Then, Jessica and Mark were thinking about going to the station. Jessica wanted to give a necklace to",Mark,Jessica,2940,17352
+baba_t3,BABA,t3,120,"Then, Emma and Laura were thinking about going to the station. Emma wanted to give a necklace to",Laura,Emma,16753,18966
+baba_t3,BABA,t3,121,"Then, Mary and Sarah were thinking about going to the station. Mary wanted to give a necklace to",Sarah,Mary,10490,5335
+baba_t3,BABA,t3,122,"Then, Robert and Jacob were thinking about going to the station. Robert wanted to give a necklace to",Jacob,Robert,12806,5199
+baba_t3,BABA,t3,123,"Then, Steven and Alice were thinking about going to the station. Steven wanted to give a necklace to",Alice,Steven,14862,8239
+baba_t3,BABA,t3,124,"Then, James and Daniel were thinking about going to the station. James wanted to give a necklace to",Daniel,James,7806,3700
+baba_t3,BABA,t3,125,"Then, Laura and Michael were thinking about going to the station. Laura wanted to give a necklace to",Michael,Laura,3899,16753
+baba_t3,BABA,t3,126,"Then, Rachel and Eric were thinking about going to the station. Rachel wanted to give a necklace to",Eric,Rachel,7651,15984
+baba_t3,BABA,t3,127,"Then, Jason and Anna were thinking about going to the station. Jason wanted to give a necklace to",Anna,Jason,11735,8982

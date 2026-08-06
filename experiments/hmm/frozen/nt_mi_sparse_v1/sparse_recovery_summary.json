@@ -1,0 +1,39 @@
+{
+  "mt_dir": "experiments/hmm/frozen/nt_mi_set1_v2",
+  "n_measurements_total": 256,
+  "n_components": 32,
+  "train_sizes": [
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    128
+  ],
+  "methods": [
+    "ridge",
+    "omp",
+    "lasso"
+  ],
+  "threshold_crossings": {
+    "ridge": {
+      "pearson_0.90": 32,
+      "pearson_0.95": 32,
+      "r2_0.90": 32
+    },
+    "omp": {
+      "pearson_0.90": 12,
+      "pearson_0.95": 12,
+      "r2_0.90": 12
+    },
+    "lasso": {
+      "pearson_0.90": 24,
+      "pearson_0.95": 24,
+      "r2_0.90": 24
+    }
+  },
+  "interpretation": "Ridge validates local additive recovery. OMP/LASSO test the actual tomography advantage claim: whether a sparse mechanism map can be recovered with fewer aggregate measurements than exhaustive single-component patching. Hyperparameters are selected by aggregate-measurement validation R2, not by direct-MI agreement. Direct MI is used only for final diagnostics."
+}

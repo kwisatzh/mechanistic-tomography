@@ -1,0 +1,75 @@
+{
+  "args": {
+    "outdir": "runs/claim3_hvp_sparse030",
+    "mode": "combined",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "n_components": 64,
+    "epsilons": [
+      5.0,
+      8.0
+    ],
+    "hvp_budgets": [
+      1,
+      2,
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "holdout_measurements": 512,
+    "mask_kind": "signed",
+    "mask_density": 0.3,
+    "raw_masks": false,
+    "hvp_kind": "signed",
+    "hvp_density": 0.3,
+    "raw_hvp_vectors": false,
+    "hvp_noise_std": 0.01,
+    "forward_noise_std": 0.01,
+    "ridge": 1e-08,
+    "val_frac": 0.25,
+    "hvp_omp_max_k": 16,
+    "r2_threshold": 0.95,
+    "pair_threshold": 0.99,
+    "beta1": 1.4,
+    "beta2": -1.1,
+    "lambda1": 0.18,
+    "lambda2": 0.75,
+    "gamma_interaction": 1.4,
+    "gamma_redundant": -1.2,
+    "quick": false
+  },
+  "n_components": 64,
+  "n_pairs": 2016,
+  "lifted_dim": 2080,
+  "support_k": 5,
+  "hvp_budgets": [
+    1,
+    2,
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "epsilons": [
+    5.0,
+    8.0
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "interpretation": "HVP recovers the sparse pair map in the white-box second-order regime. It is the correct reviewer baseline for interactional estimands."
+}

@@ -1,0 +1,102 @@
+{
+  "args": {
+    "programs": [
+      "first_order_is_A",
+      "paircat_AB_to_numeric",
+      "detect_pattern_AB_raw"
+    ],
+    "outdir": "runs/tracr_label_basis_v6",
+    "seq_len": 6,
+    "max_sequences": null,
+    "stage": "final_residual",
+    "test_frac": 0.25,
+    "seed": 0,
+    "ridge": 1e-06,
+    "omp_max_k": 4,
+    "lifted_omp_max_k": 6,
+    "max_lifted_pairs": 0,
+    "top_k_terms": 12
+  },
+  "program_summaries": [
+    {
+      "program": "first_order_is_A",
+      "n_sequences": 243,
+      "n_examples": 1215,
+      "stage": "final_residual",
+      "n_residual_labels": 12,
+      "residual_labels": [
+        "indices:0",
+        "indices:1",
+        "indices:2",
+        "indices:3",
+        "indices:4",
+        "indices:5",
+        "is_A_1",
+        "tokens:A",
+        "tokens:B",
+        "tokens:BOS",
+        "tokens:C",
+        "tokens:compiler_pad"
+      ],
+      "positive_rate": 0.3333333333333333
+    },
+    {
+      "program": "paircat_AB_to_numeric",
+      "n_sequences": 243,
+      "n_examples": 1215,
+      "stage": "final_residual",
+      "n_residual_labels": 18,
+      "residual_labels": [
+        "detect_AB_num_2",
+        "indices:0",
+        "indices:1",
+        "indices:2",
+        "indices:3",
+        "indices:4",
+        "indices:5",
+        "one",
+        "paircat_AB_3:AB",
+        "paircat_AB_3:OTHER",
+        "prev_token_4:A",
+        "prev_token_4:B",
+        "prev_token_4:C",
+        "tokens:A",
+        "tokens:B",
+        "tokens:BOS",
+        "tokens:C",
+        "tokens:compiler_pad"
+      ],
+      "positive_rate": 0.08888888888888889
+    },
+    {
+      "program": "detect_pattern_AB_raw",
+      "n_sequences": 243,
+      "n_examples": 1215,
+      "stage": "final_residual",
+      "n_residual_labels": 20,
+      "residual_labels": [
+        "detect_pattern_AB_raw_6:False",
+        "detect_pattern_AB_raw_6:True",
+        "indices:0",
+        "indices:1",
+        "indices:2",
+        "indices:3",
+        "indices:4",
+        "indices:5",
+        "map_10:False",
+        "map_10:True",
+        "map_8:False",
+        "map_8:True",
+        "one",
+        "shift_by(1)_7:False",
+        "shift_by(1)_7:True",
+        "tokens:A",
+        "tokens:B",
+        "tokens:BOS",
+        "tokens:C",
+        "tokens:compiler_pad"
+      ],
+      "positive_rate": 0.08888888888888889
+    }
+  ]
+}

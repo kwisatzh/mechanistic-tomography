@@ -1,0 +1,286 @@
+{
+  "args": {
+    "programs": [
+      "first_order_is_A",
+      "paircat_AB_to_numeric",
+      "detect_pattern_AB_raw"
+    ],
+    "seq_len": 6,
+    "max_sequences": null,
+    "test_frac": 0.25,
+    "seed": 0,
+    "ridge": 1e-08,
+    "reconstruct_ridge": 1e-08,
+    "clip_reconstruction": true,
+    "scales": [
+      0.0,
+      0.5,
+      1.5
+    ],
+    "outdir": "runs/tracr_residual_group_intervention_v8"
+  },
+  "programs": [
+    {
+      "program": "first_order_is_A",
+      "n_sequences": 243,
+      "n_examples": 1215,
+      "n_labels": 12,
+      "labels": [
+        "indices:0",
+        "indices:1",
+        "indices:2",
+        "indices:3",
+        "indices:4",
+        "indices:5",
+        "is_A_1",
+        "tokens:A",
+        "tokens:B",
+        "tokens:BOS",
+        "tokens:C",
+        "tokens:compiler_pad"
+      ],
+      "groups": {
+        "all_nonpad": [
+          "indices:0",
+          "indices:1",
+          "indices:2",
+          "indices:3",
+          "indices:4",
+          "indices:5",
+          "is_A_1",
+          "tokens:A",
+          "tokens:B",
+          "tokens:BOS",
+          "tokens:C"
+        ],
+        "tokens_nonbos": [
+          "tokens:A",
+          "tokens:B",
+          "tokens:C"
+        ],
+        "indices": [
+          "indices:0",
+          "indices:1",
+          "indices:2",
+          "indices:3",
+          "indices:4",
+          "indices:5"
+        ],
+        "prev_or_shift": [],
+        "explicit_detector": [
+          "is_A_1"
+        ],
+        "true_detector": [
+          "is_A_1"
+        ],
+        "false_detector": [],
+        "reconstruct_from": [
+          "tokens:A"
+        ],
+        "token_A": [
+          "tokens:A"
+        ]
+      },
+      "baseline_test_r2": 1.0,
+      "baseline_test_mse": 8.211691075435984e-23
+    },
+    {
+      "program": "paircat_AB_to_numeric",
+      "n_sequences": 243,
+      "n_examples": 1215,
+      "n_labels": 18,
+      "labels": [
+        "detect_AB_num_2",
+        "indices:0",
+        "indices:1",
+        "indices:2",
+        "indices:3",
+        "indices:4",
+        "indices:5",
+        "one",
+        "paircat_AB_3:AB",
+        "paircat_AB_3:OTHER",
+        "prev_token_4:A",
+        "prev_token_4:B",
+        "prev_token_4:C",
+        "tokens:A",
+        "tokens:B",
+        "tokens:BOS",
+        "tokens:C",
+        "tokens:compiler_pad"
+      ],
+      "groups": {
+        "all_nonpad": [
+          "detect_AB_num_2",
+          "indices:0",
+          "indices:1",
+          "indices:2",
+          "indices:3",
+          "indices:4",
+          "indices:5",
+          "one",
+          "paircat_AB_3:AB",
+          "paircat_AB_3:OTHER",
+          "prev_token_4:A",
+          "prev_token_4:B",
+          "prev_token_4:C",
+          "tokens:A",
+          "tokens:B",
+          "tokens:BOS",
+          "tokens:C"
+        ],
+        "tokens_nonbos": [
+          "tokens:A",
+          "tokens:B",
+          "tokens:C"
+        ],
+        "indices": [
+          "indices:0",
+          "indices:1",
+          "indices:2",
+          "indices:3",
+          "indices:4",
+          "indices:5"
+        ],
+        "prev_or_shift": [
+          "prev_token_4:A",
+          "prev_token_4:B",
+          "prev_token_4:C"
+        ],
+        "explicit_detector": [
+          "detect_AB_num_2",
+          "paircat_AB_3:AB",
+          "paircat_AB_3:OTHER"
+        ],
+        "true_detector": [
+          "detect_AB_num_2",
+          "paircat_AB_3:AB"
+        ],
+        "false_detector": [
+          "paircat_AB_3:OTHER"
+        ],
+        "reconstruct_from": [
+          "prev_token_4:A",
+          "prev_token_4:B",
+          "prev_token_4:C",
+          "tokens:A",
+          "tokens:B",
+          "tokens:C"
+        ],
+        "prev_A": [
+          "prev_token_4:A"
+        ],
+        "token_B": [
+          "tokens:B"
+        ]
+      },
+      "baseline_test_r2": 0.9999999999999992,
+      "baseline_test_mse": 7.250625054226504e-17
+    },
+    {
+      "program": "detect_pattern_AB_raw",
+      "n_sequences": 243,
+      "n_examples": 1215,
+      "n_labels": 20,
+      "labels": [
+        "detect_pattern_AB_raw_6:False",
+        "detect_pattern_AB_raw_6:True",
+        "indices:0",
+        "indices:1",
+        "indices:2",
+        "indices:3",
+        "indices:4",
+        "indices:5",
+        "map_10:False",
+        "map_10:True",
+        "map_8:False",
+        "map_8:True",
+        "one",
+        "shift_by(1)_7:False",
+        "shift_by(1)_7:True",
+        "tokens:A",
+        "tokens:B",
+        "tokens:BOS",
+        "tokens:C",
+        "tokens:compiler_pad"
+      ],
+      "groups": {
+        "all_nonpad": [
+          "detect_pattern_AB_raw_6:False",
+          "detect_pattern_AB_raw_6:True",
+          "indices:0",
+          "indices:1",
+          "indices:2",
+          "indices:3",
+          "indices:4",
+          "indices:5",
+          "map_10:False",
+          "map_10:True",
+          "map_8:False",
+          "map_8:True",
+          "one",
+          "shift_by(1)_7:False",
+          "shift_by(1)_7:True",
+          "tokens:A",
+          "tokens:B",
+          "tokens:BOS",
+          "tokens:C"
+        ],
+        "tokens_nonbos": [
+          "tokens:A",
+          "tokens:B",
+          "tokens:C"
+        ],
+        "indices": [
+          "indices:0",
+          "indices:1",
+          "indices:2",
+          "indices:3",
+          "indices:4",
+          "indices:5"
+        ],
+        "prev_or_shift": [
+          "shift_by(1)_7:False",
+          "shift_by(1)_7:True"
+        ],
+        "explicit_detector": [
+          "detect_pattern_AB_raw_6:False",
+          "detect_pattern_AB_raw_6:True",
+          "map_10:False",
+          "map_10:True",
+          "map_8:False",
+          "map_8:True"
+        ],
+        "true_detector": [
+          "detect_pattern_AB_raw_6:True",
+          "map_10:True",
+          "map_8:True"
+        ],
+        "false_detector": [
+          "detect_pattern_AB_raw_6:False",
+          "map_10:False",
+          "map_8:False"
+        ],
+        "reconstruct_from": [
+          "shift_by(1)_7:False",
+          "shift_by(1)_7:True",
+          "tokens:A",
+          "tokens:B",
+          "tokens:C"
+        ],
+        "shift_true": [
+          "shift_by(1)_7:True"
+        ],
+        "shift_false": [
+          "shift_by(1)_7:False"
+        ],
+        "token_B": [
+          "tokens:B"
+        ]
+      },
+      "baseline_test_r2": 0.9999999999999996,
+      "baseline_test_mse": 4.3235874213458874e-17
+    }
+  ],
+  "interpretation": "Final-residual GROUP causal readout interventions over Tracr residual labels. This tests causal readout effects of explicit detector groups and whether restricted/lifted observers can reconstruct them. It is not continuation from an intermediate residual stage."
+}

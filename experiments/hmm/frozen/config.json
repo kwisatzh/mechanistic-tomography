@@ -1,0 +1,33 @@
+{
+  "cfg": {
+    "seed": 7,
+    "seq_len": 64,
+    "batch_size": 256,
+    "steps": 1500,
+    "eval_every": 100,
+    "lr": 0.0003,
+    "d_model": 96,
+    "n_layers": 4,
+    "n_heads": 4,
+    "d_mlp": 384,
+    "dropout": 0.0,
+    "probe_batches": 40,
+    "probe_samples": 250000,
+    "control_batches": 20,
+    "control_batch_size": 256,
+    "target_z": 2.0,
+    "controller_gain": 0.8,
+    "max_strength": 8.0,
+    "ridge": 0.001,
+    "aux_posterior_weight": 0.0,
+    "device": "mps",
+    "outdir": "runs/m4_baseline_seed7"
+  },
+  "params": {
+    "p_stay1": 0.96,
+    "p_emit1": 0.85,
+    "p_stay2": 0.92,
+    "p_emit2": 0.8
+  },
+  "device": "mps"
+}

@@ -1,0 +1,7 @@
+{
+  "inputs": [
+    "runs/m4_baseline_seed7/step0_v2_seed7/step0_results.csv",
+    "runs/m4_baseline_seed7/step0_v2_seed8/step0_results.csv",
+    "runs/m4_baseline_seed7/step0_v2_seed9/step0_results.csv"
+  ]
+}

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+artifacts/generated/*
+!artifacts/generated/.gitkeep
+artifacts/runs/
+artifacts/notebook/
+data/raw/
+data/prepared/
+*.pt
+*.safetensors

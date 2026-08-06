@@ -1,0 +1,34 @@
+{
+  "attribution": "Experiments designed/concieved by Vijay Erramilli. Code written by Vijay Erramilli and Codex",
+  "args": {
+    "stage2c_script": "experiments/ioi/stage2c/ioi_stage2c_primary_stratified.py",
+    "outdir": "experiments/revision_checks/frozen/ioi_template_ablation_robustness",
+    "model": "gpt2-small",
+    "device": "cpu",
+    "n_prompts": 128,
+    "n_reference": 256,
+    "batch_size": 32,
+    "seed": 0,
+    "bootstrap_repeats": 2000,
+    "dry_run": false
+  },
+  "device": "cpu",
+  "template_source": "Redwood Research Easy-Transformer ioi_dataset.py; first four BABA_TEMPLATES and their generated ABBA counterparts",
+  "template_source_url": "https://github.com/redwoodresearch/Easy-Transformer/blob/main/easy_transformer/ioi_dataset.py",
+  "sign_convention": "positive effect = clean logit difference - ablated logit difference",
+  "pair_counts": {
+    "PB": 24,
+    "PE": 6,
+    "BE": 16
+  },
+  "robustness_gate": {
+    "definition": "I_PE > I_PB for mean and zero ablation, with the hierarchical 95% interval for I_PE_minus_PB above zero under both conventions",
+    "mean_point_PE_gt_PB": true,
+    "mean_I_PE_minus_PB_q025": 0.5889587086392567,
+    "mean_interval_above_zero": true,
+    "zero_point_PE_gt_PB": true,
+    "zero_I_PE_minus_PB_q025": 0.2527893646620214,
+    "zero_interval_above_zero": true,
+    "pass": true
+  }
+}

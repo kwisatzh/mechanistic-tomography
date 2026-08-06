@@ -1,0 +1,21 @@
+program,basis,method,feature_family,n_features,n_train,n_test,train_r2,test_r2,selected_k,selected_terms,pair_recall
+first_order_is_A,full_native,ridge,first_order,11,911,304,1.0,1.0,11,tokens:A;is_A_1;tokens:C;tokens:B;indices:2;indices:4;indices:1;indices:3;indices:0;indices:5;tokens:BOS,
+first_order_is_A,full_native,omp,first_order,11,911,304,1.0,1.0,4,is_A_1;tokens:A;tokens:C;tokens:B,
+first_order_is_A,tokens_only,ridge,first_order,3,911,304,1.0,1.0,3,tokens:A;tokens:C;tokens:B,
+first_order_is_A,tokens_only,omp,first_order,3,911,304,1.0,1.0,3,tokens:A;tokens:C;tokens:B,
+paircat_AB_to_numeric,full_native,ridge,first_order,17,911,304,0.999999999999999,0.9999999999999992,12,detect_AB_num_2;paircat_AB_3:AB;paircat_AB_3:OTHER;indices:0;prev_token_4:A;prev_token_4:B;prev_token_4:C;indices:1;indices:4;indices:2;indices:3;tokens:A,0.0
+paircat_AB_to_numeric,full_native,omp,first_order,17,911,304,0.9999999999999989,0.9999999999999991,4,detect_AB_num_2;indices:0;paircat_AB_3:OTHER;paircat_AB_3:AB,0.0
+paircat_AB_to_numeric,tokens_only,ridge,first_order,3,911,304,0.18910826994659335,0.20530798817199658,3,tokens:B;tokens:A;tokens:C,0.0
+paircat_AB_to_numeric,tokens_only,omp,first_order,3,911,304,0.18910826994659324,0.20530798817199658,3,tokens:B;tokens:A;tokens:C,0.0
+paircat_AB_to_numeric,restricted_pre_interaction,ridge,first_order,6,911,304,0.4452782036225734,0.5010171495734783,6,prev_token_4:A;tokens:B;tokens:C;tokens:A;prev_token_4:C;prev_token_4:B,0.0
+paircat_AB_to_numeric,restricted_pre_interaction,omp,first_order,6,911,304,0.44527809182296685,0.5010172382861087,4,prev_token_4:A;tokens:B;tokens:C;prev_token_4:C,0.0
+paircat_AB_to_numeric,restricted_pre_interaction,ridge,lifted_pairs,21,911,304,0.9999999999999993,0.9999999999999996,12,prev_token_4:A × tokens:B;prev_token_4:A;prev_token_4:A × tokens:A;prev_token_4:A × tokens:C;tokens:B;tokens:C;tokens:A;prev_token_4:C;prev_token_4:C × tokens:A;prev_token_4:C × tokens:C;prev_token_4:C × tokens:B;prev_token_4:B × tokens:B,1.0
+paircat_AB_to_numeric,restricted_pre_interaction,omp,lifted_pairs,21,911,304,0.999999999999999,0.9999999999999993,6,prev_token_4:A × tokens:B;prev_token_4:A;prev_token_4:C;prev_token_4:B;prev_token_4:A × tokens:C;prev_token_4:A × tokens:A,1.0
+detect_pattern_AB_raw,full_native,ridge,first_order,19,911,304,0.9999999999999991,0.9999999999999994,12,detect_pattern_AB_raw_6:True;detect_pattern_AB_raw_6:False;indices:0;shift_by(1)_7:True;shift_by(1)_7:False;indices:1;indices:2;indices:4;indices:3;tokens:C;map_8:False;map_10:False,0.0
+detect_pattern_AB_raw,full_native,omp,first_order,19,911,304,0.9999999999999991,0.9999999999999994,4,detect_pattern_AB_raw_6:True;indices:0;detect_pattern_AB_raw_6:False;map_8:False,0.0
+detect_pattern_AB_raw,tokens_only,ridge,first_order,3,911,304,0.18910826994659335,0.20530798817199658,3,tokens:B;tokens:A;tokens:C,0.0
+detect_pattern_AB_raw,tokens_only,omp,first_order,3,911,304,0.18910826994659324,0.20530798817199658,3,tokens:B;tokens:A;tokens:C,0.0
+detect_pattern_AB_raw,restricted_pre_interaction,ridge,first_order,5,911,304,0.44522341186074743,0.5013126612678652,5,shift_by(1)_7:True;tokens:B;tokens:C;tokens:A;shift_by(1)_7:False,0.0
+detect_pattern_AB_raw,restricted_pre_interaction,omp,first_order,5,911,304,0.44522341186074743,0.5013126611117049,4,shift_by(1)_7:True;tokens:B;tokens:C;shift_by(1)_7:False,0.0
+detect_pattern_AB_raw,restricted_pre_interaction,ridge,lifted_pairs,15,911,304,0.9999999999999993,0.9999999999999996,12,shift_by(1)_7:True × tokens:B;shift_by(1)_7:True;shift_by(1)_7:True × tokens:A;shift_by(1)_7:True × tokens:C;tokens:B;tokens:C;tokens:A;shift_by(1)_7:False;shift_by(1)_7:False × tokens:A;shift_by(1)_7:False × tokens:C;shift_by(1)_7:False × tokens:B;shift_by(1)_7:False × shift_by(1)_7:True,1.0
+detect_pattern_AB_raw,restricted_pre_interaction,omp,lifted_pairs,15,911,304,0.9999999999999991,0.9999999999999994,6,shift_by(1)_7:True × tokens:B;shift_by(1)_7:True;shift_by(1)_7:False;shift_by(1)_7:True × tokens:C;shift_by(1)_7:True × tokens:A;tokens:B,1.0

@@ -1,0 +1,74 @@
+{
+  "input_files": [
+    {
+      "source_file": "runs/claim3_noise_0.01/claim3_results.csv",
+      "source_dir": "runs/claim3_noise_0.01",
+      "noise_std": 0.01,
+      "measurements": 96,
+      "holdout_measurements": 512,
+      "n_components": 64,
+      "epsilons": [
+        5.0,
+        8.0
+      ],
+      "mode": "combined",
+      "mask_density": 0.3
+    },
+    {
+      "source_file": "runs/claim3_noise_0.05/claim3_results.csv",
+      "source_dir": "runs/claim3_noise_0.05",
+      "noise_std": 0.05,
+      "measurements": 96,
+      "holdout_measurements": 512,
+      "n_components": 64,
+      "epsilons": [
+        5.0,
+        8.0
+      ],
+      "mode": "combined",
+      "mask_density": 0.3
+    },
+    {
+      "source_file": "runs/claim3_noise_0.1/claim3_results.csv",
+      "source_dir": "runs/claim3_noise_0.1",
+      "noise_std": 0.1,
+      "measurements": 96,
+      "holdout_measurements": 512,
+      "n_components": 64,
+      "epsilons": [
+        5.0,
+        8.0
+      ],
+      "mode": "combined",
+      "mask_density": 0.3
+    },
+    {
+      "source_file": "runs/claim3_noise_0.2/claim3_results.csv",
+      "source_dir": "runs/claim3_noise_0.2",
+      "noise_std": 0.2,
+      "measurements": 96,
+      "holdout_measurements": 512,
+      "n_components": 64,
+      "epsilons": [
+        5.0,
+        8.0
+      ],
+      "mode": "combined",
+      "mask_density": 0.3
+    },
+    {
+      "source_file": "runs/claim3_noise_0.3/claim3_results.csv",
+      "source_dir": "runs/claim3_noise_0.3",
+      "noise_std": 0.3,
+      "measurements": 96,
+      "holdout_measurements": 512,
+      "n_components": 64,
+      "epsilons": [
+        5.0,
+        8.0
+      ],
+      "mode": "combined",
+      "mask_density": 0.3
+    }
+  ]
+}
