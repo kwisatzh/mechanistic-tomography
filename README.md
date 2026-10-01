@@ -58,7 +58,7 @@ model run.
 
 ```text
 c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375  assets/mechanistic-tomography-v1.pdf
-70cc633c69e89425de74696bbd04c60127ff2f32f0bbea0010e85e49c9906599  assets/mechanistic-tomography-v2.pdf
+47405278c4e14537d53bde4590b4b0dc2c9a5a0bc57248a6343a6a3a83c91272  assets/mechanistic-tomography-v2.pdf
 aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e  experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip
 ```
 
