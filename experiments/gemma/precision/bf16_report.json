@@ -1,0 +1,349 @@
+{
+  "scope": "engineering only; no scientific outcomes collected",
+  "checks": {
+    "zero_edit": true,
+    "restored": true,
+    "batch_invariance": false,
+    "all_layers_captured": true,
+    "context_bound": true,
+    "no_leaked_hooks": true,
+    "edit_locations": true,
+    "edit_rounding": false
+  },
+  "passed": false,
+  "records": [
+    {
+      "name": "clean",
+      "seconds": 1.1438701619999847,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1571734547615051,
+        1.398435890674591,
+        2.2222703099250793,
+        1.114071011543274,
+        -0.04279428720474243,
+        0.6068785786628723,
+        1.7276789247989655,
+        1.5261762142181396
+      ]
+    },
+    {
+      "name": "zero_edit",
+      "seconds": 1.1177367750001395,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1571734547615051,
+        1.398435890674591,
+        2.2222703099250793,
+        1.114071011543274,
+        -0.04279428720474243,
+        0.6068785786628723,
+        1.7276789247989655,
+        1.5261762142181396
+      ]
+    },
+    {
+      "name": "dense_edit",
+      "seconds": 1.2323254409998299,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1510177850723267,
+        1.4302570223808289,
+        2.215921998023987,
+        1.1051717400550842,
+        -0.04777926206588745,
+        0.600036084651947,
+        1.718627154827118,
+        1.5283702313899994
+      ]
+    },
+    {
+      "name": "restored_clean",
+      "seconds": 1.127630481000324,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1571734547615051,
+        1.398435890674591,
+        2.2222703099250793,
+        1.114071011543274,
+        -0.04279428720474243,
+        0.6068785786628723,
+        1.7276789247989655,
+        1.5261762142181396
+      ]
+    },
+    {
+      "name": "dense_edit_batch_one",
+      "seconds": 4.676168109999708,
+      "calls": 64,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1737098097801208,
+        1.4473994970321655,
+        2.210522949695587,
+        1.116593599319458,
+        -0.027062833309173584,
+        0.6116269826889038,
+        1.7213685512542725,
+        1.5347524285316467
+      ]
+    },
+    {
+      "name": "coordinate_edit",
+      "seconds": 1.1062153719999515,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1593096256256104,
+        1.4100585579872131,
+        2.221230626106262,
+        1.1174910068511963,
+        -0.029239892959594727,
+        0.6117165684700012,
+        1.7065093517303467,
+        1.524566799402237
+      ]
+    },
+    {
+      "name": "dense_timing_0",
+      "seconds": 1.2496840089997931,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1510177850723267,
+        1.4302570223808289,
+        2.215921998023987,
+        1.1051717400550842,
+        -0.04777926206588745,
+        0.600036084651947,
+        1.718627154827118,
+        1.5283702313899994
+      ]
+    },
+    {
+      "name": "dense_timing_1",
+      "seconds": 1.2307554230001188,
+      "calls": 8,
+      "sequences": 64,
+      "input_tokens": 7600,
+      "margin": [
+        1.1510177850723267,
+        1.4302570223808289,
+        2.215921998023987,
+        1.1051717400550842,
+        -0.04777926206588745,
+        0.600036084651947,
+        1.718627154827118,
+        1.5283702313899994
+      ]
+    }
+  ],
+  "max_batch_margin_difference": 0.02269202470779419,
+  "direction_capture_seconds": 1.8793405680003161,
+  "actual_edit_checks": [
+    {
+      "layer": 0,
+      "max_relative_rounding_error": 0.23652014136314392,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 1,
+      "max_relative_rounding_error": 0.30429619550704956,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 3,
+      "max_relative_rounding_error": 0.3648887574672699,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 4,
+      "max_relative_rounding_error": 0.3720136880874634,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 5,
+      "max_relative_rounding_error": 0.3950006067752838,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 7,
+      "max_relative_rounding_error": 0.3760634660720825,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 8,
+      "max_relative_rounding_error": 0.42011502385139465,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 9,
+      "max_relative_rounding_error": 0.4080442488193512,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 11,
+      "max_relative_rounding_error": 0.4195561707019806,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 12,
+      "max_relative_rounding_error": 0.42396238446235657,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 13,
+      "max_relative_rounding_error": 0.4282285273075104,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 15,
+      "max_relative_rounding_error": 0.40727677941322327,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 16,
+      "max_relative_rounding_error": 0.41566261649131775,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 17,
+      "max_relative_rounding_error": 0.3763761818408966,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 19,
+      "max_relative_rounding_error": 0.3729498088359833,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 20,
+      "max_relative_rounding_error": 0.35360944271087646,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 21,
+      "max_relative_rounding_error": 0.3477139174938202,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 22,
+      "max_relative_rounding_error": 0.3684454560279846,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 24,
+      "max_relative_rounding_error": 0.3866898715496063,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 25,
+      "max_relative_rounding_error": 0.43673834204673767,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 26,
+      "max_relative_rounding_error": 0.45027869939804077,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 28,
+      "max_relative_rounding_error": 0.47677838802337646,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 29,
+      "max_relative_rounding_error": 0.4838261902332306,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 30,
+      "max_relative_rounding_error": 0.5085271000862122,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 32,
+      "max_relative_rounding_error": 0.5144867300987244,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 33,
+      "max_relative_rounding_error": 0.5217662453651428,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 34,
+      "max_relative_rounding_error": 0.4936419725418091,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 36,
+      "max_relative_rounding_error": 0.5051944851875305,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 37,
+      "max_relative_rounding_error": 0.5096499919891357,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 38,
+      "max_relative_rounding_error": 0.5210536122322083,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 40,
+      "max_relative_rounding_error": 0.49791932106018066,
+      "off_position_max": 0.0
+    },
+    {
+      "layer": 41,
+      "max_relative_rounding_error": 0.3898962438106537,
+      "off_position_max": 0.0
+    }
+  ],
+  "planned_evaluations": {
+    "unit": "unbatched prompt continuation evaluations; direction uses prompt only",
+    "fit_and_selection": 251904,
+    "heldout_evaluation": 196608,
+    "clean": 1280,
+    "direction_prompt_forwards": 32,
+    "total": 449824,
+    "measured_gpu_seconds": null,
+    "note": "Planning count only; no constant conversion to GPU time or backward cost."
+  },
+  "rough_projection_seconds": 8783.404057255046,
+  "planning_margin_seconds": 17566.80811451009,
+  "projection_limit": "Engineering prompt mixture; does not measure the actual study length distribution.",
+  "token_lengths": [
+    23,
+    23,
+    24,
+    27,
+    25,
+    25,
+    370,
+    370
+  ],
+  "peak_cuda_bytes": 18918979584,
+  "device": "NVIDIA A100-SXM4-80GB",
+  "elapsed_seconds": 85.17550436900001,
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.14.1",
+    "numpy": "2.1.3",
+    "accelerate": "1.14.0"
+  },
+  "scientific_launch_authorized_by_worker": false
+}

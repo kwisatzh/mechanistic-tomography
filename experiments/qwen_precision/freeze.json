@@ -1,0 +1,29 @@
+{
+  "files": {
+    "AMENDMENT.md": "da402372ea578fd69731aa3ede0148aa922ce823030f8bfd4aa32a18ce91962a",
+    "AUTHORIZATION.json": "abc97f15b99233f24cebf23c6f19946e3f4aab2927136d3abc1cd66118bd883f",
+    "PROTOCOL.md": "e71c741912c876c3adab06ad0bbb78b296bc6193c46659119249d67fd2e9d14c",
+    "actions.json": "9a1380f19772d1551c759cd2cc04dee405c48f2bdcf549ee04087f2c4bff5588",
+    "audit.py": "972de770b3918c2b5988d8b552527890483094bd0f739e7fa479eeedae38f483",
+    "config.json": "c0327a46a1b0bdf8a29385e65c0e81bff7e686f58fc38155cc601a940c19fac6",
+    "controller.py": "06eb1238689e6844a6d4a3c5a4890eeb376064a72d112ffe646b3cb492845f58",
+    "directions.npz": "77bfb9c1fe66fb1b00a386e3d7511911c2644e8da7e6519304bdd4d18049cc06",
+    "engineering_changes.diff": "9bb4db2eaa36f05bf19107611e6bd4807a6cf90a26ddc43475c3ed8f2fa49c7d",
+    "fixtures.json": "389649389eefeeb1b3b12265de6795c52766f7b6c676ff9c27f0d3ec95eb1ebc",
+    "prepare.py": "c9125d168e0de7ee171fe43990ded5976f1bf21ff41d454ca8ff64cce70e0216",
+    "prior_release.json": "0bff340c7994631e74f8cdcb10baec28ede7a98e8f5d0d041f0562aceb06d934",
+    "qualification.json": "37223609ff98a2a569a5de82866d380ece8e9ec45350d2b398ae7a0e4248808c",
+    "qualification.log": "39ff18e2306dc4f63613831042cddcbd2fb4400e291124ca814371d96d4cb841",
+    "qwen_refusal.py": "fa626d757e8a9a769ecae7a9995e4da485bd8474025a90dc5e89f43458a0ea9a",
+    "requirements.txt": "a827376c0e88ad0f21f386889685331973033adc9171949e65949cfdbede4731",
+    "supervise.py": "c5144bf60cad80a5ef885cf4b6d6b8ce60766627ca2f0d597d54f06640fcb14a",
+    "supervisor_support.py": "7fc08fd41b56fc0ff58385d85c5c41b89fdd08ad1f68264945aeb95900c6e1ae",
+    "test_audit.py": "e9302d505932a7b9e3d8d179233736c685927c65e84d879cbeaf76303c2a5fbf"
+  },
+  "parent_freeze_sha256": "526dd9e5d9e61f9f8436ce0ee178b9cfd64caff4926225567bc59ce48e92d21a",
+  "actions": 29,
+  "max_runtime_seconds": 3444.034453868866,
+  "total_allowance_seconds": 3600,
+  "prior_charged_seconds": 155.96554613113403,
+  "frozen_unix": 1791126414.778228
+}

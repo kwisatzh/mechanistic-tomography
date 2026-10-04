@@ -1,0 +1,401 @@
+\FloatBarrier
+\section{A bias-aware criterion for finite measurements}\label{app:bias-aware-design}
+
+A measurement can reduce sampling variance while increasing approximation error.
+This appendix makes that tradeoff explicit for full-rank calibration and small
+effect maps. It specializes classical bias-aware design~\cite{box1959design}
+using the intervention error in Lemma~\ref{lem:measurement-reduction}. The
+estimator, target, noise model, and measurement costs remain fixed when designs
+are compared. Full column rank distinguishes this setting from the
+underdetermined sparse fits elsewhere in the paper.
+
+\subsection{From measurement error to estimation risk}
+
+Fix a design $S$ before observing its noise. Write
+\begin{equation}\label{eq:bd-model}
+ y=A\theta+b+\eta,\qquad \E\eta=0,\qquad
+ \E[\eta\eta^\top]=\Sigma\succ0,
+\end{equation}
+where $A\in\R^{m\times d}$ has full column rank, $\theta$ is the target,
+$b$ is deterministic approximation or systematic error, and $\eta$ is centered
+sampling noise. Correlated measurements are allowed. Let $W\succeq0$ specify
+the same target loss for every design, with $\|z\|_W^2=z^\top Wz$. Define
+\begin{equation}\label{eq:bd-gls}
+ M=A^\top\Sigma^{-1}A,\qquad
+ G=M^{-1}A^\top\Sigma^{-1},\qquad \widehat\theta=Gy.
+\end{equation}
+Here $\widehat\theta$ is the generalized least-squares (GLS) estimator.
+The identity below uses the true covariance; a fitted covariance would require
+accounting for its estimation error.
+
+\begin{proposition}[Fixed-design risk]\label{prop:bd-risk}
+Under \eqref{eq:bd-model}--\eqref{eq:bd-gls},
+\begin{equation}\label{eq:bd-risk}
+ \E\|\widehat\theta-\theta\|_W^2
+ =\operatorname{tr}(WM^{-1})+\|Gb\|_W^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Full column rank gives $GA=I$. The error is $Gb+G\eta$, its covariance is
+$G\Sigma G^\top=M^{-1}$, and the cross term has expectation zero. Expanding
+the squared norm proves the result without a Gaussian assumption.
+\end{proof}
+
+With no bias, minimizing this risk is weighted A-optimal design. D-optimality
+instead maximizes $\det M$ and generally optimizes a different objective.
+Under a correctly specified Gaussian model with parameter-independent covariance,
+$M$ is the Fisher information. Full rank makes GLS well-defined, but unknown
+bounded bias can still prevent exact identification of $\theta$.
+
+For MT, fix the context distribution, clean states $h_c$, and accessible
+directions $D_c$. For mask $a_j$ and scale $\eps_j>0$, set
+\begin{equation}\label{eq:bd-target}
+ \theta=\E_c[D_c^\top\nabla f_c(h_c)],\qquad
+ \kappa_j^2=\E_c\|D_ca_j\|_2^2.
+\end{equation}
+Under the lemma's activation-space Hessian bound $L$, the mean normalized
+response satisfies
+\begin{equation}\label{eq:bd-taylor}
+ \begin{aligned}
+ F_j&=\frac{\E_c[f_c(h_c+\eps_jD_ca_j)-f_c(h_c)]}{\eps_j}\\
+    &=a_j^\top\theta+r_j,\qquad
+ |r_j|\leq\frac{L\eps_j}{2}\kappa_j^2.
+ \end{aligned}
+\end{equation}
+The bound follows by integrating the quadratic Taylor remainder along each
+segment and then averaging. If an additional systematic error is bounded by
+$\bar\tau_j/\eps_j+\bar\nu_j$, the total envelope is
+\begin{equation}\label{eq:bd-envelope}
+ |b_j|\leq\beta_j
+ :=\frac{L\eps_j}{2}\kappa_j^2+\frac{\bar\tau_j}{\eps_j}+\bar\nu_j.
+\end{equation}
+The two kinds of error enter the model differently. Deterministic error, such
+as a systematic approximation in the response numerator, is part of the bias
+$b_j$ and is bounded through $\bar\tau_j$. Centered sampling variation,
+including the covariance created when measurements share a random baseline,
+belongs in $\Sigma$. Each error is assigned to exactly one of the two terms.
+Lemma~\ref{lem:measurement-reduction} bounds their magnitudes, so the zero-mean
+and covariance structure in \eqref{eq:bd-model} is an additional assumption.
+
+\begin{corollary}[Bias-aware design criterion]\label{cor:bd-design}
+Let $B=\operatorname{diag}(\beta_1,\ldots,\beta_m)$ and let $g_j$ denote
+column $j$ of $G$. The risk of the physical response is at most
+\begin{align}
+ J_{\rm box}(S)&=\operatorname{tr}(WM^{-1})+
+ \max_{s\in\{-1,1\}^m}s^\top BG^\top WGBs,\label{eq:bd-box}\\
+ J_{\rm box}(S)&\leq J_{\rm sum}(S)
+ :=\operatorname{tr}(WM^{-1})+
+ \left(\sum_j\beta_j\sqrt{g_j^\top Wg_j}\right)^2.\label{eq:bd-sum}
+\end{align}
+The first expression is the exact worst-case GLS risk over the rectangle
+$|b_j|\leq\beta_j$. For a scalar target $v^\top\theta$, so $W=vv^\top$,
+the two expressions coincide:
+\begin{equation}\label{eq:bd-scalar}
+ J_{\rm box}=J_{\rm sum}
+ =v^\top M^{-1}v+\left(\sum_j\beta_j|v^\top g_j|\right)^2.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The squared bias is a convex quadratic in $b$. Every point of the rectangle
+is a convex combination of its vertices $Bs$, so its maximum occurs at a
+vertex. The triangle inequality gives
+$\|W^{1/2}Gb\|_2\leq\sum_j\beta_j\|W^{1/2}g_j\|_2$.
+For a scalar target, choose each sign to agree with $v^\top g_j$; this attains
+the bound and proves \eqref{eq:bd-scalar}.
+\end{proof}
+
+Minimizing $J_{\rm box}$ over a finite set of feasible designs therefore
+selects, among the declared GLS designs, the one with the smallest worst-case
+risk over the rectangle. This comparison holds the estimator family and error
+model fixed; it does not optimize over all estimators or physical response
+classes. For a scalar target, the criterion reduces to the closed-form sum in
+\eqref{eq:bd-scalar}. For general $W$, evaluating $J_{\rm box}$ can require a
+search over the $2^m$ sign vectors. The cheaper bound $J_{\rm sum}$ can
+overstate the worst squared bias by up to a factor of $m$. That factor follows
+from Cauchy--Schwarz, since the average over vertices equals the sum of squared
+weighted-column norms; equal-norm orthogonal weighted columns attain it.
+
+The rectangle can also be conservative. When probes lie on the same ray at
+different scales, their errors arise from the same curvature and need not
+attain their separate extremes jointly. Under a Hessian bound alone, however,
+the rectangle can be sharp as a supremum, as the signed example below shows.
+In every case, the curvature bound and covariance are inputs that must be
+known or estimated, and estimating them counts toward the measurement budget.
+
+\subsection{Why the smoothness assumption matters}
+
+Shared curvature can make the coordinatewise envelope conservative. Suppose
+the response in mask coordinates is exactly quadratic:
+\begin{equation}\label{eq:bd-quadratic}
+ f(z)-f(0)=\theta^\top z+\tfrac12z^\top Hz,
+ \qquad H=H^\top,\quad \|H\|_{\rm op}\leq\Lambda.
+\end{equation}
+The constant $\Lambda$ bounds curvature in mask coordinates and differs from
+the activation-space bound $L$: for a fixed direction matrix $D$, the
+pulled-back Hessian $D^\top H_{\rm act}D$ has operator norm at most
+$L\|D\|_{\rm op}^2$. Assuming a shared quadratic is stronger than assuming a
+Hessian bound. Under that assumption, with no other systematic error and a
+fixed covariance, define
+\begin{equation}
+ K_S=\tfrac12\sum_j\eps_j(v^\top g_j)a_ja_j^\top.
+\end{equation}
+Then the exact worst-case scalar risk for the declared GLS estimator is
+\begin{equation}\label{eq:bd-shared}
+ v^\top M^{-1}v+\Lambda^2\|K_S\|_*^2,
+\end{equation}
+where $\|K_S\|_*$ is the sum of absolute eigenvalues. To prove this, use
+$b_j=(\eps_j/2)a_j^\top Ha_j$ to write the scalar bias as
+$\operatorname{tr}(HK_S)$. If $K_S=U\operatorname{diag}(\lambda_i)U^\top$,
+its absolute maximum is $\Lambda\sum_i|\lambda_i|$, attained by
+$H=\Lambda U\operatorname{diag}(\operatorname{sign}\lambda_i)U^\top$.
+Unlike the rectangle, this expression allows cancellation before taking
+absolute values.
+
+For a general scalar $f$ with $|f''|\leq L$, however, the central difference
+has worst-case bias $Lh/2$, the same as the forward difference. Separate
+Taylor bounds at $h$ and $-h$ give the upper bound. To approach it, choose
+$f_\delta''(t)=L\tanh(t/\delta)$, $f_\delta(0)=0$, and
+$f_\delta'(0)=\theta$. Direct integration gives
+\begin{equation}\label{eq:bd-sharpness}
+ \frac{f_\delta(h)-f_\delta(-h)}{2h}-\theta
+ =\frac{L\delta}{h}\int_0^h\log\cosh(t/\delta)\,dt
+ \longrightarrow\frac{Lh}{2}.
+\end{equation}
+Indeed, the bias lies between $L(h/2-\delta\log2)$ and $Lh/2$ because
+$x-\log2\leq\log\cosh x\leq x$ for $x\geq0$. With $L=h=1$ and
+$\delta=0.001$, the bias is approximately $0.4993073$. The function is
+infinitely differentiable; smoothness without a quantitative higher-order
+bound does not guarantee cancellation.
+
+Central differences improve on this worst-case rate under a stronger
+smoothness assumption. If the activation-space Hessian is Lipschitz with
+constant $L_3$ on the signed segments, the standard remainder bound gives
+\begin{equation}\label{eq:bd-central}
+ \left|\frac{f(h_0+\eps u)-f(h_0-\eps u)}{2\eps}
+       -\nabla f(h_0)^\top u\right|
+ \leq\frac{L_3\eps^2}{6}\|u\|_2^3.
+\end{equation}
+The second-order terms of the two Taylor expansions cancel, and each
+third-order remainder is at most $L_3\eps^3\|u\|_2^3/6$. Subtracting the
+expansions and dividing by $2\eps$ gives the bound, which a one-dimensional
+cubic attains. A shared quadratic therefore gives zero bias, while a
+Lipschitz Hessian gives bias of order $\eps^2$~\cite{shi2022finite}.
+The scheme needs both signs of the intervention to be feasible, which may
+fail for patching or ablation, and both evaluations count toward its cost.
+Lemma~\ref{lem:measurement-reduction} needs only the Hessian bound; the
+higher-order rate needs the additional smoothness stated here, which the
+clipped HMM readout of Sec.~\ref{sec:aggregate} lacks on paths that cross its
+clipping boundaries.
+
+\subsection{An equal-budget comparison}
+
+Consider $f(t)=\theta t+(q/2)t^2$ with $|q|\leq\Lambda$, a known baseline
+$f(0)=0$, and a budget of four evaluations, each with independent noise
+variance $\sigma^2$. If all four are taken at the same positive step $h$,
+the slope estimate has variance $\sigma^2/(4h^2)$ and worst-case bias
+$\Lambda h/2$, so its worst-case risk is
+$R(h)=\sigma^2/(4h^2)+\Lambda^2h^2/4$.
+At $\Lambda=1$, $\sigma=0.1$, and $h\in[0.1,1]$, information-only selection
+chooses $h=1$ with risk $0.2525$, while minimizing $R$ gives $h=\sqrt{0.1}$
+and risk $0.05$. Two evaluations at each sign instead cancel the shared
+quadratic bias and give risk $0.0025$ at $h=1$.
+The symmetric control therefore outperforms the best one-sided design here;
+the cancellation requires the shared quadratic, not merely a Hessian bound.
+If the baseline evaluation were itself noisy, it would add cost and
+covariance terms to each design.
+
+\subsection{Finite-response calibration has a different target}
+
+The HMM calibration in Sec.~\ref{sec:step0} estimates a gain for finite
+responses, not the local derivative. Fix its scale and evaluation distribution
+$Q$ before choosing measurements. Let $p(a)$ be the known scalar prediction,
+$F(a)$ the mean finite response, and assume finite second moments and
+$\E_Qp^2>0$. Define
+\begin{equation}\label{eq:bd-gain}
+ g_Q=\frac{\E_Q[pF]}{\E_Q[p^2]},\qquad
+ e(a)=F(a)-g_Qp(a),\qquad \E_Q[pe]=0.
+\end{equation}
+For a selected set $S$, let $I=p_S^\top\Sigma_S^{-1}p_S>0$ and
+$\widehat g=I^{-1}p_S^\top\Sigma_S^{-1}y_S$. Proposition~\ref{prop:bd-risk}
+and the projection orthogonality give
+\begin{align}
+ \E(\widehat g-g_Q)^2
+ &=I^{-1}+(I^{-1}p_S^\top\Sigma_S^{-1}e_S)^2,\label{eq:bd-gainrisk}\\
+ \E_\eta\E_Q[(p\widehat g-F)^2]
+ &=\E_Q[p^2]\E(\widehat g-g_Q)^2+\E_Q[e^2].\label{eq:bd-prediction}
+\end{align}
+The cross term vanishes because $\E_Q[pe]=0$ and $Q$ is fixed independently
+of the fitting noise. For a gain target other than $g_Q$, the cross term
+generally does not vanish.
+
+\begin{corollary}[Raw-response envelope for gain calibration]\label{cor:bd-gain}
+If $F=p+r$, $|r(a)|\leq u(a)$, and $\E_Q[|p|u]<\infty$, set
+$\alpha_Q=\E_Q[|p|u]/\E_Q[p^2]$. Then
+\begin{equation}\label{eq:bd-gainbound}
+ |g_Q-1|\leq\alpha_Q,\qquad
+ |e(a)|\leq u(a)+\alpha_Q|p(a)|.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Substitution in \eqref{eq:bd-gain} gives
+$g_Q-1=\E_Q[pr]/\E_Q[p^2]$. The triangle inequality bounds this by
+$\alpha_Q$. Apply it again to $e=r-(g_Q-1)p$.
+\end{proof}
+
+For an exact raw attribution prediction $p(a)=\eps a^\top\theta$, Taylor's
+theorem gives
+\begin{equation}
+ u(a)=\frac{L\eps^2}{2}\E_c\|D_ca\|_2^2.
+\end{equation}
+The bound on this unnormalized response scales as $\eps^2$; if the
+attribution map is itself approximate, its error must be added. Applying the
+corollary requires a curvature bound and the $Q$-moments of $p$, and any
+finite-response measurements used to obtain them count toward the budget.
+When $L$ is unknown or very conservative, the criterion becomes expensive
+to apply or too loose to guide the design.
+
+The residual envelope need not be tight even within a constant factor. If
+$F=2p$ and $u=|p|$, then $g_Q=2$ and $e=0$, but the envelope is $2|p|$.
+With independent equal-variance noise, selected predictors of magnitude $P$
+and a constant raw envelope $U$ give the scalar bound
+\begin{equation}
+ \frac{\sigma^2}{mP^2}+\left(\frac{U}{P}+\alpha_Q\right)^2.
+\end{equation}
+For fixed $U$ and $\alpha_Q$, both terms decrease with $P$. Thus normalized
+masks and a uniform envelope do not establish that large attribution responses
+are poor calibration choices. Showing that saturation
+makes large responses poor calibration choices would require additional
+structure in the residual or direct empirical evidence.
+
+\paragraph{Scope of implementation.}
+The analysis extends to other fixed linear estimators. For an estimator
+$G_0$, the variance becomes $\operatorname{tr}(WG_0\Sigma G_0^\top)$ and the
+squared bias becomes $\|(G_0A-I)\theta+G_0b\|_W^2$; for ridge regression,
+this includes the shrinkage bias that a direct application of the GLS result
+would omit. Applying the analysis after earlier data have been used to choose
+the design requires the noise assumptions to hold conditionally on that choice.
+Every pilot, covariance, and curvature measurement also counts toward the cost.
+Because the argument fixes the design before the fitting measurements, it
+gives no guarantee for sequential selection. The results so far are analytic;
+the retained-data comparison below shows how information and prediction
+error can diverge.
+
+\paragraph{A two-stage acquisition workflow.}\label{par:bd-workflow}
+We outline how the criterion could be applied to a small calibration model.
+The target, intervention scale, and candidate family are fixed first, and a
+separate validation budget is reserved. A pilot stage of $k_1$ uniformly drawn
+probes measures the finite-response mismatch, while the design matrix shows
+its conditioning. The pilot reveals where the local approximation fails but
+does not by itself bound curvature at unmeasured interventions.
+
+When justified bias envelopes and a specified covariance model are available,
+a refinement stage chooses a full-rank design of $k_2$ probes by minimizing
+$J_{\rm box}$ or its tractable upper bound $J_{\rm sum}$ over feasible designs.
+The reported selection method distinguishes an exact minimum from an
+approximation. If pilot estimates replace established envelopes or covariance
+assumptions, the rule is a heuristic whose sensitivity needs to be assessed.
+The fixed-design analysis applies conditionally on the pilot when the
+refinement design is then fixed and fresh fitting responses satisfy its
+noise assumptions.
+
+Selecting $k_2$ distinct probes from $N$ candidates allows $\binom{N}{k_2}$
+subsets before constraints are applied. Using $J_{\rm sum}$ avoids the inner
+sign enumeration but leaves this outer search. Greedy additions from a
+full-rank seed or rank-preserving probe exchanges avoid exhaustive search,
+although neither has an optimality guarantee here. Selection runtime is
+therefore reported separately from measurement cost.
+
+The refinement responses fit the model, and the reserved validation
+measurements assess its predictions at the intended scale. A cost-matched
+comparison with uniform selection includes pilot, refinement, and validation
+work, together with any measurements used to estimate covariance or bias.
+We propose this workflow but have not evaluated it; the replay below tests
+only fixed selection rules.
+
+\subsection{Calibration-probe selection on retained HMM measurements}\label{app:selector-replay}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{clrrr}
+\toprule
+Scale & Selection & \shortstack{Squared\\bias} & \shortstack{Subset\\variance} & \shortstack{Total\\MSE} \\
+\midrule
+$5$ & Largest-first & $0.12699$ & $0.00000$ & $0.27823$ \\
+$5$ & Random        & $0.00807$ & $0.04454$ & $0.20385$ \\
+$5$ & Spread        & $0.07358$ & $0.00000$ & $0.22483$ \\
+\midrule
+$8$ & Largest-first & $0.17359$ & $0.00000$ & $0.47405$ \\
+$8$ & Random        & $0.02214$ & $0.08331$ & $0.40591$ \\
+$8$ & Spread        & $0.09887$ & $0.00000$ & $0.39933$ \\
+\bottomrule
+\end{tabular}
+\caption{Eight-probe calibration on retained HMM measurements. Entries average
+the cellwise terms in Eq.~\eqref{eq:bd-empirical-decomposition}. Total MSE also
+includes the best-gain error $L_Q^\star$, averaging $0.15125$ at $\eps=5$ and
+$0.30046$ at $\eps=8$. Largest-first and spread are deterministic,
+so their subset variance within each cell is zero; their results still vary
+across cells.}
+\label{tab:selector-decomposition}
+\end{table}
+
+Under a scalar linear model with independent, zero-mean, equal-variance errors,
+choosing the largest
+absolute predictions maximizes information and is both A- and D-optimal. Finite
+responses need not follow that error model. We compare this rule with uniform
+random selection and a simple alternative that spreads probes across prediction
+magnitudes, using the retained HMM measurements from Sec.~\ref{sec:step0}.
+
+All three rules see only candidate identifiers and attribution predictions.
+They select from the same 96-mask pool, fit the same no-intercept gain, and are
+scored on the same 32 held-out masks. The spread rule chooses unused masks nearest
+to equally spaced targets over the range of absolute predictions. Random
+selection uses 50 uniform draws in each cell; the same draws are used at both
+scales, and smaller subsets are nested within larger ones. The primary comparison, fixed before the replay, is mean held-out MSE
+at $\eps=8$ with eight probes, averaged equally across the nine cells. A probe
+is one mask response averaged over 256 sequences; held-out evaluation uses 32
+additional mask responses. This replay makes no new model calls.
+
+\paragraph{Selection changes calibration error.}
+At eight probes, largest-first has $16.8\%$ higher mean MSE than random at
+$\eps=8$ and $36.5\%$ higher MSE at $\eps=5$
+(Table~\ref{tab:selector-decomposition}). It is worse in five of nine cells at
+$\eps=8$ and eight of nine at $\eps=5$. Spread improves on largest-first at both
+scales, but is $10.3\%$ worse than random at $\eps=5$ and only $1.6\%$ better at
+$\eps=8$. The latter MSE difference, $0.00659$, is smaller than the conditional
+Monte Carlo standard error of the random mean, $0.00789$.
+With four probes, largest-first beats random selection only at $\eps=8$;
+with sixteen it loses at both scales, and with the full pool all three rules
+select the same masks. Because this comparison redraws the random subsets,
+its eight-probe means ($R^2=0.953$ at $\eps=5$ and $0.949$ at $\eps=8$)
+differ slightly from those in Sec.~\ref{sec:step0} ($0.951$ and $0.948$),
+which use the original draws.
+
+\paragraph{An exact bias--variance breakdown.}
+To explain these errors after the comparison, let $F$ denote the retained
+response and $Q$ the uniform distribution over one cell's held-out masks.
+Let $g_Q$ be its least-squares gain and $w=\E_Q[p^2]$.
+Writing $L_Q(g)=\E_Q[(gp-F)^2]$ and
+$L_Q^\star=L_Q(g_Q)$, projection orthogonality gives the exact identity
+\begin{equation}\label{eq:bd-empirical-decomposition}
+ \E_S L_Q(\widehat g_S)
+ =L_Q^\star+w\bigl(\E_S\widehat g_S-g_Q\bigr)^2
+   +w\operatorname{Var}_S(\widehat g_S).
+\end{equation}
+Here $S$ ranges over the saved subsets, with equal weight on each of the 50
+random draws. The variance measures variation across these subsets, not fresh
+measurement noise. The held-out gain is used only for this post-hoc diagnosis;
+it is never available to a selector.
+
+At $\eps=8$, largest-first fits a mean gain of $0.642$, compared with $0.742$
+for the held-out best gain; at $\eps=5$ the corresponding values are $0.749$
+and $0.886$. Random selection has less squared bias but nonzero subset variance.
+Its squared-bias term accounts for about $21\%$ of its excess error above the
+best-gain error at $\eps=8$. The comparison shows how calibration bias can
+outweigh a variance-based selection advantage. The decomposition attributes
+the excess error to bias in the fitted gain. Identifying the mechanism behind
+that bias, such as saturation, and testing the bias-aware criterion
+prospectively would require further measurements of curvature and covariance.
+The comparison covers nine combinations of evaluation batch and mask design
+from a single trained model.
+\FloatBarrier

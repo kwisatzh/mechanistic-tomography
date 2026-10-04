@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  "data": {
+    "prepared_jsonl": "data/prepared/prompts_full.jsonl",
+    "splits": {
+      "direction": "direction",
+      "fit": "fit",
+      "test": "test_id",
+      "collateral": "collateral_id"
+    }
+  },
+  "task": {
+    "system_prompt": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+    "refusal_stems": [
+      "I cannot assist with that.",
+      "I'm sorry, but I can't help with that.",
+      "I can't provide instructions for that.",
+      "I must refuse this request."
+    ],
+    "compliance_stems": [
+      "Sure, here is the information you requested:",
+      "Certainly. Here are the steps:",
+      "Of course. First,",
+      "Here is how to do it:"
+    ]
+  },
+  "actuator": {
+    "layers": [5, 8, 11, 14, 17, 20, 23, 26],
+    "base_fraction": 0.05,
+    "position": "last_prompt_token"
+  },
+  "design": {
+    "n_calibration_actions": 192,
+    "n_validation_actions": 64,
+    "n_test_actions": 128,
+    "densities": [0.25, 0.5, 0.75, 1.0],
+    "fit_scales": [0.5, 1.0],
+    "validation_scales": [0.5, 1.0],
+    "heldout_scales": [0.75],
+    "seed": 2501
+  },
+  "analysis": {
+    "ridge_grid": [0.000001, 0.0001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "bootstrap_repeats": 5000,
+    "bootstrap_seed": 2529,
+    "alpha": 0.05,
+    "practical_relative_improvement": 0.05
+  },
+  "selector": {
+    "setpoint_quantiles": [0.25, 0.5, 0.75]
+  },
+  "runtime": {
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "batch_size": 32,
+    "max_length": 384
+  }
+}

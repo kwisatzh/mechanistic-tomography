@@ -34,13 +34,19 @@ EXPECTED = (
     "experiments/revision_checks/ioi_template_ablation_robustness.py",
     "experiments/qwen/notebooks/mechanistic_tomography_qwen_colab.ipynb",
     "experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip",
+    "paper/source/bias_aware_design_appendix.tex",
+    "paper/source/gemma_measurement_appendix.tex",
+    "experiments/gemma/reproduce.py",
+    "experiments/gemma/checkpoints/index.json",
+    "experiments/qwen_precision/reproduce.py",
+    "experiments/qwen_precision/retained/report.json",
 )
 
 CHECKSUMS = {
     "assets/mechanistic-tomography-v1.pdf":
         "c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375",
     "assets/mechanistic-tomography-v2.pdf":
-        "47405278c4e14537d53bde4590b4b0dc2c9a5a0bc57248a6343a6a3a83c91272",
+        "d6f1548f4f17e2dbd30c025db3d09dc859f41e871830d168614110c1c3c284e0",
     "experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip":
         "aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e",
 }

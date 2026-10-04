@@ -1,0 +1,9 @@
+{
+  "float32_matmul_precision": "highest",
+  "cuda_matmul_tf32": false,
+  "cudnn_tf32": false,
+  "NVIDIA_TF32_OVERRIDE": "0",
+  "floating_parameter_dtypes": [
+    "torch.float32"
+  ]
+}

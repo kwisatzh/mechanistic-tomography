@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "started_unix": 1791126514.8123016,
+  "worker_exit_code": 0,
+  "qualification_passed": false,
+  "finished_unix": 1791126751.7292485,
+  "gpu_processes_after": ""
+}

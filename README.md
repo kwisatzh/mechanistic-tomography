@@ -10,14 +10,36 @@ Paper, experiments, and frozen results for:
 - [Version 1 archival DOI](https://doi.org/10.5281/zenodo.21797578)
 - [Experiment guide](experiments/README.md)
 
-Version 2 adds a held-out Qwen-2.5-7B experiment and releases the complete
-reproducibility package. Version 1 remains frozen at Zenodo.
+Version 2 includes the held-out Qwen-2.5-7B experiment, the Gemma-2-9B-it
+measurement comparison, and a prospective audit of Qwen edit precision.
+The October 4 update keeps the V2 filename and URL. Version 1 remains frozen at Zenodo.
+
+## Gemma measurement design
+
+On Gemma-2-9B-it, 32 fitting and eight validation measurements give mean
+held-out-response R-squared of 0.962 for aggregate ridge and 0.994 for OMP,
+versus 0.154 for coordinate ridge, whose signed probes cover half the 32 directions.
+This is a secondary descriptive comparison. At the predeclared smaller fitting
+budget of 16, aggregate ridge reduces MSE by 21.6%, with a paired interval
+conditional on three fixed designs; both ridge maps predict weakly there.
+OMP predicts better but selects a weaker intervention at that smaller budget.
+Selection and benign collateral effects are reported alongside prediction.
+
+The [Gemma package](experiments/gemma/README.md) retains all 2,618 checkpoints,
+fits, selections, analysis code, and CPU tests. Reproduce it without model weights:
+
+```sh
+python -m pip install numpy==2.3.5
+python experiments/gemma/test_release.py
+python experiments/gemma/reproduce.py
+python experiments/qwen_precision/reproduce.py
+```
 
 ## Qwen-2.5-7B result
 
 The Qwen study measures a finite refusal-response surface for 401 designed
 actions. On 128 held-out actions and 224 held-out prompts, the calibrated
-additive map reaches MAE 0.003790 and R2 0.9829. The lifted pairwise map reaches
+additive map gives MAE 0.003790 and R2 0.9829. The lifted pairwise map gives
 MAE 0.003801 and R2 0.9835. The relative lifted MAE improvement is -0.29%, with
 a paired two-way-bootstrap 95% interval of [-3.56%, 5.65%].
 
@@ -25,6 +47,16 @@ This is a stopping result for the measurement procedure: finite calibration is
 adequate on the declared surface, so the held-out residual does not justify the
 larger pairwise family. It is not a claim that interactions disappear in larger
 models, and it does not establish mechanistic ground truth.
+
+**Precision disclosure (October 4):** the historical pipeline added edits in
+bfloat16 activation arithmetic. A prospective audit on 29 fixed actions and
+16 benign sequences found median relative displacement error of 8.24% and maximum
+29.80%, above the predeclared 20% tolerance. Historical activations were not
+retained; this does not reconstruct their errors. The original results and
+stopping decision describe the implemented bfloat16 response surface.
+The [audit package](experiments/qwen_precision/README.md) contains the unchanged
+before/after arrays and a CPU verifier. Gemma used float32 after its own bfloat16
+preflight failed the same tolerance. No historical Qwen predictions were rerun.
 
 Start with the
 [public Colab notebook](experiments/qwen/notebooks/mechanistic_tomography_qwen_colab.ipynb).
@@ -58,7 +90,7 @@ model run.
 
 ```text
 c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375  assets/mechanistic-tomography-v1.pdf
-47405278c4e14537d53bde4590b4b0dc2c9a5a0bc57248a6343a6a3a83c91272  assets/mechanistic-tomography-v2.pdf
+d6f1548f4f17e2dbd30c025db3d09dc859f41e871830d168614110c1c3c284e0  assets/mechanistic-tomography-v2.pdf
 aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e  experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip
 ```
 

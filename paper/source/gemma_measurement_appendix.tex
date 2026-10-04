@@ -1,0 +1,96 @@
+\section{Gemma measurement design, intervention choice, and precision}\label{app:gemma}
+
+This Gemma-2-9B-it experiment complements Qwen's interaction comparison by testing how to acquire an additive response map and use it to choose interventions. Its 32-direction basis provides a cross-family measurement comparison, not a model-size scaling law.
+
+\subsection{A fixed comparison with a separate selection endpoint}
+
+We use Gemma-2-9B-it revision \texttt{11c9b309abf7} (full identifier in the artifact), with float32 parameters and activations and TF32 disabled. The 32 intervention layers are distributed across the model's 42 layers, without selecting layers for favorable measured effects. At each selected layer, a harmful-minus-benign mean activation contrast from a separate 32-prompt construction split defines a direction with norm equal to $5\%$ of that layer's median construction residual norm. Interventions edit the last prompt token. Their coefficient vectors have Euclidean norm $0.5$; other scales were deferred before collection.
+
+The target is the change from the clean, length-normalized log-probability margin between four refusal stems and four compliance stems. Direction construction uses 16 harmful and 16 benign prompts, fitting uses 32 harmful prompts, and held-out evaluation uses 96 harmful and 32 benign prompts, drawn from the same pinned HarmBench and XSTest sources as the Qwen study. Construction and comparison splits are separated by source family and normalized text. All prompts fit the 384-token bound without truncation. These measurements concern a fixed stem-bank response, not generated refusal rates.
+
+Coordinate designs measure positive and negative interventions in a randomly ordered subset of directions, so $k$ fitting measurements cover $k/2$ coordinates. Aggregate designs use $k$ signed dense masks, normalized to the same scale. For each of three fixed design seeds and budgets $k\in\{8,16,32,64\}$, we fit coordinate ridge, aggregate ridge, and aggregate orthogonal matching pursuit (OMP), choosing the ridge penalty or OMP support using eight common validation measurements. Coordinate central differences supply a baseline without validation, assigning zero to unmeasured coordinates.
+
+Every fitted map selects the intervention with the largest predicted target response from a fixed menu of 64 signed dense masks plus no intervention. Exact ties favor no intervention, then the smallest menu index. Direct search instead measures menu candidates on fitting prompts and chooses the best observed response, at costs $k$ and $\min(k+8,64)$. Random choice and no intervention complete the comparison. All coefficients, validation choices, predictions, and selected indices were committed before any held-out or collateral responses were acquired.
+
+\subsection{Prediction depends strongly on measurement budget}
+
+The predeclared primary contrast is aggregate-ridge minus coordinate-ridge MSE on held-out \emph{mean} responses at $k=16$, averaged over the three design seeds. Coordinate ridge has MSE $0.000379037$, compared with $0.000297122$ for aggregate ridge: a $21.6\%$ reduction. The difference is $-0.000081915$, with paired 95\% interval $[-0.000098230,-0.000067489]$. The frozen bootstrap uses 2,000 paired resamples of the 95 held-out prompt-family labels, holding the three designs fixed. It measures prompt-family uncertainty conditional on those designs, not variation over new designs or trained models. Aggregate ridge wins on two seeds and loses slightly on the third.
+
+To put that relative improvement in context, we added descriptive $R^2$ summaries after completing the frozen analysis. They use the directly measured mean responses across the 64 nonzero held-out menu items as truth, with $R^2=1-\mathrm{MSE}/\mathrm{Var}(y)$; no full-budget fitted map substitutes for measured truth. The added metric changes no fit, selection, or primary contrast and introduces no new confidence interval.
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Method & $k=8$ & $k=16$ & $k=32$ & $k=64$ \\
+\midrule
+Coordinate ridge & 385.508 & 379.037 & 328.767 & 0.583 \\
+Aggregate ridge & 381.408 & 297.122 & 14.612 & 0.600 \\
+Aggregate OMP & 587.196 & 148.359 & 2.500 & 0.599 \\
+Coordinate central differences & 385.034 & 380.483 & 327.285 & 0.623 \\
+\bottomrule
+\end{tabular}
+\caption{Gemma held-out mean-response MSE, multiplied by $10^6$ and averaged over the three fixed designs. Ridge and OMP cost $k+8$ measurements; central differences cost $k$. The primary budget is $k=16$; other budgets are secondary.}
+\label{tab:gemma-mse}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Method & $k=16$ & $k=32$ \\
+\midrule
+Coordinate ridge & 0.025 [$-0.044$, 0.114] & 0.154 [0.013, 0.273] \\
+Aggregate ridge & 0.235 [0.082, 0.487] & 0.962 [0.938, 0.997] \\
+Aggregate OMP & 0.618 [0.447, 0.710] & 0.994 [0.989, 0.998] \\
+\bottomrule
+\end{tabular}
+\caption{Post-hoc descriptive $R^2$ for held-out mean responses: mean [minimum, maximum] over three fixed design seeds. Ranges describe seeds, not uncertainty intervals.}
+\label{tab:gemma-r2}
+\end{table*}
+
+Tables~\ref{tab:gemma-mse}--\ref{tab:gemma-r2} show that the primary relative MSE improvement occurs where both ridge maps predict weakly, while OMP provides moderate prediction. At $k=32$, aggregate ridge and OMP predict mean responses accurately, while coordinate designs have measured only half the directions. At $k=64$, all four maps have similar error. Aggregate measurement is therefore most useful here before full coordinate coverage; OMP's success at the middle budgets does not by itself establish that the complete effect map is sparse.
+
+Mean effects across the menu range from $-0.053$ to $+0.040$ margin units, against a clean mean of $1.88$ and prompt standard deviation $0.57$: changes of a few percent of the clean mean. The readout is a log-probability margin, so these are not probability percentage points. Accurate population means also leave prompt-level variation: at $k=64$, per-prompt MSE is about $0.0000993$, versus about $0.0000006$ for mean responses.
+
+\subsection{Prediction, choice, and collateral movement}
+
+At $k=16$, OMP predicts better than aggregate ridge in each design but selects a weaker target intervention. At $k=32$, OMP selects the best held-out mean-response menu item in all three designs, and aggregate ridge does so in two. The prediction-versus-selection discrepancy is thus budget-dependent, rather than an enduring weakness of the sparse estimator.
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Method & Cost & Target effect & Benign $|\Delta M|$ & Benign KL \\
+\midrule
+Coordinate ridge & 24 & 0.00696 & 0.01216 & 0.00082 \\
+Aggregate ridge & 24 & 0.02971 & 0.03722 & 0.00414 \\
+Aggregate OMP & 24 & 0.02014 & 0.02898 & 0.00129 \\
+Coordinate central differences & 16 & 0.00177 & 0.01537 & 0.00092 \\
+Direct menu search & 16 & 0.02397 & 0.03124 & 0.00254 \\
+Cost-matched menu search & 24 & 0.02397 & 0.03124 & 0.00254 \\
+Random menu choice & 0 & $-0.02020$ & 0.02002 & 0.00134 \\
+No intervention & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Selection at the primary fitting budget $k=16$, averaged over three designs. Cost counts intervention measurements on fitting prompts. Selection optimizes only the target; both collateral readouts are measured afterward on the same selected interventions. KL is $\mathrm{KL}(P_{\rm clean}\Vert P_{\rm edited})$ over the full vocabulary at the first assistant position. Secondary comparisons are descriptive.}
+\label{tab:gemma-selection}
+\end{table*}
+
+The strongest target item in the menu has mean effect $0.03973$, benign absolute margin movement $0.05809$, and KL $0.00832$; every map and direct-search method selects it at $k=64$. It is not the menu's most collateral intervention: another item has absolute benign movement $0.07618$ and KL $0.01276$. At the primary budget, methods selecting interventions with stronger target responses generally also move benign prompts more (Table~\ref{tab:gemma-selection}). All actions have the same declared coefficient norm, so this is a comparison of realized responses, not different intervention scales.
+
+Aggregate ridge is not unusually collateral-prone per unit of target effect. The ratio of mean absolute benign movement to mean target effect is $1.25$ for aggregate ridge, $1.30$ for cost-matched search, $1.44$ for OMP, and $1.75$ for coordinate ridge; KL per unit target effect is lowest for OMP. These ratios are descriptive, and the benign data contain only two source families. The study supports reporting target and collateral responses together, without assigning an undeclared acceptability threshold to either readout.
+
+\subsection{Numerical precision and edit fidelity}\label{app:precision}
+
+On fixed benign Gemma fixtures, maximum relative displacement error was $0.522$ under bfloat16 and $2.01\times10^{-5}$ under float32, so acquisition used float32 with TF32 disabled. Edit locations, zero edits, restoration, finite outputs, and batch agreement also passed; the qualification covers these fixtures and this code path.
+
+Qwen's retained configuration and source hashes establish bfloat16 loading and edits in the activation dtype. A prospective audit used the original hook, saved directions, and 29 fixed actions on sixteen benign sequences. Across 1,216 nonzero layer--sequence edits, relative displacement error had median $0.0824$ and maximum $0.298$, exceeding the predeclared $0.20$ tolerance. Zero and inactive edits, edit locations, finite values, and hook removal passed. Historical activations were not retained, so this fixture check does not reconstruct their errors; the original predictions describe the implemented bfloat16 response surface.
+
+The HMM checkpoint and retained MPS intervention path use float32 without mixed precision. GPT-2's activation dtype was not logged; float32 is inferred from TransformerLens's default loading path without a dtype override or autocast. Its mean ablations also differ from small additive edits. Synthetic recovery, HVP calculations, and Tracr's NumPy analyses use float64, while Tracr's compiled-model dtype is unlogged. These are source and configuration checks, distinct from measured edit fidelity.
+
+\subsection{Cost, retention, and inclusion}
+
+A fitting measurement averages 32 prompts scored with eight stems: 256 sequence evaluations in 32 batched forward calls. The full acquisition ledger also charges shared direction construction, clean responses, and held-out and collateral evaluation: 19,112 batched calls, 152,896 sequence evaluations, and 2.31 hours of timed measurement. Charged occupancy was 7.31 of 14 allowed hours, including preflights, setup, transfers, a lost session, and cleanup; occupancy before the first adopted preflight was unrecorded.
+
+Four leases produced all 2,618 hash-verified checkpoints without repeating retained measurements. Analysis finished before the predeclared 6 October cutoff, qualifying the complete comparison for inclusion regardless of outcome. The separate Qwen audit used $8.66$ runtime minutes of its one-hour allowance, including one failed setup and its authorized retry, without regenerating scientific responses.

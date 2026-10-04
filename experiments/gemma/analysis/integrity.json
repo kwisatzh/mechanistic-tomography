@@ -1,0 +1,189 @@
+{
+  "all_arrays_finite": true,
+  "all_frozen_sources_verified": true,
+  "all_resume_prefixes_unchanged": true,
+  "analysis_source_sha256": "bf9c30ecaa0d872b5be4d6ee1cb960e92f1a1912a262ab1999f99133ef62a9a7",
+  "charged_hours": 7.312382371097671,
+  "charged_seconds": 26324.576535951615,
+  "checkpoint_index_sha256": "cfa6d7e63ae10e975693620242e249a1d74e455d2029f2cda52c9e84bddca28f",
+  "checkpoints": 2618,
+  "commitment_before_every_heldout_block": true,
+  "committed_choices_reproduced_from_fitting_data_only": true,
+  "committed_values_numerically_reproduced_rtol": 1e-09,
+  "final_gpu_absence": {
+    "active_count": 0,
+    "source": "fresh Colab account inventory after terminal acquisition",
+    "unix": 1791108861.834561
+  },
+  "leases": [
+    {
+      "lease": "lease-001",
+      "reason": "infrastructure_loss",
+      "seconds": 5168.718432188034
+    },
+    {
+      "lease": "lease-002",
+      "reason": "lease_boundary",
+      "seconds": 9743.71324801445
+    },
+    {
+      "lease": "lease-003",
+      "reason": "lease_boundary",
+      "seconds": 9749.088768959045
+    },
+    {
+      "lease": "lease-004",
+      "reason": "complete",
+      "seconds": 336.06908679008484
+    }
+  ],
+  "maximum_full_prompt_tokens": 52,
+  "maximum_used_prompt_tokens": 52,
+  "note": "Elapsed owned-runtime ledger, not billing; retained measurement time excludes setup, transfer, and failed unsaved work.",
+  "packet_sha256": "be0d5ae8d740612c1279cadb4093efdeffe0a788b2185555f7c7485933b45771",
+  "peak_cuda_bytes": 37368047616,
+  "preflight_seconds": 1326.987,
+  "prompt_count": 192,
+  "retained_measurement_counts": {
+    "aggregate_10301": {
+      "calls": 2048,
+      "input_tokens": 663040,
+      "sequences": 16384
+    },
+    "aggregate_10302": {
+      "calls": 2048,
+      "input_tokens": 663040,
+      "sequences": 16384
+    },
+    "aggregate_10303": {
+      "calls": 2048,
+      "input_tokens": 663040,
+      "sequences": 16384
+    },
+    "collateral_clean": {
+      "calls": 32,
+      "input_tokens": 8896,
+      "sequences": 256
+    },
+    "collateral_kl": {
+      "calls": 256,
+      "input_tokens": 55040,
+      "sequences": 2048
+    },
+    "collateral_kl_clean": {
+      "calls": 4,
+      "input_tokens": 860,
+      "sequences": 32
+    },
+    "collateral_margin": {
+      "calls": 2048,
+      "input_tokens": 569344,
+      "sequences": 16384
+    },
+    "commitment": {
+      "calls": 0,
+      "input_tokens": 0,
+      "sequences": 0
+    },
+    "construction": {
+      "calls": 4,
+      "input_tokens": 965,
+      "sequences": 32
+    },
+    "coordinate": {
+      "calls": 2048,
+      "input_tokens": 663040,
+      "sequences": 16384
+    },
+    "fit_clean": {
+      "calls": 32,
+      "input_tokens": 10360,
+      "sequences": 256
+    },
+    "search": {
+      "calls": 2048,
+      "input_tokens": 663040,
+      "sequences": 16384
+    },
+    "test_clean": {
+      "calls": 96,
+      "input_tokens": 31440,
+      "sequences": 768
+    },
+    "test_margin": {
+      "calls": 6144,
+      "input_tokens": 2012160,
+      "sequences": 49152
+    },
+    "validation": {
+      "calls": 256,
+      "input_tokens": 82880,
+      "sequences": 2048
+    }
+  },
+  "retained_measurement_seconds": {
+    "aggregate_10301": 905.4916739759979,
+    "aggregate_10302": 905.7789496899943,
+    "aggregate_10303": 909.7016490779995,
+    "collateral_clean": 11.879987182999685,
+    "collateral_kl": 111.45349169900044,
+    "collateral_kl_clean": 1.2579214740007956,
+    "collateral_margin": 782.9334868219948,
+    "commitment": 0.7518423009996695,
+    "construction": 1.4328504959999009,
+    "coordinate": 885.3987344460031,
+    "fit_clean": 13.83149793799953,
+    "search": 902.0968808070002,
+    "test_clean": 41.45512154300013,
+    "test_margin": 2718.352485964,
+    "validation": 113.55312729200023
+  },
+  "startup": [
+    {
+      "checks": {
+        "batch_kl": true,
+        "finite": true,
+        "hooks_removed": true,
+        "normalized": true,
+        "restored": true,
+        "zero": true
+      },
+      "lease": "lease-001"
+    },
+    {
+      "checks": {
+        "batch_kl": true,
+        "finite": true,
+        "hooks_removed": true,
+        "normalized": true,
+        "restored": true,
+        "zero": true
+      },
+      "lease": "lease-002"
+    },
+    {
+      "checks": {
+        "batch_kl": true,
+        "finite": true,
+        "hooks_removed": true,
+        "normalized": true,
+        "restored": true,
+        "zero": true
+      },
+      "lease": "lease-003"
+    },
+    {
+      "checks": {
+        "batch_kl": true,
+        "finite": true,
+        "hooks_removed": true,
+        "normalized": true,
+        "restored": true,
+        "zero": true
+      },
+      "lease": "lease-004"
+    }
+  ],
+  "truncated_prompt_count": 0,
+  "verified_unix": 1791108873.204577
+}

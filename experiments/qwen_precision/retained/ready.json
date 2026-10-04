@@ -1,0 +1,14 @@
+{
+  "unix": 1791126712.4814007,
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.14.0",
+    "numpy": "2.0.2",
+    "accelerate": "1.14.0"
+  },
+  "cuda": "13.0",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "parameter_dtypes": [
+    "torch.bfloat16"
+  ]
+}
