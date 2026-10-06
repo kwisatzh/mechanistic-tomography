@@ -1,14 +1,16 @@
-# Belief-State Tomography: Minimal Observer-Fidelity Harness
+# Belief State Estimation and One Step Control
 
-This repository is a first-pass falsifier for the thesis:
+This testbed measures how estimation error affects one controller-chosen
+activation edit in a transformer trained on two hidden Markov models (HMMs).
+The exact filtered posteriors provide an independent reference for estimation
+error, while target error and nuisance movement measure the edit's effects.
+The retained experiment evaluates one estimate-and-edit step per token position,
+not a repeated feedback trajectory.
 
-> A controller is only as good as the observer feeding it.
-
-The harness asks one question:
-
-> In a wind tunnel with analytic hidden state, does closed-loop control quality track observer quality?
-
-If the answer is yes, it earns a reason to build a richer network-tomography observer. If the answer is no, refine the task/controller/actuator before spending more compute.
+The code and retained results are unchanged. The clarification below corrects
+earlier descriptions of the control sequence and the coarse proxy. The commands
+later in this README are the original fresh-run entry points; checking this
+clarification requires no training or new model measurements.
 
 ---
 
@@ -25,20 +27,58 @@ The script trains a tiny causal transformer on next-token prediction only, then:
 
 1. Probes each residual layer for `z1` and `z2`.
 2. Chooses an actuation direction for `z1` using high-minus-low posterior activations.
-3. Holds a P controller fixed.
+3. Keeps a P controller fixed.
 4. Sweeps observers:
    - oracle posterior
    - noisy oracle at several noise levels
    - linear probe
-   - coarse last-observation proxy
-   - deliberately entangled observer: `z1 + 0.9*z2`
+   - coarse posterior-sign proxy
+   - entangled observer: `z1 + 0.9*z2`
 5. Produces the main plot:
 
 ```text
-observer RMSE against true z1  vs  closed-loop target loss
+observer RMSE against true z1  vs  target loss after one edit
 ```
 
-That is Figure 1. If the points separate and roughly increase with observer error, observer fidelity is binding in this toy setting.
+Across the ten retained observer variants, target error after the edit tracks
+observer RMSE (Spearman correlation 0.95). The trained linear readout has slightly
+lower control error than the analytic posterior, so agreement with the reference
+and usefulness for this edit are related but distinct criteria.
+
+### The ten observer variants
+
+`observer_predictions` and `run_control_eval` in `hmm_observer_control.py`
+define the exact posterior log-odds `z1`, a trained linear readout, the coarse
+proxy `1.5 * sign(z1)`, the mixed estimate `z1 + 0.9*z2`, and six versions of
+`z1` with zero-mean Gaussian noise at standard deviations 0.25, 0.5, 1, 1.5, 2,
+and 3. In `frozen/observer_control.csv`, the trained readout's target MSE is
+3.441 and the exact posterior's is 3.484 under the same edit direction.
+
+The separate mixed observer-and-actuator condition uses `z1 + 0.5*z2` and a
+direction proportional to `d1 + 0.5*d2`. It reduces target MSE from 25.02 to
+4.81, compared with 3.56 for target-only oracle control, while nuisance movement
+increases from 0.037 to 0.079. This is a different comparison from the ten-observer
+fixed-direction sweep; the two oracle values should not be interchanged.
+
+### The implemented control sequence
+
+In `hmm_observer_control.py`, `run_control_eval` first runs the unedited token
+sequence and computes the observer estimate at each position. The fixed
+proportional controller converts the gap between that estimate and the target
+into an edit size, using the fixed direction's readout gain and the configured
+clipping limit. A second forward pass applies those edits and scores the outputs.
+All position-specific edit sizes come from the unedited pass; the controlled
+outputs do not feed another observer update or an autoregressive rollout.
+`control_gate_d_rotating.py` uses the same single estimate-and-edit sequence for
+the mixed observer and actuator specificity comparison.
+
+The legacy identifier `last_obs_proxy` in `observer_predictions` returns
+`1.5 * torch.sign(z_true)`, where `z_true` is the exact posterior log-odds after
+filtering the observation history. It is a coarse posterior-sign estimate, not
+an estimate made from the current observation alone. The identifier, historical
+source comment, and saved rows are retained for reproducibility; this explanation
+supersedes their last-observation wording. Likewise, any closed-loop labels in
+historical plotting code or images refer to the one-step measurement above.
 
 ---
 
@@ -275,7 +315,7 @@ In that case, fix the harness before building an NT observer.
 
 ---
 
-## Cheap next extensions if Figure 1 works
+## Possible next checks if Figure 1 works
 
 1. **Observer sweep with structured corruption**
    - Add `z_hat = z1 + alpha*z2` for many `alpha` values.
@@ -298,4 +338,8 @@ In that case, fix the harness before building an NT observer.
 
 ## Notes on scope
 
-This harness does not prove that a real LLM has a faithful belief geometry. It tests the smaller, necessary claim: in a controlled setting with known latent state, does observer fidelity actually constrain closed-loop control? Real-model validation should later be phrased as control-usefulness, not proof of belief identity.
+This experiment links observer quality to one-step control performance in a
+small model with an exact posterior reference. It also separates fidelity to that
+reference from usefulness for the implemented edit. It does not test stability
+or performance over repeated feedback updates, or establish belief identity in
+a pretrained LLM.

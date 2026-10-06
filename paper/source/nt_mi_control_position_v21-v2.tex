@@ -48,7 +48,7 @@ Understanding and steering transformer behavior requires measuring internal stat
 
 Our theory connects measurement error to perturbation scale, calibration dimension, and interaction recovery. It supports a practical sequence: start with the least costly measurement family, check finite responses on held-out interventions, calibrate a simple mismatch, and add interactions only when a structured residual remains. When an estimate guides an intervention, it acts as an observer, so we also test its effect on control.
 
-In a two-HMM wind tunnel, control error tracks observer error under a fixed controller and actuator (Spearman $0.95$). Aggregate probes recover a compressible map using 12 measurements instead of 32 coordinate interventions, and eight finite probes calibrate attribution patching to held-out $R^2=0.948$ at the larger intervention scale. Planted interactions and compiled transformers show when the feature family or basis must change. On GPT-2-small indirect-object identification, one cross-group interaction reduces held-out mean absolute error (MAE) by about one-third. On Qwen-2.5-7B, a calibrated additive map gives held-out $R^2=0.983$ on a finite decline-versus-compliance response surface, with no detected MAE benefit from pairwise lifting. On Gemma-2-9B-it, 40 aggregate measurements predict held-out mean responses in a 32-direction basis with mean $R^2$ of $0.96$--$0.99$, versus $0.15$ for coordinate probing at the same budget. These studies show how held-out responses guide both refinement and stopping.
+In a two-HMM wind tunnel, target error after one edit tracks observer error under a fixed controller and actuator (Spearman $0.95$). Aggregate probes recover a compressible map using 12 measurements instead of 32 coordinate interventions, and eight finite probes calibrate attribution patching to held-out $R^2=0.948$ at the larger intervention scale. Planted interactions and compiled transformers show when the feature family or basis must change. On GPT-2-small indirect-object identification, one cross-group interaction reduces held-out mean absolute error (MAE) by about one-third. On Qwen-2.5-7B, a calibrated additive map gives held-out $R^2=0.983$ on a finite decline-versus-compliance response surface, with no detected MAE benefit from pairwise lifting. On Gemma-2-9B-it, 40 aggregate measurements predict held-out mean responses in a 32-direction basis with mean $R^2$ of $0.96$--$0.99$, versus $0.15$ for coordinate probing at the same budget. These studies show how held-out responses guide both refinement and stopping.
 \end{abstract}
 
 \maketitle
@@ -79,7 +79,7 @@ The experiments follow the same decision sequence: test how observer error affec
     \item \textbf{Structural unification.} Table~\ref{tab:methodmap} places coordinate patching, attribution patching, subset recovery, Hessian-vector products, and lifted recovery in one measurement language. The methods keep their own targets and numerical answers; their recoverability, error amplification, and held-out prediction error can be assessed within a common framework.
     \item \textbf{Measurement and extension theory.} Intervention scale balances nonlinear response against amplified measurement error, while pure interactions can be invisible to first-order measurements. Lemma~\ref{lem:measurement-reduction} separates nonlinear response, sampling error, and basis error; the recovery, calibration, and lifting results turn that decomposition into conditions for choosing a measurement family.
     \item \textbf{Calibration dimension.} Proposition~\ref{prop:caldim} defines the smallest declared correction family that lets a baseline map predict finite responses on held-out interventions. An $r$-dimensional correction needs $O(r)$ well-conditioned probes; a residual outside that family calls for new features or a new basis. Sec.~\ref{sec:step0} tests the dimension-one case: just eight finite probes raise held-out attribution-patching $R^2$ from $0.818$ to $0.948$ at the larger scale. Yet choosing those probes by the classical information-optimal rule gives $16.8\%$ higher MSE than random selection in the retained-data replay.
-    \item \textbf{Control-facing validation.} In a two-HMM wind tunnel, closed-loop target error tracks observer error across ten observer variants (Spearman $0.95$) under a fixed controller and actuator. A separate specificity test shows why target improvement by itself is not enough: it can coexist with increased movement of a nuisance state.
+    \item \textbf{Control-facing validation.} In a two-HMM wind tunnel, target error after one controller-chosen edit tracks observer error across ten observer variants (Spearman $0.95$) under a fixed controller and actuator. A separate specificity test shows why target improvement by itself is not enough: it can coexist with increased movement of a nuisance state.
     \item \textbf{Measurement savings and stopping decisions.} Twelve aggregate measurements approximately recover the HMM model's 32-coordinate map. In the sparse synthetic testbed, 64--72 measurements recover interactions among 2,080 candidate coefficients, compared with 2,016 exhaustive pair probes. Tracr, which compiles known computations into transformers, shows that the required interaction order depends on the basis. Held-out prediction then supports adding a group interaction in GPT-2 but stopping at a calibrated additive map in Qwen-2.5-7B (Secs.~\ref{sec:aggregate}--\ref{sec:qwen}).
 \end{enumerate}
 \endgroup
@@ -111,7 +111,7 @@ which attribution patching estimates. This is the direct-access case of the inve
 
 For attribution patching, the equation matters once the gradient is used to predict a finite intervention. The gradient supplies $x$ but says nothing about $w$, and at finite scale it is $w$ that determines whether $x$ still predicts the response, so measuring $w$ requires finite measurements; Sec.~\ref{sec:step0} obtains them with calibration probes.
 
-An estimate that explains a mechanism is checked against that mechanism, whereas one that guides an intervention must predict the response to an action not yet taken, at the scale the action will use. That predictive test makes $w$ something to measure and turns $\eps$ and $\rho$ into design choices. The formulation itself needs no control loop (Sec.~\ref{sec:control} makes one explicit), but the intended use determines which residuals matter.
+An estimate that explains a mechanism is checked against that mechanism, whereas one that guides an intervention must predict the response to an action not yet taken, at the scale the action will use. That predictive test makes $w$ something to measure and turns $\eps$ and $\rho$ into design choices. The formulation itself needs no controller; Sec.~\ref{sec:control} tests one-step control as a downstream use that determines which residuals matter.
 
 The same form accommodates two extensions. Adding the products $a_i a_j$ to each row adds pair coefficients to the target, so interactions become columns of a larger linear model, while a Hessian-vector product along a chosen direction keeps the row-times-unknown structure but measures the local curvature map $H_0$ instead of the effect map.
 
@@ -322,35 +322,37 @@ The experiments place these three objects under control and then relax that cont
 
 An estimate that guides an intervention acts as an \emph{observer} and must be judged by the action it supports. We test whether estimation error affects control, whether target improvement can conceal nuisance movement, and whether the most faithful estimate also controls best. We vary the observer with the transformer, actuator, controller, and target fixed to isolate its effect on control. A separate test couples a mixed target--nuisance estimate with a mixed actuation direction to examine what the target metric misses.
 
-A control loop connects the system being changed, the observer, the controller, and the actuator. The transformer has an internal activation state $x_t$; in classical control terminology, it is the \emph{plant}.\footnote{More precisely, the controlled system includes the transformer state at the edit location and the remaining computation from that state to the readout. We use \emph{transformer} in the text and reserve \emph{plant} for this classical control-theory meaning.} The quantity we want to regulate is $z_t=\phi(x_t)$, but the controller does not observe it directly. It receives measurements $y_t$, uses an observer $O$ to form the estimate $\widehat z_t$, and then applies a control rule $K$:
+The control setup connects the system being changed, the observer, the controller, and the actuator. The transformer is the \emph{plant} in classical control terminology.\footnote{More precisely, the controlled system includes the transformer state at the edit location and the remaining computation from that state to the readout. We use \emph{transformer} in the text and reserve \emph{plant} for this classical control-theory meaning.} An observer $O$ estimates the target belief from measurements $y_t$ at token position $t$. A controller $K$, analogous to a policy, uses this estimate and a target value $r_t$ to choose an intervention $u_t$, which the actuator turns into an activation edit:
 \begin{align}
-    z_t &= \phi(x_t), & y_t &= h(x_t,c_t)+\epsilon_t,\\
-    \zhat_t &= O(y_{0:t},c_{0:t}), & u_t &= K(\zhat_t,r_t).
+    y_t &= g(h_t^{(0)},c_t)+\xi_t,\\
+    \zhat_t &= O(y_t,c_t), & u_t &= K(\zhat_t,r_t).
 \end{align}
-Here $c_t$ denotes the context, $\epsilon_t$ measurement noise, $r_t$ the desired reference, and $u_t$ the intervention. In an activation-steering example, $x_t$ is the residual-stream state, $O$ is a probe or another state estimate, $K$ converts the estimated error into an edit size, and the actuator is the direction along which the activation is changed. The intervention could instead be a logit bias, retrieval insertion, prompt rewrite, or decoding change. Even a well-behaved controller $K$ can fail if the observer $O$ estimates the wrong quantity. We validate the estimate in four ways: agreement with an oracle when one exists, sensitivity under a fixed controller, movement of nuisance variables, and prediction on held-out interventions in a real model.
+Here $h_t^{(0)}$ is the unedited activation, $c_t$ includes the tokens so far, $g$ specifies the available measurements, and $\xi_t$ is measurement noise. We first run the model without edits and obtain each observer's estimates. The controller uses their gaps from the target to set edit sizes along a fixed direction. A second pass applies the edits, and we score mean squared error between the output-implied belief log-odds and the target. The index $t$ denotes token position, not a repeated control update; edited outputs do not feed another estimate. We validate the estimate through agreement with the independent HMM posterior, control performance under a fixed controller, and movement of nuisance variables; later experiments test prediction on held-out interventions in pretrained models.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.82\linewidth]{figs/observer_control.png}
-\caption{With the controller and actuator fixed, closed-loop target error rises with observer error across ten observer variants. The analytic oracle and the linear probe have the lowest estimation and control error; coarse, noisy, proxy, and entangled estimates have more of both.}
+\includegraphics[width=0.82\linewidth]{figs/observer_control_one_step.png}
+\caption{With the controller and actuator fixed, target error after one edit rises with observer error across ten observer variants. The analytic oracle and the trained linear readout have the lowest estimation and control error; coarse, noisy, and mixed estimates have more of both.}
 \label{fig:observer}
 \end{figure}
 
 \subsection{Estimation error changes control performance}\label{sec:result-control}
-These comparisons require a reference independent of the observer and control outcome. A hidden Markov model (HMM) supplies the exact filtered posterior over its hidden state after every token, letting us measure estimation error separately from control performance. Unlike our pretrained-model studies, this setting lets us compare the two rankings without assuming the transformer's internal state equals the external posterior.
+To compare estimation error with control error, we need to know the quantity being estimated independently of the control outcome. A hidden Markov model (HMM) supplies the exact filtered posterior over its hidden state after every token, letting us measure estimation error separately from control performance. Unlike our pretrained-model studies, this setting lets us compare the two rankings without assuming the transformer's internal state equals the external posterior.
 
-Building on analytic-posterior HMM wind tunnels~\cite{agarwal2025geometry}, we train a small transformer on tokens generated by two independent HMMs. One hidden process defines the target belief $z_1$; the other defines a nuisance belief $z_2$. We use their exact posterior log-odds as the two reference states. The model matches the Bayes cross-entropy floor, and a linear probe recovers $z_1$ with $R^2\approx0.99$.
+Building on analytic-posterior HMM wind tunnels~\cite{agarwal2025geometry}, we train a small transformer on tokens generated by two independent HMMs. One hidden process defines the target belief $z_1$; the other defines a nuisance belief $z_2$. We use their exact posterior log-odds as the two reference states. The model matches the Bayes cross-entropy floor, and a trained linear readout recovers $z_1$ with $R^2\approx0.99$.
 
-The first check asks whether observer quality matters once the estimate enters a feedback loop. We create ten observers with different amounts and kinds of error, including a last-observation proxy that uses only the current emission instead of the filtered history. We then hold the transformer, actuator, controller, and target fixed. Across these observers, closed-loop target error rises with observer RMSE (Spearman $r_s=0.95$). This fixed-controller comparison connects estimation accuracy to downstream performance in a setting with an exact reference state.
+The ten observers are the exact posterior log-odds $z_1$, a trained linear readout, a coarse proxy $1.5\,\mathrm{sign}(z_1)$, a mixed estimate $z_1+0.9z_2$, and six versions of $z_1$ with zero-mean Gaussian noise of standard deviation $0.25$, $0.5$, $1$, $1.5$, $2$, or $3$. With the transformer, actuator, controller, and target fixed, target error after one edit tracks observer RMSE (Spearman $r_s=0.95$): more accurate estimates generally support more accurate steering.
 
-The second check asks whether an observer can improve the target while moving an unrelated state. We construct an entangled estimate, $z_1+0.5z_2$, and use the corresponding mixed actuation direction $d\propto d_1+0.5d_2$. This condition reduces target MSE from $25.02$ without control to $4.81$, while the oracle target-only condition gives $3.56$. Yet nuisance movement rises from $0.037$ to $0.079$. This joint observer--actuator stress test shows that specificity matters even when the target improves, since the mixed intervention also moves the nuisance state. Reporting both quantities reveals an effect that target MSE alone would conceal.
+An observer can confuse the target with a second variable, and an edit direction can push both. To test whether the target metric reveals this, a separate condition combines the mixed estimate $z_1+0.5z_2$ with the mixed direction $d\propto d_1+0.5d_2$. It reduces target MSE from $25.02$ without control to $4.81$, compared with $3.56$ for oracle target-only control. Nuisance movement nevertheless more than doubles, from $0.037$ to $0.079$, so target improvement alone misses that cost.
 
 \paragraph{The most faithful estimate need not control best.}
-The linear probe sometimes produces slightly lower closed-loop error than the analytic posterior oracle, even though the oracle is the more faithful estimate of the external HMM posterior. The controller edits the state represented by the transformer, and the probe can align more closely with that editable state than the external posterior does. Here, the analytic posterior tests representational faithfulness, while closed-loop performance tests how well an observer matches the state used by this model--actuator pair.
+In the fixed-direction comparison in Figure~\ref{fig:observer}, the trained readout gives slightly lower target MSE than the exact posterior ($3.441$ versus $3.484$), despite its estimation error. The edits act on the transformer's representation, with which a trained readout can align more closely than the external posterior does. Matching the reference and being useful for this edit are therefore distinct criteria.
 
-These findings make estimation error a control concern, require a separate nuisance-movement metric, and support validation through the intended intervention as well as against a reference. We next compare the measurement cost of first-order estimates under forward-only and white-box access in the same model and task.
+These findings make estimation error a control concern, require a separate nuisance-movement metric, and support validation through the intended intervention as well as against a reference.
 
 \section{From exact ground truth to pretrained LLMs}\label{sec:extensions}
+
+We first compare aggregate and coordinate measurements in the HMM and Gemma, then ask what gradients, interaction measurements, and basis changes add. The planted and compiled-model studies provide known mechanisms; GPT-2 and Qwen test response prediction with less internal ground truth. Measurement counts below compare methods with the same model access; forward passes, backward passes, and HVPs have different computational costs.
 
 \subsection{Aggregate measurements replace exhaustive probes when the map is compressible}\label{sec:aggregate}
 
@@ -358,13 +360,13 @@ Without gradient access, coordinate patching requires a separate forward interve
 
 We test this in the HMM model from Sec.~\ref{sec:control}, using 32 coordinates formed by crossing transformer layer with token position. The space is small enough to patch every coordinate individually, which gives a reference map for judging aggregate recovery.
 
-The measured response is the change in the model's implied belief log-odds at the final token, averaged over a batch. We invert its predicted next-observation probability using the HMM parameters, clip the implied belief probability to $[10^{-5},1-10^{-5}]$, and then take log-odds. This output-derived readout is distinct from the analytic posterior reference. Because paths crossing the clipping boundaries fall outside Lemma~\ref{lem:measurement-reduction}'s smoothness assumptions, these finite-effect experiments test the measurement equation empirically.
+The readout converts the model's predicted probability of the next observation into the HMM belief that would produce it, using the known HMM parameters, and then takes log-odds. We clip the implied probability to $[10^{-5},1-10^{-5}]$ to avoid infinities and measure the intervention's change in this readout at the final token, averaged over a batch. This output-implied belief differs from the analytic posterior reference. Paths crossing the clipping boundaries do not satisfy Lemma~\ref{lem:measurement-reduction}'s smoothness assumption, so these experiments test the linear prediction empirically.
 
 The reference map is not exactly sparse, but it is strongly compressible, with its four largest coordinates containing $98.4\%$ of its squared $\ell_2$ norm. We use orthogonal matching pursuit (OMP), a sparse-recovery method that selects a small set of coordinates and fits their effects from the aggregate responses. A separate validation split chooses how many coordinates OMP should retain. We also fit ridge regression as a dense baseline.
 
-After 12 aggregate measurements, validation selects a four-coordinate OMP model. It gives Pearson $r=0.989$ against the coordinate-patching reference and $R^2=0.935$ on held-out aggregate masks. Ridge regression requires 32 measurements, the same count as exhaustive coordinate patching, to obtain $r=0.962$ and held-out $R^2=0.933$.
+After 12 aggregate measurements, validation selects a four-coordinate OMP model. It gives Pearson $r=0.989$ against the coordinate-patching reference and $R^2=0.935$ on held-out aggregate masks. Ridge regression requires 32 measurements, the same count as exhaustive coordinate patching, to obtain $r=0.962$ and held-out $R^2=0.933$. Thus 12 aggregate measurements closely recover the 32-patch reference and match the predictive accuracy of the larger ridge fit.
 
-Aggregate measurements save interventions here because the finite-effect map is compressible and approximately additive. These two properties determine when the saving is available; dense maps or strong interactions call for a different design. Bair et al.\ demonstrate the same sparse-recovery principle at pretrained-model scale using attention-head knockouts~\cite{bair2026compressed}. This experiment establishes the forward-only baseline before we turn to gradient access.
+Aggregate measurements save interventions here because the finite-effect map is compressible and approximately additive. These two properties determine when the saving is available; dense maps or strong interactions call for a different design. Bair et al.\ demonstrate the same sparse-recovery principle at pretrained-model scale using attention-head knockouts~\cite{bair2026compressed}.
 
 \begin{figure}[t]
 \centering
@@ -373,13 +375,20 @@ Aggregate measurements save interventions here because the finite-effect map is 
 \label{fig:forward}
 \end{figure}
 
-\subsection{A few finite probes calibrate attribution patching at intervention scale}\label{sec:step0}
+\paragraph{Do aggregate probes help in Gemma?}
+A Gemma-2-9B-it study~\cite{gemma2024report} repeats the design comparison with 32 steering directions at one scale. At the predeclared primary budget of 16 fitting and eight validation measurements, aggregate ridge lowers test MSE by $22\%$ relative to coordinate ridge (paired interval excluding zero, conditional on three fixed designs), although both ridge maps predict weakly.
+
+At the secondary budget of 32 fitting and eight validation measurements, aggregate maps predict held-out mean responses with $R^2=0.96$ (ridge) and $0.99$ (OMP), versus $0.15$ for coordinate probing, which covers half the directions. Both budgets were fixed before collection; these descriptive $R^2$ summaries were added after the primary analysis.
+
+Each map also chooses the intervention with the largest predicted target response from 64 fixed interventions plus no intervention. At the smaller budget, OMP predicts moderately well ($R^2=0.62$) but chooses a weaker target response than aggregate ridge. At the larger budget, OMP chooses the best menu item in all three designs. Methods choosing stronger target responses also generally move benign prompts more. Appendix~\ref{app:gemma} reports prediction, choice, and collateral effects separately.
+
+\subsection{A few interventions correct gradient predictions at the size used}\label{sec:step0}
 
 Attribution patching obtains the complete local first-order map with one backward pass, more cheaply than recovering it from many forward measurements. A gradient, however, describes an infinitesimal change, and nonlinearities in the model or its readout can make a finite intervention respond differently.
 
 We test whether a single scale factor can correct the mismatch before estimating a richer map. Using the same HMM model and component directions as in Sec.~\ref{sec:aggregate}, we compare scales $\eps\in\{5,8\}$. Raw attribution patching predicts the smaller interventions well on average, while it systematically overpredicts responses at the larger scale. With the readout defined in Sec.~\ref{sec:aggregate}, the gain corrects the combined model-and-readout response. We fit one scalar gain from finite calibration probes and rescale the gradient map, preserving its relative sensitivities without re-estimating every coordinate.
 
-To check that the gain transfers across sequences and measurement designs, we cross three independently generated evaluation batches with three independently generated mask-and-split designs, giving nine evaluation cells. Each cell contains 128 masks: 72 fit the scalar gain and the sparse OMP comparison, 24 select the OMP model, and 32 are reserved for final evaluation. We fit a separate gain at each intervention scale because the correction describes the response at that scale.
+To check that the gain generalizes across sequences and masks, we cross three independently generated evaluation batches with three independent draws of masks and training, validation, and test splits, giving nine evaluation cells. Of each cell's 128 masks, 72 fit the gain and the OMP comparison map, 24 choose OMP's sparsity, and 32 form the final test set. We fit a separate gain at each intervention scale because the correction describes the response at that scale.
 
 \begin{table}[t]
 \centering
@@ -403,7 +412,8 @@ We next ask how many finite probes the correction needs. From the 96 masks not r
 
 The scalar gain tests the calibration-dimension-one hypothesis. It corrects most of the scale error, while the residual gap to OMP in some cells, even after 96 probes, identifies where one gain leaves useful predictive structure unexplained. Held-out error thus supplies the stopping rule: retain the corrected map when it predicts the intended interventions well enough, and use a richer observer when the residual warrants it.
 
-Appendix~\ref{app:selector-replay} compares three fixed ways to select calibration probes from the retained measurements. Its bias--variance decomposition explains why selecting the largest predicted responses can increase held-out error despite the rule's variance advantage under a classical linear error model.
+\paragraph{Does it matter which probes are used?}
+When fitting one gain, choosing the largest absolute predicted responses minimizes its variance if errors are independent, unbiased, and equally variable. We tested this rule on retained measurements, selecting probes from attribution predictions alone. At $\eps=8$, the eight largest predictions give test MSE $0.474$, versus $0.406$ for random selection ($16.8\%$ higher); at $\eps=5$, the penalty is $36.5\%$. The fitted gain's larger bias outweighs its variance advantage. Appendix~\ref{app:selector-replay} gives the fixed 50-draw comparison and bias--variance breakdown; the source of the bias remains unidentified. Probe selection should therefore account for bias as well as variance, as in the proposed \hyperref[par:bd-workflow]{two-stage workflow} in Appendix~\ref{app:bias-aware-design}.
 
 \begin{figure}[t]
 \centering
@@ -497,9 +507,9 @@ At $\eps=5$, both prediction and pair recall remain high through noise standard 
 
 \paragraph{Why held-out masks matter.}
 
-Finally, we give one off-path coordinate the same pattern as a causal coordinate on the training masks. Either feature can then explain the observed responses, even though only one belongs to the planted mechanism: the two features are aliased by the measurement design.
+Finally, a noncausal coordinate copies a causal coordinate with probability $0.85$ on each training row, making the features strongly correlated without making them identical. The test masks are drawn independently, with no forced copying. At $\eps=8$, ridge assigns the distractor a nonzero coefficient in all three seeds (absolute sizes $0.062$--$0.219$), while first-order and lifted OMP assign it zero. Lifted OMP also predicts the independent masks accurately ($R^2>0.998$ in every seed).
 
-Sparse support selection followed by independent held-out masks suppresses the false positive. The test shows how held-out interventions contribute to identification by separating features that agree on the training masks. A corresponding pair-level stress test would apply the same principle to aliased columns in the lifted design.
+Feature selection and refitting use the training data, with a validation split to choose sparsity; the independent test masks score the fitted maps without changing their coefficients. Thus the sparse fit excludes the distractor, and the test masks check whether its predictions survive removal of the training correlation. This test concerns a correlated main-effect distractor; it does not establish recovery from exact aliasing or an aliased pair feature.
 
 
 
@@ -540,7 +550,7 @@ Predicting a compiler label does not show that the model's output depends on it.
 
 We first ablate the detector group. We then reconstruct it from the restricted pre-conjunction basis using either additive features or lifted pair features and write that reconstruction back into the residual stream. This tests whether the recovered detector supplies information that the final readout actually uses.
 
-Editing the final residual stream isolates the connection between the detector subspace and the readout. Reconstruction at an earlier layer would additionally have to survive the intervening transformer computation, so the writeback result applies to the final-residual interface tested here.
+Because the edit is at the final layer, this shows that the readout uses the detector; it does not test how an earlier edit would propagate through the network. Reconstruction at an earlier layer would additionally have to survive the intervening transformer computation.
 
 Ablating the detector group drops held-out readout $R^2$ from $1.00$ to about $-0.05$ for the numeric program and $-0.51$ for the boolean program. The final output therefore depends on these detector coordinates. Writing back the additive reconstruction restores readout $R^2$ to only about $0.55$ for both programs. Writing back the lifted reconstruction restores the original $R^2=1.00$.
 
@@ -573,7 +583,7 @@ For an ablated set of heads $U$, let $\Delta(U)$ be the clean margin minus the a
 
 We use two studies because complete group ablations and prediction over ordinary subset masks answer different questions. The direct study uses 21 selected group masks, 128 matched name pairs, and eight prompt conditions formed by four lexical frames in the standard ABBA and BABA orders. These two orders reverse how the names are introduced relative to the person who later repeats as the subject. We repeat the study with two ablation conventions. Template-conditioned mean ablation replaces a selected head output with its average clean activation on that prompt template; zero ablation replaces it with zero. Agreement across the two reduces the chance that the interaction ordering comes from one replacement convention. This study asks what happens at the corners of the intervention space, where whole groups are removed.
 
-The predictive study measures 240 masks over 256 name pairs on one prompt template. A masked head is replaced by its average clean activation on prompts from that template. We score the 239 non-clean masks using five cross-validation splits, while including the unablated mask in every training split to fix the reference response. This study asks which measurement model best predicts unseen subset interventions drawn from the tested mask distribution.
+The predictive study measures 240 masks over 256 name pairs on one prompt template. Each removed head's output is replaced by its mean at the same token position over a separate set of prompts from that template. We score the 239 non-clean masks using five cross-validation splits, while including the unablated mask in every training split to fix the reference response. This study asks which measurement model best predicts unseen subset interventions drawn from the tested mask distribution.
 
 \paragraph{Direct group ablations reproduce conditional backup.}
 
@@ -626,7 +636,7 @@ The three group interactions capture part of the response, with a remaining thre
 
 The predictive study tests whether these interactions help predict unseen subset masks beyond the complete group ablations. We stratify masks by the exact number of removed primary heads, a binned count of removed Backup Name Movers, and the exact number of removed Negative Name Movers. We oversample masks with at least two removed primary heads because conditional backup is most visible after the primary path has been weakened.
 
-A count-additive baseline gives each group its own flexible dose response. It can learn, for example, that removing four backup heads has more than twice the effect of removing two. What it cannot express is that removing a Negative Name Mover helps Bob while the primary writers remain but helps much less after those writers have been removed.
+A count-additive baseline gives each group its own flexible dose response. It can learn, for example, that removing four backup heads has more than twice the effect of removing two. What it cannot express is that removing a Negative Name Mover helps Bob while the primary heads remain but helps much less after those heads have been removed.
 
 We represent that dependence by adding one normalized count product at a time:
 \[
@@ -664,7 +674,7 @@ The direct and predictive studies agree on the ordering of the three tested inte
 
 This distinction explains why the known $P\times B$ backup response is clear under complete group ablation yet contributes much less to prediction than $P\times E$ over the tested subset distribution. For that distribution, one prompt template, and mean ablation, $P\times E$ is the strongest and most stable of the three group-level terms. The broader direct-ablation study establishes that the group ordering also holds across the tested prompt conditions and both replacement conventions.
 
-\subsection{Finite calibration is sufficient on the tested Qwen-2.5-7B surface}\label{sec:qwen}
+\subsection{Pair terms give no measured MAE gain on Qwen-2.5-7B}\label{sec:qwen}
 
 The preceding experiments use exact posteriors, planted effects, compiler labels, or documented circuit groups. Qwen tests the same measurement procedure against a behavioral response surface. Here the model's measured response to a finite intervention supplies the reference for evaluating predictive transfer; an independently known internal mechanism is unavailable.
 
@@ -692,12 +702,11 @@ Lifted pairwise & 48 & 0.003801 & 0.004613 & 0.9835 \\
 
 The additive map gives held-out $R^2=0.9829$ and MAE $0.003790$. The lifted map gives $R^2=0.9835$ and MAE $0.003801$. The estimated relative MAE improvement from lifting is $-0.29\%$. A paired prompt-family-by-action bootstrap gives a 95\% interval of $[-3.56\%,5.65\%]$.
 
-We retain the calibrated additive map for this basis, prompt distribution, and intervention regime, as implemented, because adding pair terms yields no detected MAE improvement. The interval spans zero and extends slightly beyond the predeclared 5\% practical threshold, so we stop at the available precision; the comparison does not establish equivalence.
+The interval includes zero and extends slightly above the predeclared $5\%$ practical-improvement threshold. A gain just above that threshold is therefore not ruled out, but no MAE benefit is detected. We retain the calibrated additive map for this basis, prompt distribution, and intervention range, as implemented.
 
 This result complements the IOI study. In IOI, the additive residual points to a specific missing relation, and the $P\times E$ term materially improves held-out prediction. On the Qwen behavioral surface, finite calibration makes the simpler map adequate at the measured precision.
 
-A complementary Gemma-2-9B-it study~\cite{gemma2024report} tests measurement design in a 32-direction basis at one scale. With 32 fitting and eight validation measurements, aggregate ridge and OMP have mean held-out-response $R^2$ of $0.96$ and $0.99$, versus $0.15$ for coordinate designs covering half the directions; this is a secondary, descriptive comparison. At the predeclared 16-measurement fitting budget, aggregate ridge lowers MSE by $22\%$ (paired interval excluding zero, conditional on three fixed designs), although both ridge maps predict weakly. OMP has $R^2=0.62$ there yet selects a weaker intervention. Interventions with stronger target responses also move benign prompts more; Appendix~\ref{app:gemma} reports both outcomes and the post-hoc $R^2$ summaries.
-
+\paragraph{Artifacts.}
 The \href{https://github.com/kwisatzh/mechanistic-tomography}{public artifact repository} contains the experiment code, retained measurements, and CPU reproduction scripts, including the Gemma comparison and prospective Qwen precision audit. A Colab notebook regenerates Table~\ref{tab:qwen} without loading the model, while a separate GPU script can rerun the finite measurements from the pinned model revision.
 
 \FloatBarrier

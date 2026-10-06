@@ -151,8 +151,9 @@
             Once an estimate guides an intervention, it acts as an observer. A useful observer
             must predict what the intervention will do, not merely reconstruct a mechanism on
             the data used to fit it. In the two-HMM experiment, the controller and actuator are
-            fixed while the observer varies, exposing how identification error reaches
-            closed-loop error on the property being controlled. The measurement framework itself
+            fixed while the observer varies. Estimates from an unedited pass determine
+            edit sizes, and a second pass applies those edits and scores target and nuisance
+            effects. This is one estimate-and-edit step, not repeated feedback. The measurement framework itself
             applies more broadly to internal states and finite intervention effects.
           </p>
         </section>

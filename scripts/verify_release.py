@@ -46,7 +46,7 @@ CHECKSUMS = {
     "assets/mechanistic-tomography-v1.pdf":
         "c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375",
     "assets/mechanistic-tomography-v2.pdf":
-        "d6f1548f4f17e2dbd30c025db3d09dc859f41e871830d168614110c1c3c284e0",
+        "07d5cc6fbcf19386c5234c2d5024355f79cee889ee5b92c864b6706e5dc8662b",
     "experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip":
         "aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e",
 }

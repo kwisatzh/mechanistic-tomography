@@ -12,18 +12,37 @@ Paper, experiments, and frozen results for:
 
 Version 2 includes the held-out Qwen-2.5-7B experiment, the Gemma-2-9B-it
 measurement comparison, and a prospective audit of Qwen edit precision.
-The October 4 update keeps the V2 filename and URL. Version 1 remains frozen at Zenodo.
+The October 6 update clarifies the experiments while keeping the V2 filename
+and URL. Version 1 remains frozen at Zenodo. No new model measurements were run.
+
+## HMM control and independent testing
+
+The HMM study evaluates one estimate-and-edit step per token position. Observer
+estimates from an unedited pass set edit sizes; a second pass applies the edits
+and scores the outputs. Edited outputs do not feed another observer update.
+The [HMM guide](experiments/hmm/README.md) lists all ten observers and distinguishes
+the fixed-direction comparison from the mixed observer-and-actuator test.
+
+The [interaction guide](experiments/planted_interactions/README.md) explains the
+correlated-distractor result: sparse fitting assigns the false feature zero
+weight, while independent test masks evaluate the map without changing its
+coefficients. The forward-measurement noise sweep also shows that locating
+interactions can remain reliable after their coefficients become too noisy
+for accurate prediction.
 
 ## Gemma measurement design
 
 On Gemma-2-9B-it, 32 fitting and eight validation measurements give mean
 held-out-response R-squared of 0.962 for aggregate ridge and 0.994 for OMP,
 versus 0.154 for coordinate ridge, whose signed probes cover half the 32 directions.
-This is a secondary descriptive comparison. At the predeclared smaller fitting
+Both measurement budgets were predeclared; the R-squared summaries are
+post-hoc descriptive context. At the predeclared smaller fitting
 budget of 16, aggregate ridge reduces MSE by 21.6%, with a paired interval
 conditional on three fixed designs; both ridge maps predict weakly there.
 OMP predicts better but selects a weaker intervention at that smaller budget.
-Selection and benign collateral effects are reported alongside prediction.
+The choice task uses 64 fixed interventions plus no intervention. At the larger
+budget, OMP selects the best menu item in all three designs. Selection and benign
+collateral effects are reported alongside prediction, now in Section 5.1 of V2.
 
 The [Gemma package](experiments/gemma/README.md) retains all 2,618 checkpoints,
 fits, selections, analysis code, and CPU tests. Reproduce it without model weights:
@@ -43,10 +62,11 @@ additive map gives MAE 0.003790 and R2 0.9829. The lifted pairwise map gives
 MAE 0.003801 and R2 0.9835. The relative lifted MAE improvement is -0.29%, with
 a paired two-way-bootstrap 95% interval of [-3.56%, 5.65%].
 
-This is a stopping result for the measurement procedure: finite calibration is
-adequate on the declared surface, so the held-out residual does not justify the
-larger pairwise family. It is not a claim that interactions disappear in larger
-models, and it does not establish mechanistic ground truth.
+The interval includes zero and extends slightly above the predeclared 5%
+practical-improvement threshold. A gain just above that threshold is not ruled
+out, but no MAE benefit is detected. The procedure stops at the calibrated
+additive map for this basis, prompt distribution, and intervention range,
+as implemented.
 
 **Precision disclosure (October 4):** the historical pipeline added edits in
 bfloat16 activation arithmetic. A prospective audit on 29 fixed actions and
@@ -90,7 +110,7 @@ model run.
 
 ```text
 c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375  assets/mechanistic-tomography-v1.pdf
-d6f1548f4f17e2dbd30c025db3d09dc859f41e871830d168614110c1c3c284e0  assets/mechanistic-tomography-v2.pdf
+07d5cc6fbcf19386c5234c2d5024355f79cee889ee5b92c864b6706e5dc8662b  assets/mechanistic-tomography-v2.pdf
 aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e  experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip
 ```
 

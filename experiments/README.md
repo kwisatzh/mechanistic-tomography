@@ -6,13 +6,15 @@ access regimes. Frozen outputs sit beside the code that produced them.
 
 | Paper section | Experiment | Source and frozen outputs | Hardware for a full rerun |
 |---|---|---|---|
-| Sec. 4 | Belief-state observer and control | [`hmm/`](hmm/) | CPU, MPS, or GPU |
+| Sec. 4 | Belief-state estimation and one-step control | [`hmm/`](hmm/) | CPU, MPS, or GPU |
 | Secs. 5.1--5.2 | Aggregate recovery and finite AtP calibration | [`hmm/`](hmm/) and [`revision_checks/`](revision_checks/) | CPU, MPS, or GPU |
+| Sec. 5.1, Appendix F | Gemma measurement design and intervention choice | [`gemma/`](gemma/) | CPU for retained analysis; GPU for new measurements |
 | Sec. 5.3 | Planted pair recovery | [`planted_interactions/`](planted_interactions/) | CPU |
 | Sec. 5.3 | Designed HVP recovery | [`hvp_interactions/`](hvp_interactions/) | CPU |
 | Sec. 5.4 | Tracr basis and detector writeback | [`tracr/`](tracr/) | CPU; pinned Tracr environment |
 | Sec. 5.5 | GPT-2-small IOI | [`ioi/`](ioi/) and [`revision_checks/`](revision_checks/) | GPU/MPS and TransformerLens |
 | Sec. 5.6 | Qwen-2.5-7B finite-response surface | [`qwen/`](qwen/) | CPU for frozen analysis; A100/H100-class GPU for full measurement |
+| Appendix F.4 | Prospective Qwen edit-precision audit | [`qwen_precision/`](qwen_precision/) | CPU for retained analysis; GPU for new fixtures |
 
 ## Recommended order
 
@@ -53,6 +55,9 @@ python claim3_hvp_baseline.py --quick --outdir runs/smoke
 ```
 
 Their frozen budget, noise, support, and response-prediction tables are included.
+The [planted-interaction guide](planted_interactions/README.md) explains why the
+correlated-distractor test is not an exact-aliasing test and distinguishes the
+96-forward-measurement noise sweep from the HVP comparison.
 
 ## Tracr
 

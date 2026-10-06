@@ -29,7 +29,9 @@ mean R-squared 0.62 but selects a weaker intervention than aggregate ridge.
 At the secondary budget of 32 fitting plus eight validation measurements, mean
 R-squared is 0.962 for aggregate ridge, 0.994 for OMP, and 0.154 for coordinate
 ridge, whose positive/negative probes cover 16 of the 32 directions. R-squared
-was added after the primary analysis as descriptive context. At this budget OMP
+was added after the primary analysis as descriptive context; both measurement
+budgets were predeclared. Each map selects the largest predicted target response
+from 64 fixed interventions plus no intervention. At this budget OMP
 selects the best menu item in all three designs and aggregate ridge in two.
 `analysis/results.json` retains all methods, budgets, per-design values,
 selection outcomes, and collateral measurements. Stronger target responses
