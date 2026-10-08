@@ -36,6 +36,11 @@ EXPECTED = (
     "experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip",
     "paper/source/bias_aware_design_appendix.tex",
     "paper/source/gemma_measurement_appendix.tex",
+    "paper/source/experimental_details_appendix.tex",
+    "experiments/hmm/frozen/probes.pt",
+    "experiments/hmm/frozen/gate_d_rotating_v1/gate_d_rotating_control.csv",
+    "experiments/hmm/frozen/specificity_cpu_verification/gate_d_rotating_control.csv",
+    "experiments/hmm/check_specificity_records.py",
     "experiments/gemma/reproduce.py",
     "experiments/gemma/checkpoints/index.json",
     "experiments/qwen_precision/reproduce.py",
@@ -46,7 +51,7 @@ CHECKSUMS = {
     "assets/mechanistic-tomography-v1.pdf":
         "c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375",
     "assets/mechanistic-tomography-v2.pdf":
-        "07d5cc6fbcf19386c5234c2d5024355f79cee889ee5b92c864b6706e5dc8662b",
+        "bc9bcf61d4e60711d850b7ba0577abac03b562f47c58b21786e3ea1157ca7fd5",
     "experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip":
         "aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e",
 }

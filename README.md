@@ -12,8 +12,9 @@ Paper, experiments, and frozen results for:
 
 Version 2 includes the held-out Qwen-2.5-7B experiment, the Gemma-2-9B-it
 measurement comparison, and a prospective audit of Qwen edit precision.
-The October 6 update clarifies the experiments while keeping the V2 filename
-and URL. Version 1 remains frozen at Zenodo. No new model measurements were run.
+The October 8 update adds reproduction settings, corrects the HMM measurement
+accounting, and retains the recovered specificity records and CPU verification.
+The V2 filename and URL are unchanged; Version 1 remains frozen at Zenodo.
 
 ## HMM control and independent testing
 
@@ -22,6 +23,13 @@ estimates from an unedited pass set edit sizes; a second pass applies the edits
 and scores the outputs. Edited outputs do not feed another observer update.
 The [HMM guide](experiments/hmm/README.md) lists all ten observers and distinguishes
 the fixed-direction comparison from the mixed observer-and-actuator test.
+
+The specificity result concerns output-probability movement, which increases
+from 0.037 to 0.079; implied-log-odds movement instead decreases slightly.
+The original and CPU records agree on that distinction. The trained readout and
+exact posterior control about equally well, and their small ordering reverses
+between records. The HMM recovery's 12 measurements count fitting only: 64 more
+were used for validation. Gemma supplies the equal-total-budget comparison.
 
 The [interaction guide](experiments/planted_interactions/README.md) explains the
 correlated-distractor result: sparse fitting assigns the false feature zero
@@ -110,7 +118,7 @@ model run.
 
 ```text
 c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375  assets/mechanistic-tomography-v1.pdf
-07d5cc6fbcf19386c5234c2d5024355f79cee889ee5b92c864b6706e5dc8662b  assets/mechanistic-tomography-v2.pdf
+bc9bcf61d4e60711d850b7ba0577abac03b562f47c58b21786e3ea1157ca7fd5  assets/mechanistic-tomography-v2.pdf
 aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e  experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip
 ```
 

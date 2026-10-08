@@ -35,9 +35,12 @@ Finding the interacting pairs can therefore remain reliable after coefficient
 errors make their predicted effects inaccurate.
 
 The separate [HVP study](../hvp_interactions/) measures local pairs using
-Hessian-vector products. In the quadratic testbed, combining those pairs with
-gradient main effects meets the prediction and recall thresholds with 12 HVP
-queries at scale 5 and 24 at scale 8, plus a backward pass. Pair-only HVP maps
+simulated Hessian-vector products. The pair terms are bilinear and have constant
+cross-curvature, although the main effects saturate through tanh and the full
+response is not quadratic. Combining the pairs with analytic gradient main
+effects meets the prediction and recall thresholds with 12 HVP queries at scale
+5 and 24 at scale 8. These are simulated access primitives, not timed automatic-
+differentiation calls or forward-pass-equivalent costs. Pair-only HVP maps
 locate the pairs but predict poorly without the main effects (R-squared 0.36
 and 0.60). The forward-measurement noise sweep is not an HVP noise experiment.
 

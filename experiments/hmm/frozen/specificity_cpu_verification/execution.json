@@ -1,0 +1,49 @@
+{
+  "device": "cpu",
+  "threads": 8,
+  "seed": 7,
+  "elapsed_seconds": 13.319301999988966,
+  "versions": {
+    "torch": "2.12.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.10.9",
+    "tqdm": "4.68.1"
+  },
+  "argv": [
+    "control_gate_d_rotating.py",
+    "--run-dir",
+    "frozen",
+    "--outdir",
+    "NEW_OUTPUT_DIRECTORY",
+    "--device",
+    "cpu",
+    "--seed",
+    "7",
+    "--control-batches",
+    "20",
+    "--control-batch-size",
+    "256",
+    "--direction-batches",
+    "20",
+    "--direction-samples",
+    "120000",
+    "--quantile",
+    "0.20",
+    "--alphas",
+    "0.5,0.9,1.5,2.0",
+    "--controller-gain",
+    "0.8",
+    "--max-strength",
+    "8"
+  ],
+  "input_sha256": {
+    "code/control_gate_d_rotating.py": "2c235ce6b42ca07d13aec869c5ac72900cd4d35b7ef360eab1cf01a089acb772",
+    "code/hmm_observer_control.py": "23763cdddb8658e730555217294234a60381c6e57ee9eac3beea818614ebc602",
+    "frozen/config.json": "3836f7b1cc1815430c0fa042323ff2922ab2d536d764709e7e5e5ffdbac51b5d",
+    "frozen/model.pt": "4d8689f8615cd2e78972f46dc022ae6b11d02eb2a4430bbae6cc013b0f299983",
+    "frozen/probes.pt": "7d9021fd44a197833ad031e2d6a08441cba2ac360cf5892be623876012c9d781"
+  },
+  "historical_invocation_unavailable": true,
+  "scope": "New CPU verification using released defaults; no training or fitted-readout replacement"
+}

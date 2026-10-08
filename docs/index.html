@@ -106,11 +106,11 @@
         <section id="results">
           <h2>Selected results</h2>
           <figure>
-            <img src="assets/nt-sample-efficiency.png" alt="Held-out recovery score versus number of aggregate measurements, showing sparse recovery above 0.9 with fewer than 32 measurements.">
+            <img src="assets/nt-sample-efficiency.png" alt="Held-out recovery score versus fitting measurements; validation and test costs are additional.">
             <figcaption>
-              In the planted sparse-effect experiment, aggregate measurements recover the
-              declared map without exhausting all 32 coordinates. The measurement design makes
-              explicit when fewer interventions are sufficient.
+              In the HMM experiment, sparse recovery uses 12 fitting measurements rather than
+              ridge's 32. Both use 64 additional validation measurements and 64 test measurements;
+              the figure compares fitting budgets, not total cost against 32 coordinate patches.
             </figcaption>
           </figure>
           <p>

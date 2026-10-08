@@ -7,10 +7,10 @@ error, while target error and nuisance movement measure the edit's effects.
 The retained experiment evaluates one estimate-and-edit step per token position,
 not a repeated feedback trajectory.
 
-The code and retained results are unchanged. The clarification below corrects
-earlier descriptions of the control sequence and the coarse proxy. The commands
-later in this README are the original fresh-run entry points; checking this
-clarification requires no training or new model measurements.
+The code and earlier retained results are unchanged. The artifact additionally
+includes recovered specificity records, saved readouts, and a separate CPU
+verification. The commands later in this README remain the original fresh-run
+entry points; the verification below reuses the checkpoint without training.
 
 ---
 
@@ -41,24 +41,80 @@ observer RMSE against true z1  vs  target loss after one edit
 ```
 
 Across the ten retained observer variants, target error after the edit tracks
-observer RMSE (Spearman correlation 0.95). The trained linear readout has slightly
-lower control error than the analytic posterior, so agreement with the reference
-and usefulness for this edit are related but distinct criteria.
+observer RMSE (Spearman correlation 0.95). The trained linear readout and analytic
+posterior give similar control error despite different estimation error; their
+small ordering reverses in the CPU verification described below. Agreement with
+the reference and usefulness for this edit are assessed separately.
 
-### The ten observer variants
+### Measurement accounting
+
+The aggregate-recovery study uses 12 fitting measurements for OMP and 32 for
+ridge, with 64 additional validation measurements and 64 separate test
+measurements in both cases. Thus its non-test budgets are 76 and 96, respectively;
+the 32 singleton reference measurements are additional. The 12-measurement
+result is a fitting-budget comparison, not an all-in saving over 32 patches.
+
+### The ten observer variants and their comparison
 
 `observer_predictions` and `run_control_eval` in `hmm_observer_control.py`
 define the exact posterior log-odds `z1`, a trained linear readout, the coarse
 proxy `1.5 * sign(z1)`, the mixed estimate `z1 + 0.9*z2`, and six versions of
 `z1` with zero-mean Gaussian noise at standard deviations 0.25, 0.5, 1, 1.5, 2,
 and 3. In `frozen/observer_control.csv`, the trained readout's target MSE is
-3.441 and the exact posterior's is 3.484 under the same edit direction.
+3.441 and the exact posterior's is 3.484 under the same edit direction. The
+separate CPU verification gives 3.4862 and 3.4580, respectively, reversing this
+small ordering. Both comparisons show similar control performance despite
+different estimation error; they do not establish that the readout controls better.
 
 The separate mixed observer-and-actuator condition uses `z1 + 0.5*z2` and a
 direction proportional to `d1 + 0.5*d2`. It reduces target MSE from 25.02 to
-4.81, compared with 3.56 for target-only oracle control, while nuisance movement
+4.81, compared with 3.56 for target-only oracle control, while off-target probability movement
 increases from 0.037 to 0.079. This is a different comparison from the ten-observer
 fixed-direction sweep; the two oracle values should not be interchanged.
+
+### Recovered specificity record and CPU verification
+
+The original eight-row CSV is now retained under `frozen/gate_d_rotating_v1/`.
+It verifies the rounded numbers above. The separate CPU run in
+`frozen/specificity_cpu_verification/` gives target MSE 25.1707 before editing
+and 4.7808 after the mixed edit, with oracle MSE 3.4580. Mean absolute off-target
+probability movement is 0.03656 for the oracle and 0.07912 for the mixed edit.
+
+The relevant column is `collateral_q2_abs`: absolute change in the second chain's
+next-observation probability. The alternative column `collateral_z2_abs` measures
+implied-log-odds movement and does not show the same increase: it changes from
+3.0506 to 2.8866 historically and from 3.0361 to 2.9091 on CPU. The result is
+metric-dependent, as stated in the paper's main text as well as its experimental
+details. The historical fixed-direction result is one comparison, not a reliable
+ranking across samples.
+
+The recovered `frozen/probes.pt` provides the saved readouts and target direction
+required by the unchanged specificity script. To run it without training, use a
+PyTorch environment with pandas 3 (the saved readout archive includes pandas 3
+metadata), choose a new output directory, and run from this directory:
+
+```sh
+OMP_NUM_THREADS=8 MPLBACKEND=Agg python control_gate_d_rotating.py \
+  --run-dir frozen --outdir /tmp/mt-specificity-new \
+  --device cpu --seed 7 --control-batches 20 --control-batch-size 256 \
+  --direction-batches 20 --direction-samples 120000 --quantile 0.20 \
+  --alphas 0.5,0.9,1.5,2.0 --controller-gain 0.8 --max-strength 8
+```
+
+The CPU execution record gives package versions and input hashes. The original
+specificity invocation is unavailable, so this verifies the released defaults
+without asserting identical historical random streams. The retained summaries
+have only their local directory fields replaced with artifact-relative paths;
+the CSVs and readout archive are byte-identical to their source records.
+The execution receipt hashes the anonymous source distribution. The public
+checker normalizes only the authorship comment before comparing those two source
+hashes; every other source byte must match.
+
+For a headless check of the retained values without PyTorch or model execution:
+
+```sh
+python check_specificity_records.py
+```
 
 ### The implemented control sequence
 
