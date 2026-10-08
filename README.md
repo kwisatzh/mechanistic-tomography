@@ -47,7 +47,8 @@ Both measurement budgets were predeclared; the R-squared summaries are
 post-hoc descriptive context. At the predeclared smaller fitting
 budget of 16, aggregate ridge reduces MSE by 21.6%, with a paired interval
 conditional on three fixed designs; both ridge maps predict weakly there.
-OMP predicts better but selects a weaker intervention at that smaller budget.
+OMP predicts better in all three designs but selects a weaker intervention in
+two, and on average, at that smaller budget.
 The choice task uses 64 fixed interventions plus no intervention. At the larger
 budget, OMP selects the best menu item in all three designs. Selection and benign
 collateral effects are reported alongside prediction, now in Section 5.1 of V2.
@@ -118,7 +119,7 @@ model run.
 
 ```text
 c94a297cac5988fc519c9d12dfb3c92c968b4fb221de9d84c0eff153b18de375  assets/mechanistic-tomography-v1.pdf
-bc9bcf61d4e60711d850b7ba0577abac03b562f47c58b21786e3ea1157ca7fd5  assets/mechanistic-tomography-v2.pdf
+fae8a2faa4547bd2247eb23874d833fb65104f7b9cd096c28eb815604ffc9ee7  assets/mechanistic-tomography-v2.pdf
 aca53bf0c108a0de1812edbbbf98ece0612a304a151f50cf3f13e109ac01544e  experiments/qwen/artifacts/frozen/qwen2_5_7b_a100_full_results.zip
 ```
 

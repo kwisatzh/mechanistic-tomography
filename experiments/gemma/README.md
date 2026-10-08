@@ -24,7 +24,8 @@ The primary comparison is at 16 fitting plus eight validation measurements:
 aggregate ridge reduces mean-response MSE by 21.6% relative to coordinate ridge.
 The paired interval is conditional on three fixed designs and resamples prompt
 families, not designs. Both ridge predictions are weak at this budget; OMP has
-mean R-squared 0.62 but selects a weaker intervention than aggregate ridge.
+mean R-squared 0.62 and predicts better than aggregate ridge in all three designs,
+but selects a weaker intervention in two, and on average.
 
 At the secondary budget of 32 fitting plus eight validation measurements, mean
 R-squared is 0.962 for aggregate ridge, 0.994 for OMP, and 0.154 for coordinate
