@@ -16,6 +16,14 @@ The October 8 update adds reproduction settings, corrects the HMM measurement
 accounting, and retains the recovered specificity records and CPU verification.
 The V2 filename and URL are unchanged; Version 1 remains frozen at Zenodo.
 
+The October 9 consistency update keeps the MI-oriented framing and full
+appendices while making the theory easier to follow. It adds consolidated
+Gemma prediction-and-choice and IOI interaction tables, clarifies Qwen's
+length-normalized fixed-continuation score and squared-weight features, and
+corrects the HVP figure's description of the synthetic pair terms. The paper
+remains 35 pages. Numerical results, experimental code, and retained data are
+unchanged; no model experiments were run for this update.
+
 ## HMM control and independent testing
 
 The HMM study evaluates one estimate-and-edit step per token position. Observer

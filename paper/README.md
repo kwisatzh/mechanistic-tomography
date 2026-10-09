@@ -1,6 +1,12 @@
 # Paper source
 
 `source/nt_mi_control_position_v21-v2.tex` is the public version 2 manuscript.
+The October 9 revision retains the MI-oriented exposition and fuller appendices,
+clarifies the theoretical statements without changing their results, and brings
+the Gemma and IOI comparisons into consolidated tables. It also makes the Qwen
+readout and feature definitions explicit. The 35-page PDF reports the same
+measurements as the previous release.
+
 It builds with a current TeX Live distribution and the `acmart` class:
 
 ```bash

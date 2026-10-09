@@ -161,45 +161,24 @@ An estimate can be judged by how faithfully it recovers the declared target or b
 The recovery tools come from classical inverse problems, sparse recovery, masked interaction recovery, and HVP correction~\cite{bair2026compressed,kang2025spex,butler2025proxyspex,zhang2026lies}. The new element is that each measurement is also a finite intervention on a nonlinear model, so the design changes the residual it must control.
 
 \paragraph{Does one finite intervention produce a linear measurement?}
-The inverse formulation would be empty if we simply assumed that every intervention followed it. We instead derive the relation from the response to one finite intervention. The lemma below shows that a mask $a$ produces a weighted sum of the local component effects, $a^\top x$, plus three identifiable sources of error.
+Suppose a mask changes only heads 2 and 5. For a small displacement, the gradient predicts $a_2x_2+a_5x_5$, because the slope along a combination of directions is the same combination of their slopes. The same calculation gives $a^\top x$ for any mask. Moving a nonzero distance can bend the response away from this tangent, and estimating the response from a batch adds measurement error. The lemma bounds what those two steps leave out.
 
-\begin{lemma}[Mechanistic measurement reduction]\label{lem:measurement-reduction}
-Let $\eps>0$ and let $f_c$ be twice differentiable on the perturbation ball containing the intervention paths. Assume its Hessian satisfies $\|\nabla^2 f_c\|_{op}\le L$. Define the population normalized response
-\begin{equation}
-    y_\infty(a,\eps)
-    =
-    \frac{1}{\eps}
-    \E_c\!\left[
-    f_c(h_c+\eps D_ca)-f_c(h_c)
-    \right].
-\end{equation}
-Suppose the response estimated from a batch of $B$ paired contexts can be written as
-\begin{equation}
-    \widetilde y_B(a,\eps)
-    =
-    y_\infty(a,\eps)
-    +\frac{e_B(a)}{\eps}
-    +\zeta_B(a,\eps),
-\end{equation}
-where $|e_B(a)|\le\tau_B(a)$ bounds uncancelled error in the response numerator and $|\zeta_B(a,\eps)|\le\nu_B(a)$ bounds the remaining normalized sampling error. Then
+\begin{lemma}[One intervention measures a weighted sum of effects]\label{lem:measurement-reduction}
+Let $\eps>0$. Suppose each readout $f_c$ is twice differentiable on the ball containing its intervention paths, with curvature bounded by $L$ (the Hessian's operator norm is at most $L$). Assume the quantities averaged over contexts are integrable. Estimate the change in readout from $B$ paired contexts and divide by $\eps$. Suppose the error in that estimate consists of an error of at most $\tau_B(a)$ before division, plus a remaining sampling error of at most $\nu_B(a)$ after division. Then the normalized measurement is
 \begin{equation}
     \widetilde y_B(a,\eps)
     =
     a^\top x+w(a,\eps),
 \end{equation}
-where $x$ is the local first-order map in Equation~\eqref{eq:firstorder} and
+where $x$ contains the local slopes defined in Equation~\eqref{eq:firstorder}, and
 \begin{equation}
     |w(a,\eps)| \le \frac{L}{2}\eps\E_c\|D_ca\|_2^2
     + \frac{\tau_B(a)}{\eps}+\nu_B(a).
 \end{equation}
-Stacking measurements from several masks gives $\widetilde y=Ax+w$. The proof is in Appendix~\ref{app:proof-measurement}.
+Stacking measurements from several masks gives $\widetilde y=Ax+w$.
 \end{lemma}
 
-Suppose a mask changes only heads 2 and 5, with coefficients $a_2$ and $a_5$. The linear part of the measured response is
-\[
-    a^\top x=a_2x_2+a_5x_5.
-\]
-The intervention returns one weighted sum of the effects without revealing either separately. Several masks produce several such equations, and solving those equations recovers the individual effects. This is the same logic used in network tomography and compressed sensing.
+The proof is Taylor's formula along the displacement $\eps D_ca$, followed by averaging over contexts; Appendix~\ref{app:proof-measurement} writes out these steps and the two sampling terms. Several masks give several weighted sums, so recovering the component effects becomes a linear inverse problem.
 
 The residual $w$ records three sources of difference between the measured transformer response and that weighted sum. The curvature term grows with $\eps$ because a larger intervention moves farther from the local tangent and encounters more of the model's nonlinear response. The term $\tau_B/\eps$ grows when $\eps$ becomes too small because any error already present in the response numerator is magnified when we divide by the intervention size. The remaining term $\nu_B$ records normalized sampling error that remains after pairing or batching.
 
@@ -210,22 +189,15 @@ A mask does more than set a row of $A$: it also determines the displacement $\|D
 With this local model in place, recovery depends on the rank, coverage, or sparse-recovery properties of $A$ and on the residual induced by the design. The next results connect these properties to the choice of scale and density and to the decision to calibrate or enlarge the measurement family.
 
 \paragraph{Can a small correction repair the finite response?}
-For a nondifferentiable endpoint---for example, a behavioral rating, tool outcome, or black-box score---we cannot use the Taylor bound directly. In that setting the finite response is the quantity of interest, and held-out interventions provide the relevant test. The remaining question is whether the difference from the gradient map is a simple scale correction or evidence that the first-order family is missing structure. Calibration dimension formalizes that distinction.
+The Taylor bound requires a differentiable readout and control of its curvature. When these are unavailable, as can happen with a behavioral rating, tool outcome, or black-box score, the intervention response itself is the quantity to predict and test on new interventions. In either setting, we can ask whether the finite effects are roughly a rescaled copy of a baseline map, such as the gradient map when one exists. A systematic mismatch after rescaling calls for more correction terms. Calibration dimension makes this precise.
 
-A useful first check is whether all finite effects are approximately a rescaled version of the local map. If so, a few finite probes may be enough to estimate the correction. If not, collecting more probes for the same family will not solve the problem.
+For one unknown gain, one noiseless measurement with a nonzero baseline prediction determines the ratio between prediction and response. More generally, $r$ correction parameters need $r$ independent equations. Additional measurements improve stability, but they cannot remove an error that no allowed correction can represent.
 
-\begin{proposition}[Calibration dimension]\label{prop:caldim}
-Let $F_\eps(a)$ denote the systematic finite-intervention response on a design family $\mathcal A$, and let $\mathcal Q$ be a declared held-out distribution on that family. Fix a declared feature map $\phi(a)\in\R^q$, baseline $x_0\in\R^q$, and correction dictionary $B\in\R^{q\times r}$. If
-\begin{equation}
-    F_\eps(a)=\phi(a)^\top(x_0+B\theta_\eps)
-    \quad\text{for all } a\in\mathcal A
-\end{equation}
-and the sampled correction design $\Phi B$ has full column rank, then $\theta_\eps$ is identifiable from $O(r)$ noiseless calibration measurements and stably estimable according to the conditioning of $\Phi B$, where row $j$ of $\Phi$ is $\phi(a_j)^\top$. In all cases, the residual
-\begin{equation}
-    \inf_\theta \|F_\eps(\cdot)-\phi(\cdot)^\top(x_0+B\theta)\|_{L_2(\mathcal Q)}
-\end{equation}
-lower-bounds the error of every observer using that family.
+\begin{proposition}[A small correction needs a small identifying design]\label{prop:caldim}
+Fix a baseline map, a set of features, and $r$ allowed linear correction parameters before measuring. Suppose some setting of those parameters represents the systematic finite response exactly on the chosen set of interventions. If the calibration measurements give independent equations for all $r$ parameters (a full-column-rank correction design), then $r$ independent noiseless measurements identify the correction. With measurement error, stability depends on the conditioning of those equations. In all cases, the residual of the best possible correction---the infimum of its root mean squared error under a fixed test distribution---lower-bounds the error of every map in that correction model. More measurements alone cannot lower this approximation-error floor.
 \end{proposition}
+
+Subtracting the baseline leaves a linear system with $r$ unknowns; the error floor follows because every fitted correction is one member of the same model class. Appendix~\ref{app:remaining-proofs} gives the matrix setup and proof.
 
 For a declared nested family $B_r$ and a tolerance $\delta$ at or above the estimated noise floor, the calibration dimension is the smallest $r$ whose held-out error is at most $\delta$. Dimension zero means the baseline map transfers without correction, dimension one allows a single scalar gain, and larger dimensions allow several declared corrections, such as separate gains for component groups. If the residual lies outside the entire first-order family, no collection of gains can fix it; the observer needs new features, such as component pairs. Sec.~\ref{sec:step0} tests the one-gain case; Sec.~\ref{sec:interactions} supplies a case in which pair features are necessary.
 
@@ -234,28 +206,23 @@ This definition gives a practical stopping rule. Start with a gradient map when 
 \paragraph{How should scale and mask density be chosen?}
 Once an observer family is chosen, two design variables govern the interventions that measure it: the scale $\eps$, which sets how far each probe moves the model, and the density $\rho$, which sets how many coordinates each mask changes. Small probes reduce nonlinear error but magnify uncancelled response noise. Dense masks may cover sparse features more efficiently, but they can also move the activation farther or make the inverse problem poorly conditioned.
 
-\begin{corollary}[Noisy first-order scale--density bound]\label{cor:scale-density}
-For a mask family $\mathcal A_\rho$ under a fixed actuator normalization, define
+For a fixed set of masks, the competing errors have the form $c_1\eps+c_2/\eps$, whose sum is smallest when the terms are equal. The next result applies this familiar step-size balance after accounting for how much recovery amplifies the measurement error.
+
+\begin{corollary}[The bound is smallest when curvature and noise balance]\label{cor:scale-density}
+Choose masks of density $\rho$ and fix how their weights are scaled. Let $\kappa_\rho^2$ bound the mean squared direction length $\E_c\|D_ca\|_2^2$ for every chosen mask. Let $\tau_B(\rho)$ and $\nu_B(\rho)$ bound the two sampling errors uniformly over them. Suppose, for the chosen class of maps, the recovery method converts a maximum normalized measurement error of size $\eta$ into Euclidean reconstruction error of at most $C_{\mathrm{rec}}(A_\rho)\eta$. Then its reconstruction error is bounded by
 \begin{equation}
-    \kappa_\rho^2 = \sup_{a\in\mathcal A_\rho}\E_c\|D_ca\|_2^2,
-\end{equation}
-and let $\tau_B(\rho)$ and $\nu_B(\rho)$ uniformly bound the two sampling terms in Lemma~\ref{lem:measurement-reduction}. For the declared target class, assume the recovery method obeys $\|\widehat x-x\|_2\le C_{\mathrm{rec}}(A_\rho)\|w\|_\infty$ when $\widetilde y=A_\rho x+w$. Thus $C_{\mathrm{rec}}$ amplifies the maximum normalized measurement residual into reconstruction error. A conditional first-order recovery-error bound is
-\begin{equation}
-\begin{aligned}
     \mathcal J_1(\eps,\rho)
-    &= C_{\mathrm{rec}}(A_\rho)
+    = C_{\mathrm{rec}}(A_\rho)
     \left[
     \frac{L}{2}\eps\kappa_\rho^2
     +\frac{\tau_B(\rho)}{\eps}+\nu_B(\rho)
-    \right],\\
-    (\eps^*,\rho^*)&\in\arg\min_{\eps,\rho}\mathcal J_1(\eps,\rho).
-\end{aligned}
+    \right].
 \end{equation}
-For fixed $\rho$, if $\tau_B(\rho)>0$, $L\kappa_\rho^2>0$, and $C_{\mathrm{rec}},\nu_B$ are locally independent of $\eps$, the first two terms have the interior minimizing scale
+For fixed $\rho$, suppose $\tau_B(\rho)>0$ and $L\kappa_\rho^2>0$, and keep these bounds and $C_{\mathrm{rec}},\nu_B$ fixed as $\eps$ varies over the scale range being considered. If it lies inside that range, the scale minimizing this bound is
 \begin{equation}
     \eps^*(\rho)=\sqrt{\frac{2\tau_B(\rho)}{L\kappa_\rho^2}}.
 \end{equation}
-Density affects both model-induced error through $\kappa_\rho$ and identifiability through coverage and conditioning.
+At this scale, the curvature and pre-division error terms are equal. If the scale is outside the allowed range, or either positive term is absent, the appropriate boundary or limiting case replaces this interior balance. Density affects both direction length and identifiability through coverage and conditioning.
 \end{corollary}
 
 Corollary~\ref{cor:scale-density} gives a square-root rule for the interior scale that minimizes the stated error bound, balancing curvature against amplified numerator error~\cite{shi2022finite}. Secs.~\ref{sec:aggregate}--\ref{sec:interactions} vary scale, budget, and noise separately to examine these trade-offs. Using the bound to select a joint scale--density design additionally requires estimates of $L$, $\tau_B$, and design conditioning.
@@ -274,34 +241,34 @@ If the component-effect map is sparse or compressible, aggregate masks can recov
 \paragraph{Why first-order maps miss interactions.}
 Sparse recovery cannot recover a term that the measurement model does not contain, and real transformers contain such terms: softmax attention, layer normalization, nonlinear MLPs, and downstream heads all let one component's effect depend on the state of another. This dependence appears when backup heads compensate for an ablated primary head, self-repair reroutes a computation, or copy-suppression heads act on what earlier heads have written~\cite{wang2022ioi,mcgrath2023hydra,mcdougall2023copy}. An additive model cannot express this dependence, and more first-order measurements only estimate the wrong family more precisely. Pair features are the smallest extension that can represent a two-component interaction.
 
-\begin{proposition}[First-order blindness to pure interactions]\label{prop:blindness}
-Let $H_{0,ij}=\partial^2 f/\partial d_i\partial d_j$ at the baseline. If $x_i=x_j=0$ but $H_{0,ij}\ne0$, gradients and singleton first-order measurements do not identify the cross term. For the following finite-scale expansion, additionally assume that $f$ has a uniformly bounded third derivative on the intervention paths. At scale $\eps>0$, the normalized finite response has
+Consider $f(s,t)=\gamma st$ around $(0,0)$. Changing either component alone gives zero, and both baseline slopes are zero, yet changing both gives $\gamma st$. No collection of those single-component responses reveals $\gamma$. In a main-plus-pair model, the pair effect is the joint response minus the two single responses, the same contrast $I_{AB}=\Delta(A{+}B)-\Delta(A)-\Delta(B)$ measured for IOI head groups in Sec.~\ref{sec:ioi}. For a more general response, that contrast also contains higher-order terms.
+
+\begin{proposition}[Single-component measurements miss pure pair effects]\label{prop:blindness}
+Suppose two local component effects are zero, but their mixed second derivative at the baseline, $H_{0,ij}$, is nonzero. Gradients at the baseline and single-component first-order measurements do not identify that pair effect. If, in addition, $f$ has a uniformly bounded third derivative on the intervention paths, its normalized response at scale $\eps>0$ can be written as
 \begin{equation}
     \widetilde y(a)=a^\top x+\sum_{i<j}a_i a_j\Gamma_{\eps,ij}+w_\eps(a),
 \end{equation}
-where $\Gamma_{\eps,ij}=\eps H_{0,ij}+O(\eps^2)$. Lifted features $a_i a_j$ make these finite pair coefficients visible.
+with finite pair coefficients $\Gamma_{\eps,ij}=\eps H_{0,ij}+O(\eps^2)$. Each pair contributes through the product $a_i a_j$. The remainder $w_\eps$ retains whatever this feature set does not represent, including single-component curvature, higher-order response, and measurement error.
 \end{proposition}
 
-Treating each product $a_i a_j$ as an additional feature makes pairs visible but multiplies the columns, from $n$ main effects to $n+\binom{n}{2}$ main-and-pair effects, and a design well conditioned for the original $n$ columns may be badly conditioned after this expansion.
+Taylor expansion supplies the finite-scale relation, with one power of $\eps$ removed by normalization. Treating each product $a_i a_j$ as an additional feature makes the response a weighted sum again, now with $n+\binom{n}{2}$ main and pair coefficients. If only a few matter, classical sparse recovery applies to this expanded feature set, provided its measurements distinguish the sparse alternatives.
 
-\begin{proposition}[Conditional lifted-recovery reduction]\label{prop:lifted}
-Let $\theta_\eps=(x_\eps,\mathrm{vec}\,\Gamma_\eps)\in\R^{N}$ be sparse in a lifted finite main-plus-pair basis, and let $\Phi(A)$ be the corresponding lifted design with rows $[a,\{a_i a_j\}_{i<j}]$. If the lifted misspecification is bounded, sparse recovery gives the same form of stable error bound as classical sparse recovery, conditional on restricted conditioning of $\Phi(A)$ on the relevant support. A first-order restricted-isometry property (RIP) does not imply lifted RIP. Appendix~\ref{app:proof-lifted} gives the reduction to the standard sparse-recovery theorem.
+\begin{proposition}[Pair effects can be recovered like main effects]\label{prop:lifted}
+At a fixed intervention scale, suppose the responses are a sum of main effects and pair effects, plus a remainder whose Euclidean norm across the measurements is bounded. Suppose only a few coefficients are nonzero, or the coefficient vector is well approximated by such a sparse vector. Treat every product $a_i a_j$ as another feature. If this expanded design satisfies the restricted-conditioning condition required by the chosen sparse-recovery method, then that method estimates the main and pair effects together with its usual stable error bound. For example, the restricted isometry condition requires the expanded measurements to tell sparse alternatives apart with a margin. A design that meets this condition for main effects need not meet it for main and pair effects together.
 \end{proposition}
 
-With ideal dense independent Rademacher masks, whose entries are independent random $+1$ or $-1$ values, the main-effect columns $a_i$ and pair columns $a_i a_j$ are orthogonal in the population. Real designs are finite and often sparse or constrained, so pair columns can duplicate or nearly duplicate one another, and the lifted design's conditioning must be checked and the recovered map tested on masks not used for fitting.
+The proof changes the feature matrix in the classical recovery theorem. Its coefficients describe the response at the chosen scale; they need not equal the baseline gradient and Hessian. Appendix~\ref{app:proof-lifted} gives the reduction and the error bound, including the approximation term for coefficients that are only approximately sparse.
 
-Appendix~\ref{app:lifted-conditioning} gives a three-component half-fraction design with orthogonal main effects but aliased pair effects.
-
-Held-out masks therefore help identify the pairs: on the training masks, a true pair and a false pair can produce the same column and appear equally plausible. A separate or explicitly de-aliased mask design tests whether the recovered interaction transfers.
+The need to check the expanded design has a simple example. If signed masks always satisfy $a_1a_2a_3=1$, then $a_2a_3=a_1$, because $a_1^2=1$. A pair effect between components 2 and 3 therefore looks exactly like a main effect of component 1. These four masks have orthogonal main-effect columns, so even perfect conditioning for main effects cannot prevent the ambiguity. Appendix~\ref{app:lifted-conditioning} gives this half-fraction design explicitly. Masks on which the columns differ, including independent test masks, distinguish the two explanations.
 
 \paragraph{How should missing interactions be measured?}
-White-box access gives the first-order map in one backward pass but not the pair map, which needs curvature measurements. A Hessian-vector product (HVP) measures how the gradient changes along a chosen direction without constructing the full Hessian, so designed HVP directions can serve as aggregate measurements of local interactions.
+With white-box access, we can ask how the gradient changes along a direction $v$. A Hessian-vector product (HVP) returns $H_0v$: another weighted sum, this time of local curvature entries. If the response is quadratic along the intervention paths, that curvature stays constant and determines the finite pair response. Otherwise, a measurement at the starting point need not describe the whole path.
 
-\begin{corollary}[White-box second-order tomography]\label{cor:hvp}
-A backward pass gives $\nabla f$, while designed HVP queries give linear measurements of the local curvature map $H_0$. If the response is quadratic on the intervention path, the known relation $\Gamma_\eps=\eps H_0$ converts local curvature to the normalized finite pair map. Otherwise HVPs identify only a local quantity; finite-scale prediction needs path integration or finite calibration. Lifted forward measurements estimate the finite-scale map directly. Integrated Hessians and HVP correction provide precedents~\cite{janizek2020integrated,zhang2026lies}.
+\begin{corollary}[Hessian-vector products measure local pair effects]\label{cor:hvp}
+For a differentiable model with the required second derivatives, a backward pass supplies the gradient, and HVPs supply linear measurements of the baseline curvature map $H_0$. Recovery of that map requires the corresponding rank or sparse-recovery conditions on the chosen measurements. If the response is quadratic on the intervention paths, each normalized finite pair coefficient is exactly $\Gamma_{\eps,ij}=\eps H_{0,ij}$ for $i<j$. Otherwise HVPs measure local curvature only; finite-scale prediction requires information along the path, through integration or calibration with interventions. Forward measurements with pair features instead fit the finite-scale map directly, subject to Proposition~\ref{prop:lifted}'s design and remainder conditions.
 \end{corollary}
 
-The access regime again determines the efficient route. With gradients and HVPs, we can estimate local main and pair effects without evaluating every finite mask. With only forward evaluations or with a nondifferentiable endpoint, lifted subset interventions measure the finite pair response directly. The two routes target the same quantity only when local curvature transfers to the finite intervention scale; otherwise we must integrate along the path or calibrate against finite responses.
+This follows because $H_0v$ is linear in the unknown curvature, and a quadratic response has no changing curvature to integrate. Integrated Hessians and HVP correction provide precedents~\cite{janizek2020integrated,zhang2026lies}. With only forward evaluations or a nondifferentiable endpoint, pair-feature measurements offer the direct finite-scale route.
 
 Appendix~\ref{app:remaining-proofs} gives the proofs of the calibration, scale--density, interaction-blindness, and HVP results.
 
@@ -385,9 +352,26 @@ Compressibility and approximate additivity let the sparse fit match the dense fi
 \paragraph{Do aggregate probes help in Gemma?}
 A Gemma-2-9B-it study~\cite{gemma2024report} repeats the design comparison with 32 steering directions at one scale. Its readout averages token log probabilities within each of four refusal and four compliance stems, then subtracts the compliance-bank mean from the refusal-bank mean. We test whether predicting this response helps choose an intervention. At the predeclared primary budget of 16 fitting and eight validation measurements, aggregate ridge lowers test MSE by $22\%$ relative to coordinate ridge (paired interval excluding zero, conditional on three fixed designs), although both ridge maps predict weakly.
 
-At the secondary budget of 32 fitting and eight validation measurements, aggregate maps predict held-out mean responses with $R^2=0.96$ (ridge) and $0.99$ (OMP), versus $0.15$ for coordinate probing, which covers half the directions because each is measured with a positive and a negative push. Both budgets were fixed before collection; these descriptive $R^2$ summaries were added after the primary analysis.
+At the secondary budget of 32 fitting and eight validation measurements, aggregate maps predict held-out mean responses with $R^2=0.96$ (ridge) and $0.99$ (OMP), versus $0.15$ for coordinate probing, which covers half the directions because each is measured with a positive and a negative push. Both budgets were fixed before collection; these descriptive $R^2$ summaries were added after the primary analysis. Table~\ref{tab:gemma-main} puts prediction and intervention choice beside their full fitting-plus-validation costs.
 
 Each map also chooses the intervention with the largest predicted target response from 64 fixed interventions plus no intervention. At the smaller budget, OMP predicts better than aggregate ridge in all three designs (mean $R^2=0.62$), but its chosen target response is weaker in two designs, and on average. At the larger budget, OMP chooses the best menu item in all three designs. Methods choosing stronger target responses also generally move benign prompts more. Appendix~\ref{app:gemma} reports prediction, choice, and collateral effects separately.
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{$k=16$: 24 measurements total} & \multicolumn{3}{c}{$k=32$: 40 measurements total} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Map & MSE & $R^2$ & Choice effect & MSE & $R^2$ & Choice effect \\
+\midrule
+Coordinate ridge & 379.0 & 0.025 & 0.00696 & 328.8 & 0.154 & $-0.00462$ \\
+Aggregate ridge & 297.1 & 0.235 & 0.02971 & 14.6 & 0.962 & 0.03905 \\
+Aggregate OMP & 148.4 & 0.618 & 0.02014 & 2.5 & 0.994 & 0.03973 \\
+\bottomrule
+\end{tabular}
+\caption{Gemma prediction and choice, averaged over three fixed designs. MSE is in units of $10^{-6}$; choice effect is the selected intervention's measured target response. The best menu item gives $0.0397$; cost-matched direct search gives $0.0240$ at $k=16$ (Appendix~\ref{app:gemma}). Budgets include eight validation measurements; test scoring is additional. Ridge MSE at $k=16$ is primary; the larger budget is secondary, and $R^2$ is post-hoc descriptive.}
+\label{tab:gemma-main}
+\end{table*}
 
 \subsection{A few interventions correct gradient predictions at the size used}\label{sec:step0}
 
@@ -502,7 +486,7 @@ The pair-only HVP ablation finds the correct interacting pairs but gives $R^2=0.
 \includegraphics[width=\linewidth]{figs/claim3_hvp_r2.png}
 \caption{held-out prediction}
 \end{subfigure}
-\caption{White-box interaction recovery. Designed HVPs recover the local pair map, and the quadratic testbed supplies the known conversion to finite-scale pair coefficients. Accurate prediction also requires the AtP main-effect map.}
+\caption{White-box interaction recovery. Designed HVPs recover the local pair map. The bilinear pair terms have constant cross-curvature, so their local coefficients convert exactly to finite-scale pair coefficients even though the main effects saturate. Accurate prediction also requires the AtP main-effect map.}
 \label{fig:hvp}
 \end{figure*}
 
@@ -662,7 +646,22 @@ The count-additive baseline has MAE $0.386$ and $R^2=0.752$. An additive model w
 
 Across 2,000 paired prompt bootstraps with fixed five-fold splits, $PB$ improves MAE by $0.0083$ (95\% CI $[0.0064,0.0101]$), while $PE$ improves it by $0.1265$ (95\% CI $[0.1195,0.1338]$). The $BE$ change is $-0.0002$ (95\% CI $[-0.0015,0.0011]$), which is indistinguishable from no improvement. Adding all three terms gives MAE $0.236$, $R^2=0.907$, and an MAE improvement of $0.1499$ (95\% CI $[0.1425,0.1578]$).
 
-The ordering remains stable across 200 alternative assignments of intervention masks to cross-validation folds. The $PE$ gain is positive in all 200 assignments, $PB$ in 199, and $BE$ in 154. Among the three tested single interaction terms, $PE$ is both the largest and the most stable. $PB$ gives a smaller but repeatable gain, while the $BE$ gain depends on the split.
+The ordering remains stable across 200 alternative assignments of intervention masks to cross-validation folds. The $PE$ gain is positive in all 200 assignments, $PB$ in 199, and $BE$ in 154. Among the three tested single interaction terms, $PE$ is both the largest and the most stable. $PB$ gives a smaller but repeatable gain, while the $BE$ gain depends on the split. Table~\ref{tab:ioi-main} brings these predictive gains together with the direct group interactions.
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Pair & Direct interaction [95\% CI] & MAE gain [95\% CI] & Positive / 200 \\
+\midrule
+$PB$ & 1.080 [0.912, 1.262] & 0.0083 [0.0064, 0.0101] & 199 \\
+$PE$ & 1.830 [1.569, 2.076] & 0.1265 [0.1195, 0.1338] & 200 \\
+$BE$ & 0.502 [0.429, 0.576] & $-0.0002$ [$-0.0015$, 0.0011] & 154 \\
+\bottomrule
+\end{tabular}
+\caption{IOI direct interactions and predictive gains under mean ablation. Direct values average eight template-and-name-order conditions; the original template alone gives $I_{PB}=1.055$. Direct intervals use a crossed bootstrap of four templates and 128 shared name pairs, retaining both orders. Predictive intervals use 2,000 paired prompt bootstraps on one template with fixed five-fold splits. The last column counts positive gains across 200 alternative fold assignments, not independent datasets.}
+\label{tab:ioi-main}
+\end{table*}
 
 \begin{figure}[t]
 \centering
@@ -692,11 +691,11 @@ This distinction explains why the known $P\times B$ backup response is clear und
 
 The preceding experiments use exact posteriors, planted effects, compiler labels, or documented circuit groups. Qwen tests the same measurement procedure against a behavioral response surface. Here the model's measured response to a finite intervention supplies the reference for evaluating predictive transfer; an independently known internal mechanism is unavailable.
 
-We fix Qwen-2.5-7B-Instruct~\cite{qwen2025report} and a decline-versus-compliance margin. The readout compares the model's log probability of four decline stems with its log probability of four compliance stems at the first generated position. Harmful prompts come from HarmBench, and safe, superficially safety-related prompts come from XSTest~\cite{mazeika2024harmbench,rottger2024xstest}. Together they provide a varied response surface for testing intervention prediction. The endpoint is computed directly from model probabilities, without generating a continuation or using an LLM judge, and measures this margin rather than overall model safety.
+We fix Qwen-2.5-7B-Instruct~\cite{qwen2025report} and a decline-versus-compliance margin. As in the Gemma study, the readout averages token log probabilities within each of four decline and four compliance stems, then subtracts the compliance-bank mean from the decline-bank mean. Harmful prompts come from HarmBench, and safe, superficially safety-related prompts come from XSTest~\cite{mazeika2024harmbench,rottger2024xstest}. Together they provide a varied response surface for testing intervention prediction. This fixed-continuation score uses no sampled continuation or LLM judge and measures the stem-bank margin rather than overall model safety.
 
 The intervention basis contains eight layerwise harmful-versus-benign contrast directions, measured at layers 5, 8, 11, 14, 17, 20, 23, and 26 at the last prompt token. An \emph{action} is a vector of signed steering weights over these directions, normalized to the chosen intervention scale. We hold the basis and prompt splits fixed, along with a library of 401 actions that combines random masks at four densities with unablated and single-direction controls. Calibration and validation use scales $0.5$ and $1.0$; the final test crosses 128 held-out actions at scale $0.75$ with 224 held-out prompts. Edits use bfloat16 activation arithmetic; a prospective audit found median relative displacement error of $8.2\%$ and maximum $29.8\%$, exceeding the predeclared $20\%$ tolerance. These results therefore describe the implemented bfloat16 response surface (Appendix~\ref{app:precision}).
 
-We compare a calibrated additive map, containing the declared first-order action features and scale corrections, with a lifted map that adds all 28 products of the eight layer coefficients. Both choose their ridge penalty on the same validation split and are evaluated on the same held-out action--prompt pairs.
+We compare a 20-parameter calibrated additive map, containing each steering weight, its square, and density and scale corrections, with a 48-parameter map that adds all 28 products of the eight layer coefficients. Squared weights let each direction's effect bend with its own size without coupling two directions. Both maps choose their ridge penalty on the same validation split and are evaluated on the same held-out action--prompt pairs.
 
 \begin{table}[t]
 \centering
@@ -851,6 +850,12 @@ Generative AI tools assisted with writing experimental code, editing the manuscr
 The model is nonlinear, but the tomography equation does not require it to be globally linear. It requires a more limited statement: around each clean activation, the response to a finite intervention can be separated into a local linear contribution and a residual. The proof performs that separation for one mask and then stacks the resulting measurements.
 
 \begin{proof}
+
+The idea is to apply Taylor's formula along the chosen displacement and then average. Write $y_\infty(a,\eps)$ for the population normalized response defined in Equation~\eqref{eq:finite}. The sampling assumption in Lemma~\ref{lem:measurement-reduction} is
+\[
+\widetilde y_B=y_\infty+e_B/\eps+\zeta_B,
+\qquad |e_B|\le\tau_B(a),\quad |\zeta_B|\le\nu_B(a).
+\]
 
 \noindent\textbf{Step 1: Treat the mask as one activation-space direction.}\par
 
@@ -1098,7 +1103,7 @@ This check explains why interaction-aware tomography is more than adding pair te
 The four results proved here answer successive measurement-design questions. Proposition~\ref{prop:caldim} asks when a small correction can repair a baseline observer. Corollary~\ref{cor:scale-density} asks how intervention scale and mask density affect its error. Proposition~\ref{prop:blindness} shows why no first-order method can recover a pure pair interaction. Corollary~\ref{cor:hvp} then explains what white-box curvature measurements recover and when they predict finite interventions.
 
 \begin{proof}[Proof of Proposition~\ref{prop:caldim}]
-The proposition states when exact calibration is identifiable and bounds the approximation error for every correction family. When the finite response lies in the family, the bound is zero; a positive bound measures the error that calibration cannot remove.
+Subtracting the baseline turns calibration into a linear system for the correction parameters. Let $F_\eps(a)$ denote the systematic finite response on a set of interventions $\mathcal A$, and let $\mathcal Q$ be the fixed test distribution on that set. Fix features $\phi(a)\in\R^q$, a baseline $x_0\in\R^q$, and a correction dictionary $B\in\R^{q\times r}$; the allowed maps are $\phi(a)^\top(x_0+B\theta)$. When the finite response lies in this family, its approximation error is zero; a positive lower bound measures what calibration cannot remove.
 
 \noindent\textbf{Step 1: Express the calibration measurements as a small linear system.}\par
 Let $a_1,\ldots,a_m$ be the calibration masks. Put the feature row $\phi(a_j)^\top$ into row $j$ of $\Phi$, and define
@@ -1129,7 +1134,7 @@ In the noiseless case, suppose two corrections $\theta_1$ and $\theta_2$ produce
 \]
 If $M$ has full column rank, its null space contains only zero. Hence $\theta_1=\theta_2$, and the correction is unique.
 
-An $r$-dimensional correction therefore needs only $r$ independent equations in the ideal case. The statement uses $O(r)$ because practical experiments normally collect additional measurements to improve conditioning and to reserve separate masks for held-out validation.
+An $r$-dimensional correction therefore needs $r$ independent equations in the noiseless case. Practical experiments may collect more measurements to improve conditioning and reserve separate masks for validation; those costs must be counted separately.
 
 \noindent\textbf{Step 3: Show how measurement error propagates into the correction.}\par
 When $M$ has full column rank, the least-squares estimate obeys
@@ -1220,7 +1225,7 @@ The per-mask bound gives $\|w\|_\infty\le\eta_1(\eps,\rho)$. The assumed stabili
 This multiplication connects the model side of the experiment to the inverse-problem side. Even a small response error can produce a poor estimate when the design is badly conditioned.
 
 \noindent\textbf{Step 4: Choose the scale for a fixed density.}\par
-Fix $\rho$. Assume $\tau_B(\rho)>0$ and $L\kappa_\rho^2>0$, and treat $C_{\mathrm{rec}}(A_\rho)$ and $\nu_B(\rho)$ as locally independent of $\eps$. The scale-dependent part is
+Fix $\rho$. Assume $\tau_B(\rho)>0$ and $L\kappa_\rho^2>0$, and keep these bounds, $C_{\mathrm{rec}}(A_\rho)$, and $\nu_B(\rho)$ fixed throughout the allowed scale range. The scale-dependent part is
 \[
     \frac{L}{2}\eps\kappa_\rho^2
     +
